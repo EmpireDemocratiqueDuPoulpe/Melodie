@@ -38,3 +38,10 @@ C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\ref\Melodie.dll
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Melodie.pdb
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Melodie.genruntimeconfig.cache
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Melodie.csproj.CopyComplete
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
