@@ -16,5 +16,5 @@ namespace Melodie
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-    }
+}
 }

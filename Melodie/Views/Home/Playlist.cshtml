@@ -1,0 +1,60 @@
+﻿@{
+	ViewData["Title"] = "Playlist";
+}
+
+<div id="playlist-container">
+	<a href="Index">&lt;-- Retour</a>
+	
+	<div id="playlist-info">
+		<div class="playlist-logo"></div>
+		<form id="playlist-info-text">
+			<input class="playlist-title" type="text" value="Une superbe playlist avec un nom super long"/>
+			<p class="playlist-duration">5 musiques</p>
+			<textarea class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</textarea>
+
+			<button class="playlist-save-info btn red hover-vertical-rec" type="submit">
+				<span>Enregistrer</span>
+			</button>
+		</form>
+	</div>
+
+	<div id="songs-container">
+		<div class="song-block">
+			<div class="song-play no-play-button song-row"></div>
+			<p class="song-name song-row">Nom</p>
+			<p class="song-duration song-row">Durée</p>
+			<p class="song-author song-row">Auteur</p>
+			<p class="song-add-date song-row">Date d'ajout</p>
+		</div>
+		<div class="song-block">
+			<div class="song-play song-row"></div>
+			<p class="song-name song-row">Musique 1</p>
+			<p class="song-duration song-row">3:41</p>
+			<p class="song-author song-row">Captain Diabète</p>
+			<p class="song-add-date song-row">12/02/2021</p>
+		</div>
+		<div class="song-block">
+			<div class="song-play song-row"></div>
+			<p class="song-name song-row">Musique 1</p>
+			<p class="song-duration song-row">3:41</p>
+			<p class="song-author song-row">Captain Diabète</p>
+			<p class="song-add-date song-row">12/02/2021</p>
+		</div>
+		<div class="song-block">
+			<div class="song-play song-row"></div>
+			<p class="song-name song-row">Musique 1</p>
+			<p class="song-duration song-row">3:41</p>
+			<p class="song-author song-row">Captain Diabète</p>
+			<p class="song-add-date song-row">12/02/2021</p>
+		</div>
+		<div class="song-block">
+			<div class="song-play song-row"></div>
+			<p class="song-name song-row">Musique 1</p>
+			<p class="song-duration song-row">3:41</p>
+			<p class="song-author song-row">Captain Diabète</p>
+			<p class="song-add-date song-row">12/02/2021</p>
+		</div>
+	</div>
+</div>
+
+<script src="~/js/playlists_logo_filler.js"></script>

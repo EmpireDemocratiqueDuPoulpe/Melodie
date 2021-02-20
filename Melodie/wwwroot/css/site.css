@@ -36,7 +36,9 @@ header {
     width: 256px;
     height: 64px;
     line-height: 64px;
+    background: transparent;
     color: rgb(255, 255, 255);
+    border: none;
     text-transform: uppercase;
     text-decoration: none;
     transition: all 300ms;
@@ -59,11 +61,12 @@ header {
 }
 
 /** Colors **/
-.btn.red { color: rgb(200, 20, 20); }
-.btn.red.hover-vertical-rec::before { background: rgba(200, 20, 20, 0.1); }
-.btn.red.hover-vertical-rec::after { border-color: rgba(200, 20, 20, 0.5); }
+.btn.red { color: rgb(200, 20, 20) !important; }
+.btn.red::before { background: rgba(200, 20, 20, 0.1) !important; }
+.btn.red::after { border-color: rgba(200, 20, 20, 0.5) !important; }
 
 /** Effect **/
+/* Vertical growing rectangle */
 .btn.hover-vertical-rec::before {
     background: rgba(255, 255, 255, 0.1);
     opacity: 0;
@@ -72,11 +75,70 @@ header {
 .btn.hover-vertical-rec:hover::before { opacity: 1; transform: scale(1, 1); }
 
 .btn.hover-vertical-rec::after {
-    border: thin solid rgba(255, 255, 255, 0.5);
+    border: thin rgba(255, 255, 255, 0.5) solid;
     opacity: 1;
     transition: all 300ms;
 }
 .btn.hover-vertical-rec:hover::after { opacity: 0; transform: scale(1, 0.1); }
+
+/* Scaling rectangle */
+.btn.hover-scaling-rec:hover span { transform: scale(1.2, 1.2); }
+
+.btn.hover-scaling-rec::before {
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: scale(0.1, 0.1);
+}
+.btn.hover-scaling-rec:hover::before { opacity: 1; transform: scale(1, 1); }
+
+.btn.hover-scaling-rec::after {
+    border: thin rgba(255, 255, 255, 0.5) solid;
+    transition: all 300ms;
+}
+.btn.hover-scaling-rec:hover::after { opacity: 0; transform: scale(0, 0); }
+
+/* Global - Playlists
+-------------------------------------------------- */
+
+.playlist-logo {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 0;
+    margin: 0 auto;
+    vertical-align: middle;
+    padding-bottom: 100%;
+    background: #0f6674; /* CHANGE */
+}
+
+.playlist-logo:after {
+    content: attr(data-acronym) '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.playlist-title {
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.playlist-desc {
+    display: inline-block;
+    width: 100%;
+    line-height: 1em;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 /* Home
 -------------------------------------------------- */
@@ -111,46 +173,16 @@ header {
     overflow: hidden;
 }
 
-.playlist-logo {
-    position: relative;
-    display: block;
+.playlist-block:hover { background: violet; }
+
+#playlists-container .playlist-logo {
     width: 100%;
-    height: 0;
-    margin: 0 auto;
-    vertical-align: middle;
     padding-bottom: 100%;
-    background: #0f6674; /* CHANGE */
 }
 
-.playlist-logo:after {
-    content: attr(data-acronym) '';
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    transform: translateY(-50%);
-    text-align: center;
-}
+#playlists-container .playlist-title { margin: 10px 0 2px 0; }
 
-.playlist-title {
-    display: inline-block;
-    width: 100%;
-    margin: 10px 0 2px 0;
-    font-weight: bold;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.playlist-desc {
-    display: inline-block;
-    width: 100%;
-    height: 2em;
-    line-height: 1em;
-    margin: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+#playlists-container .playlist-desc { height: 2em; }
 
 #playlists-see-all {
     margin: 30px 10px 0 auto;
@@ -206,4 +238,124 @@ header {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+/* Playlist
+-------------------------------------------------- */
+
+#playlist-container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 50px 50px 20px 50px;
+}
+
+/* Playlist - Info
+-------------------------------------------------- */
+
+#playlist-container #playlist-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+#playlist-container #playlist-info input[type="text"],
+#playlist-container #playlist-info textarea {
+    border: thin transparent solid;
+}
+
+#playlist-container #playlist-info textarea { resize: vertical; }
+
+#playlist-container #playlist-info input[type="text"]:hover,
+#playlist-container #playlist-info textarea:hover {
+    border-color: black;
+}
+
+#playlist-container #playlist-info .btn { z-index: 10; }
+#playlist-container #playlist-info input[type="submit"] { z-index: 20; }
+
+#playlist-container .playlist-logo {
+    width: 12.5%;
+    padding-bottom: 12.5%;
+    margin-right: 25px;
+}
+
+#playlist-info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#playlist-info-text .playlist-title {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+}
+
+.playlist-duration {
+    margin: 0 0 5px 0;
+    color: gray;
+}
+
+#playlist-info-text .playlist-desc { height: 4em; }
+
+#playlist-info-text .playlist-save-info { margin: 5px 0 0 auto; }
+
+/* Playlist - Songs list
+-------------------------------------------------- */
+
+.song-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.song-block:hover {
+    background: violet;
+}
+
+.song-block .song-row                   { flex-grow: 1; }
+.song-block .song-row:not(:last-child)  { margin-right: 5%; }
+
+.song-block .song-play {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+}
+
+.song-block .song-play.no-play-button {
+    background: transparent;
+    cursor: default;
+    pointer-events: none;
+}
+
+.song-block .song-name {
+    width: 15%;
+    background: #007bff;
+}
+
+.song-block .song-duration {
+    width: 5%;
+    background: peru;
+}
+
+.song-block .song-author {
+    width: 10%;
+    background: hotpink;
+}
+
+.song-block .song-add-date {
+    width: 7%;
+    background: papayawhip;
 }

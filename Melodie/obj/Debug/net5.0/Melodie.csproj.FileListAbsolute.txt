@@ -24,7 +24,6 @@ C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Melodie.TagHelpers
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Melodie.TagHelpers.output.cache
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Melodie.RazorCoreGenerate.cache
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -45,3 +44,5 @@ C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.Extensio
 C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\MySqlConnector.dll
 C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Web.config
+C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\Home\Playlist.cshtml.g.cs
