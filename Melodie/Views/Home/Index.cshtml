@@ -13,10 +13,12 @@
         <h2>Vos playlists</h2>
         
         <div id="playlists-grid">
-            <a class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Ajouter une playlist</p>
-            </a>
+            <form class="playlist-block" asp-controller="Home" asp-action="AddPlaylist">
+                <button class="playlist-sub-block" type="submit">
+                    <div class="playlist-logo"></div>
+                    <p class="playlist-title">Ajouter une playlist</p>
+                </button>
+            </form>
             
             @foreach (var playlist in playlists)
             {

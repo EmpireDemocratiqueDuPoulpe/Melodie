@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using Melodie.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -71,7 +68,7 @@ namespace Melodie.Controllers
         }
         
         //Home/Playlist/ID
-        [HttpGet("Home/Playlist/{pid}", Name = "GetByPlaylistId")]
+        [HttpGet("Home/Playlist/{pid:int}", Name = "GetByPlaylistId")]
         public async Task<IActionResult> Playlist(int pid)
         {
             var playlist = await _dbService.GetPlaylistById(pid);
@@ -85,21 +82,35 @@ namespace Melodie.Controllers
         }
 
         /* ADD */
-        //Home/Playlist/add
-        [HttpPost("Home/Playlist/Add", Name = "AddPlaylist")]
-        public async Task<ActionResult<Playlist>> AddPlaylist(Playlist playlist)
+        //Home/Playlist/Add
+        [HttpPost("Home/AddPlaylist", Name = "AddPlaylist")]
+        public async Task<ActionResult<Playlist>> AddPlaylist()
         {
-            if (playlist.playlist_id != null)
-            {
-                return BadRequest("ID cannot be set for INSERT query.");
-            }
+            var playlist = new Playlist();
 
             var playlistId = await _dbService.AddPlaylist(playlist);
-            return (playlist != default) ? CreatedAtRoute("GetByPlaylistId", new {pid = playlistId}, playlist) : BadRequest();
+            return (playlist != default)
+                //? CreatedAtRoute("GetByPlaylistId", new {pid = playlistId}, playlist)
+                ? RedirectToAction("Playlist", new {pid = playlistId})
+                : BadRequest();
         }
         
+        //[HttpPost("Home/Playlist/Add", Name = "AddPlaylist")]
+        //public async Task<ActionResult<Playlist>> AddPlaylist(Playlist playlist)
+        //{
+        //    if (playlist.playlist_id != null)
+        //    {
+        //        return BadRequest("ID cannot be set for INSERT query.");
+        //    }
+//
+        //    var playlistId = await _dbService.AddPlaylist(playlist);
+        //    return (playlist != default)
+        //        ? CreatedAtRoute("GetByPlaylistId", new {pid = playlistId}, playlist)
+        //        : BadRequest();
+        //}
+        
         /* UPDATE */
-        //Home/Playlist/update
+        //Home/Playlist/Update
         [HttpPut("Home/Playlist/Update", Name = "UpdatePlaylist")]
         public async Task<ActionResult<Playlist>> UpdatePlaylist(Playlist playlist)
         {
@@ -113,6 +124,7 @@ namespace Melodie.Controllers
         }
         
         /* DELETE */
+        //Home/Playlist/Delete/ID
         [HttpDelete("Home/Playlist/Delete/{pid}", Name = "DelPlaylist")]
         public async Task<ActionResult<Playlist>> DeletePlaylist(int pid)
         {

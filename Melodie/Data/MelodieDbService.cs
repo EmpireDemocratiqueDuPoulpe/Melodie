@@ -33,7 +33,10 @@ namespace Melodie.Data
         
         public async Task<IEnumerable<Playlist>> GetPlaylistsOf(int userId)
         {
-            return await _db.Playlists.Where(p => p.user_id == userId).ToListAsync();
+            return await _db.Playlists
+                .Where(p => p.user_id == userId)
+                .OrderByDescending(p => p.playlist_id)
+                .ToListAsync();
         }
 
         // ADD
@@ -46,7 +49,10 @@ namespace Melodie.Data
         public async Task<int> AddPlaylist(Playlist playlist)
         {
             _db.Add(playlist);
-            return await _db.SaveChangesAsync();
+            await _db.SaveChangesAsync();
+            //return await _db.SaveChangesAsync();
+
+            return playlist.playlist_id ?? -1;
         }
 
         // UPDATE
