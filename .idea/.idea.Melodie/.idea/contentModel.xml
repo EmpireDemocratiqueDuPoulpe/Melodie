@@ -4,6 +4,7 @@
     <e p="C:\Users\alexi\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
     <e p="C:\Users\alexi\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Melodie.372990550.00" t="ExcludeRecursive" />
     <e p="C:\Users\alexi\AppData\Roaming\JetBrains\Rider2020.3\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\alexi\AppData\Roaming\JetBrains\Rider2020.3\extensions" t="IncludeRecursive" />
     <e p="C:\Users\alexi\RiderProjects\Melodie" t="IncludeFlat">
       <e p="Melodie" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -21,6 +22,7 @@
         <e p="Melodie.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="Playlist.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -42,6 +44,7 @@
           <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />
             <e p="Playlist.cshtml" t="Include" />
+            <e p="Playlist.cshtml.cs" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />

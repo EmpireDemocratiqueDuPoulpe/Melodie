@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Melodie.Models;
 using Microsoft.EntityFrameworkCore;
@@ -24,11 +25,27 @@ namespace Melodie.Data
         {
             return await _db.Users.ToListAsync();
         }
+        
+        public async Task<Playlist> GetPlaylistById(int playlistId)
+        {
+            return await _db.Playlists.FirstOrDefaultAsync(p => p.playlist_id == playlistId);
+        }
+        
+        public async Task<IEnumerable<Playlist>> GetPlaylistsOf(int userId)
+        {
+            return await _db.Playlists.Where(p => p.user_id == userId).ToListAsync();
+        }
 
         // ADD
         public async Task<int> AddUser(User user)
         {
             _db.Add(user);
+            return await _db.SaveChangesAsync();
+        }
+        
+        public async Task<int> AddPlaylist(Playlist playlist)
+        {
+            _db.Add(playlist);
             return await _db.SaveChangesAsync();
         }
 
@@ -37,7 +54,20 @@ namespace Melodie.Data
         {
             try
             {
-                _db.Update(user);
+                _db.Users.Update(user);
+                return await _db.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return 0;
+            }
+        }
+        
+        public async Task<int> UpdatePlaylist(Playlist playlist)
+        {
+            try
+            {
+                _db.Playlists.Update(playlist);
                 return await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -52,6 +82,19 @@ namespace Melodie.Data
             try
             {
                 _db.Users.Remove(new User {UserId = userId});
+                return await _db.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return 0;
+            }
+        }
+        
+        public async Task<int> DeletePlaylist(int playlistId)
+        {
+            try
+            {
+                _db.Playlists.Remove(new Playlist {playlist_id = playlistId});
                 return await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)

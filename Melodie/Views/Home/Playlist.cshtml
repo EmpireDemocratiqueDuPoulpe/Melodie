@@ -1,5 +1,10 @@
-﻿@{
-	ViewData["Title"] = "Playlist";
+﻿@page "{pid?}"
+@{
+	var playlist = (Playlist) ViewBag.Playlist;
+}
+
+@section Scripts {
+    <script src="~/js/playlists_logo_filler.js"></script>
 }
 
 <div id="playlist-container">
@@ -8,9 +13,9 @@
 	<div id="playlist-info">
 		<div class="playlist-logo"></div>
 		<form id="playlist-info-text">
-			<input class="playlist-title" type="text" value="Une superbe playlist avec un nom super long"/>
+			<input class="playlist-title" type="text" value="@playlist.name"/>
 			<p class="playlist-duration">5 musiques</p>
-			<textarea class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</textarea>
+			<textarea class="playlist-desc">@playlist.description</textarea>
 
 			<button class="playlist-save-info btn red hover-vertical-rec" type="submit">
 				<span>Enregistrer</span>
@@ -56,5 +61,3 @@
 		</div>
 	</div>
 </div>
-
-<script src="~/js/playlists_logo_filler.js"></script>

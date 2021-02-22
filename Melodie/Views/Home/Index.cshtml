@@ -1,5 +1,10 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@page "{uid?}"
+@{
+	var playlists = (IEnumerable<Playlist>) ViewBag.Playlists;
+}
+
+@section Scripts {
+    <script src="~/js/playlists_logo_filler.js"></script>
 }
 
 <div id="home-container">
@@ -13,83 +18,14 @@
                 <p class="playlist-title">Ajouter une playlist</p>
             </a>
             
-            <a class="playlist-block" href="Playlist">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist avec un nom super long</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </a>
-            
-            <div class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </div>
-            
-            <div class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </div>
-            
-            <div class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </div>
-            
-            <div class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </div>
-            
-            <div class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </div>
-            
-            <div class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </div>
-            
-            <div class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </div>
-            
-            <div class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </div>
-            
-            <div class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </div>
-            
-            <div class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </div>
-            
-            <div class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </div>
-            
-            <div class="playlist-block">
-                <div class="playlist-logo"></div>
-                <p class="playlist-title">Une superbe playlist</p>
-                <p class="playlist-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus nunc magna, eu finibus mi ultrices nec. Phasellus imperdiet tempus condimentum. Sed tempor venenatis luctus. Mauris imperdiet ac quam eget dictum. Suspendisse nec eros nec lorem tristique scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sit amet aliquet sapien, vitae porta dolor. Vestibulum tristique eleifend interdum. Sed efficitur quam vel dignissim tincidunt.</p>
-            </div>
+            @foreach (var playlist in playlists)
+            {
+                <a class="playlist-block" asp-controller="Home" asp-action="Playlist" asp-route-pid="@playlist.playlist_id">
+                    <div class="playlist-logo"></div>
+                    <p class="playlist-title">@playlist.name</p>
+                    <p class="playlist-desc">@playlist.description</p>
+                </a>
+            }
         </div>
         
         <a id="playlists-see-all" class="btn red hover-vertical-rec" href="#">
@@ -194,5 +130,3 @@
         </div>
     </div>
 </div>
-
-<script src="~/js/playlists_logo_filler.js"></script>
