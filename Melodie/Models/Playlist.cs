@@ -7,12 +7,11 @@ namespace Melodie.Models
     {
         private MelodieDbContext _context;
         
-        [Key]
-        public int? playlist_id { get; set; }
-        public int? user_id { get; set; }
-        public int? color_id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
+        [Key] public int? playlist_id { get; set; }
+        [Required] public int? user_id { get; set; }
+        [Required] public int? color_id { get; set; }
+        [Required] [MaxLength(100)] public string name { get; set; }
+        [DataType(DataType.MultilineText)] [MaxLength(255)] public string description { get; set; }
 
         public Playlist()
         {

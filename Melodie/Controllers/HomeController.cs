@@ -76,9 +76,9 @@ namespace Melodie.Controllers
             if (playlist == default) return RedirectToAction("Index");
             
             ViewBag.Title = "Playlist - " + playlist.name;
-            ViewBag.Playlist = playlist;
+            //ViewBag.Playlist = playlist;
 
-            return View();
+            return View(playlist);
         }
 
         /* ADD */
@@ -111,7 +111,8 @@ namespace Melodie.Controllers
         
         /* UPDATE */
         //Home/Playlist/Update
-        [HttpPut("Home/Playlist/Update", Name = "UpdatePlaylist")]
+        //[HttpPut("Home/UpdatePlaylist", Name = "UpdatePlaylist")]
+        [HttpPost("Home/UpdatePlaylist", Name = "UpdatePlaylist")]
         public async Task<ActionResult<Playlist>> UpdatePlaylist(Playlist playlist)
         {
             if (playlist.playlist_id == null)

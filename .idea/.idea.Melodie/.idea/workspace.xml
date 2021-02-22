@@ -7,9 +7,7 @@
     <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Data/MelodieDbService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Data/MelodieDbService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/Models/Playlist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Models/Playlist.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/Views/Home/Playlist.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Home/Playlist.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.pdb" afterDir="false" />
@@ -33,12 +31,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/Desktop/Day2/Day2TP1/Pages/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/Admin/AddEditRecipe.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day2/Day2TP1/Pages/Wonder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/Admin/AddEditRecipe.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/alexi/RiderProjects/Melodie/Melodie/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/647FAEDF-A0C0-4C01-B79E-04471FFD80DF/233/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
@@ -62,12 +67,12 @@
       <option value="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" />
       <option value="$PROJECT_DIR$/Melodie/Views/Shared/_Layout.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Views/Home/AddPlaylist.cshtml" />
-      <option value="$PROJECT_DIR$/Melodie/Views/Home/Playlist.cshtml" />
-      <option value="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" />
-      <option value="$PROJECT_DIR$/Melodie/Models/Playlist.cs" />
-      <option value="$PROJECT_DIR$/Melodie/Controllers/HomeController.cs" />
       <option value="$PROJECT_DIR$/Melodie/Data/MelodieDbService.cs" />
       <option value="$PROJECT_DIR$/Melodie/Views/Home/Index.cshtml" />
+      <option value="$PROJECT_DIR$/Melodie/Models/Playlist.cs" />
+      <option value="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" />
+      <option value="$PROJECT_DIR$/Melodie/Controllers/HomeController.cs" />
+      <option value="$PROJECT_DIR$/Melodie/Views/Home/Playlist.cshtml" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1o4TnRmOu64XrIIxtmBo7OSf87P" />
@@ -136,7 +141,8 @@
       <workItem from="1613157903628" duration="2043000" />
       <workItem from="1613838389261" duration="10154000" />
       <workItem from="1613940236187" duration="3422000" />
-      <workItem from="1613992211861" duration="13079000" />
+      <workItem from="1613992211861" duration="13131000" />
+      <workItem from="1614024283227" duration="3171000" />
     </task>
     <task id="LOCAL-00001" summary="Added Playlist page">
       <created>1613846759594</created>
@@ -166,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613998106634</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="It is now possible to add a playlist">
+      <created>1614005873267</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614005873267</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +204,7 @@
     <MESSAGE value="Added Playlist page" />
     <MESSAGE value="The website can now show playlists from database" />
     <MESSAGE value="Added missing files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added missing files" />
+    <MESSAGE value="It is now possible to add a playlist" />
+    <option name="LAST_COMMIT_MESSAGE" value="It is now possible to add a playlist" />
   </component>
 </project>
