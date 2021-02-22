@@ -96,7 +96,20 @@ namespace Melodie.Data
             }
         }
         
-        public async Task<int> DeletePlaylist(int playlistId)
+        public async Task<int> DeletePlaylist(Playlist playlist)
+        {
+            try
+            {
+                _db.Playlists.Remove(new Playlist {playlist_id = playlist.playlist_id});
+                return await _db.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return 0;
+            }
+        }
+        
+        public async Task<int> DeletePlaylistById(int playlistId)
         {
             try
             {

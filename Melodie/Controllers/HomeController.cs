@@ -82,7 +82,7 @@ namespace Melodie.Controllers
         }
 
         /* ADD */
-        //Home/Playlist/Add
+        //Home/AddPlaylist
         [HttpPost("Home/AddPlaylist", Name = "AddPlaylist")]
         public async Task<ActionResult<Playlist>> AddPlaylist()
         {
@@ -94,23 +94,9 @@ namespace Melodie.Controllers
                 ? RedirectToAction("Playlist", new {pid = playlistId})
                 : BadRequest();
         }
-        
-        //[HttpPost("Home/Playlist/Add", Name = "AddPlaylist")]
-        //public async Task<ActionResult<Playlist>> AddPlaylist(Playlist playlist)
-        //{
-        //    if (playlist.playlist_id != null)
-        //    {
-        //        return BadRequest("ID cannot be set for INSERT query.");
-        //    }
-//
-        //    var playlistId = await _dbService.AddPlaylist(playlist);
-        //    return (playlist != default)
-        //        ? CreatedAtRoute("GetByPlaylistId", new {pid = playlistId}, playlist)
-        //        : BadRequest();
-        //}
-        
+
         /* UPDATE */
-        //Home/Playlist/Update
+        //Home/UpdatePlaylist
         //[HttpPut("Home/UpdatePlaylist", Name = "UpdatePlaylist")]
         [HttpPost("Home/UpdatePlaylist", Name = "UpdatePlaylist")]
         public async Task<ActionResult<Playlist>> UpdatePlaylist(Playlist playlist)
@@ -125,12 +111,25 @@ namespace Melodie.Controllers
         }
         
         /* DELETE */
-        //Home/Playlist/Delete/ID
-        [HttpDelete("Home/Playlist/Delete/{pid}", Name = "DelPlaylist")]
-        public async Task<ActionResult<Playlist>> DeletePlaylist(int pid)
+        //Home/DeletePlaylist
+        //[HttpDelete("Home/Playlist/Delete/{pid}", Name = "DelPlaylist")]
+        [HttpPost("Home/DeletePlaylist", Name = "DelPlaylist")]
+        public async Task<ActionResult<Playlist>> DeletePlaylist(Playlist playlist)
         {
-            var result = await _dbService.DeletePlaylist(pid);
-            return (result > 0) ? NoContent() : NotFound();
+            if (playlist.playlist_id == null)
+            {
+                return BadRequest("ID must be set for DELETE query.");
+            }
+            
+            var result = await _dbService.DeletePlaylist(playlist);
+            return (result > 0) ? RedirectToAction("Index") : NotFound();
+        }
+        
+        [HttpPost("Home/DeletePlaylistById", Name = "DelPlaylistById")]
+        public async Task<ActionResult<Playlist>> DeletePlaylistById(int pid)
+        {
+            var result = await _dbService.DeletePlaylistById(pid);
+            return (result > 0) ? RedirectToAction("Index") : NotFound();
         }
         
         /* Error

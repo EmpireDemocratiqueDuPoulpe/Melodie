@@ -24,6 +24,7 @@ namespace Melodie.Data
         
         // DELETE
         Task<int> DeleteUser(int userId);
-        Task<int> DeletePlaylist(int playlistId);
+        Task<int> DeletePlaylist(Playlist playlist);
+        Task<int> DeletePlaylistById(int playlistId);
     }
 }

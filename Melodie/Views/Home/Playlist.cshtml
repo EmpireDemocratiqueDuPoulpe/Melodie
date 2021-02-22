@@ -20,19 +20,16 @@
 			<p class="playlist-duration">5 musiques</p>
 			@Html.EditorFor(p => p.description, new { htmlAttributes = new { @class = "playlist-desc", placeholder = "Description" } })
 			
-			<button class="playlist-save-info btn red hover-vertical-rec" type="submit">
-				<span>Enregistrer</span>
-			</button>
+			<div class="playlist-info-buttons">
+				<button class="btn red hover-vertical-rec" type="submit">
+					<span>Enregistrer</span>
+				</button>
+				
+				<button class="btn red hover-vertical-rec" type="submit" formaction="@Url.Action("DeletePlaylist")">
+					<span>Supprimer</span>
+				</button>
+			</div>
 		}
-		<!--<form id="playlist-info-text" asp-controller="Home" asp-action="UpdatePlaylist" asp-route-playlist="@@playlist">
-			<input class="playlist-title" type="text" value="@@playlist.name"/>
-			<p class="playlist-duration">5 musiques</p>
-			<textarea class="playlist-desc">@@playlist.description</textarea>
-
-			<button class="playlist-save-info btn red hover-vertical-rec" type="submit">
-				<span>Enregistrer</span>
-			</button>
-		</form>-->
 	</div>
 
 	<div id="songs-container">

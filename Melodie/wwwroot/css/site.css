@@ -292,9 +292,6 @@ header {
     border-color: black;
 }
 
-#playlist-container #playlist-info .btn { z-index: 10; }
-#playlist-container #playlist-info input[type="submit"] { z-index: 20; }
-
 #playlist-container .playlist-logo {
     width: 12.5%;
     padding-bottom: 12.5%;
@@ -321,7 +318,15 @@ header {
 
 #playlist-info-text .playlist-desc { height: 4em; }
 
-#playlist-info-text .playlist-save-info { margin: 5px 0 0 auto; }
+#playlist-info-text .playlist-info-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 0 0 auto;
+}
+
+#playlist-info-text .playlist-info-buttons button:not(:last-child) { margin-right: 10px; }
 
 /* Playlist - Songs list
 -------------------------------------------------- */
