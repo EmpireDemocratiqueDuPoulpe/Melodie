@@ -63,3 +63,4 @@ C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Melodie.dll
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\ref\Melodie.dll
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Melodie.pdb
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Melodie.genruntimeconfig.cache
+C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\Shared\DelMusicFormPartial.cshtml.g.cs

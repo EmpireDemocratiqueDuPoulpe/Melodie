@@ -55,6 +55,7 @@
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
             <e p="AddMusicFormPartial.cshtml" t="Include" />
+            <e p="DelMusicFormPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
           </e>
         </e>

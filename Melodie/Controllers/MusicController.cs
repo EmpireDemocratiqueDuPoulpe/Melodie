@@ -76,6 +76,32 @@ namespace Melodie.Controllers
                 : BadRequest();
         }
         
+        /* DELETE
+        -------------------------------------------------- */
+        //Music/Delete
+        [HttpPost("Music/Delete", Name = "DelMusic")]
+        public async Task<ActionResult<Music>> Delete(Music music)
+        {
+            if (music.MusicId == null)
+            {
+                return BadRequest("ID must be set for DELETE query.");
+            }
+
+            var playlistId = music.PlaylistId;
+            var result = await _dbService.DeleteMusic(music);
+            return (result > 0)
+                ? RedirectToAction("Playlist", "Playlist", new { pid = playlistId })
+                : NotFound();
+        }
+        
+        //Music/DeleteById
+        [HttpPost("Music/DeleteById", Name = "DelMusicById")]
+        public async Task<ActionResult<Music>> DeleteById(int mid)
+        {
+            var result = await _dbService.DeleteMusicById(mid);
+            return (result > 0) ? NoContent() : NotFound();
+        }
+        
         /* OTHER
         -------------------------------------------------- */
         public bool IsFileAMusic(string ext)

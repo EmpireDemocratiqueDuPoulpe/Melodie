@@ -34,9 +34,9 @@ namespace Melodie.Controllers
         
         /* ADD
         -------------------------------------------------- */
-        //AddPlaylist
+        //Playlist/Add
         [HttpPost("Playlist/Add", Name = "AddPlaylist")]
-        public async Task<ActionResult<Playlist>> AddPlaylist()
+        public async Task<ActionResult<Playlist>> Add()
         {
             var playlist = new Playlist();
 
@@ -48,10 +48,10 @@ namespace Melodie.Controllers
         
         /* UPDATE
         -------------------------------------------------- */
-        //UpdatePlaylist
-        //[HttpPut("UpdatePlaylist", Name = "UpdatePlaylist")]
+        //Playlist/Update
+        //[HttpPut("Playlist/Update", Name = "UpdatePlaylist")]
         [HttpPost("Playlist/Update", Name = "UpdatePlaylist")]
-        public async Task<ActionResult<Playlist>> UpdatePlaylist(Playlist playlist)
+        public async Task<ActionResult<Playlist>> Update(Playlist playlist)
         {
             if (playlist.PlaylistId == null)
             {
@@ -64,10 +64,10 @@ namespace Melodie.Controllers
         
         /* DELETE
         -------------------------------------------------- */
-        //DeletePlaylist
+        //Playlist/Delete
         //[HttpDelete("Home/Playlist/Delete/{pid}", Name = "DelPlaylist")]
         [HttpPost("Playlist/Delete", Name = "DelPlaylist")]
-        public async Task<ActionResult<Playlist>> DeletePlaylist(Playlist playlist)
+        public async Task<ActionResult<Playlist>> Delete(Playlist playlist)
         {
             if (playlist.PlaylistId == null)
             {
@@ -78,8 +78,9 @@ namespace Melodie.Controllers
             return (result > 0) ? RedirectToAction("Index", "Home") : NotFound();
         }
         
+        //Playlist/DeleteById
         [HttpPost("Playlist/DeleteById", Name = "DelPlaylistById")]
-        public async Task<ActionResult<Playlist>> DeletePlaylistById(int pid)
+        public async Task<ActionResult<Playlist>> DeleteById(int pid)
         {
             var result = await _dbService.DeletePlaylistById(pid);
             return (result > 0) ? RedirectToAction("Index", "Home") : NotFound();

@@ -1,6 +1,16 @@
 ﻿@using System.Globalization
 @model Melodie.Models.Playlist
 
+@{
+	var musicsCount = "";
+	
+	if (Model.Musics != null)
+	{
+		var count = Model.Musics.Count;
+		musicsCount = count + " musique" + (count > 0 ? "s" : "");
+	}
+}
+
 @section Scripts {
     <script src="~/js/playlists_logo_filler.js"></script>
 }
@@ -13,11 +23,13 @@
 	
 	<div id="playlist-info">
 		<div class="playlist-logo"></div>
-		@using (Html.BeginForm("UpdatePlaylist", "Playlist", FormMethod.Post, new { id = "playlist-info-text" }))
+		@using (Html.BeginForm("Update", "Playlist", FormMethod.Post, new { id = "playlist-info-text" }))
 		{
+			@Html.AntiForgeryToken()
+			
 			@Html.HiddenFor(p => p.PlaylistId)
 			@Html.EditorFor(p => p.Name, new { htmlAttributes = new { @class = "playlist-title", placeholder = "Nom de la playlist" } })
-			<p class="playlist-duration">5 musiques</p>
+			<p class="playlist-duration">@musicsCount</p>
 			@Html.EditorFor(p => p.Description, new { htmlAttributes = new { @class = "playlist-desc", placeholder = "Description" } })
 			
 			<div class="playlist-info-buttons">
@@ -26,7 +38,7 @@
 					<span>Enregistrer</span>
 				</button>
 				
-				<button class="btn2 showing-icon" type="submit" formaction="@Url.Action("DeletePlaylist")">
+				<button class="btn2 showing-icon" type="submit" formaction="@Url.Action("Delete")">
 					<!--<div class="btn-effect-box">
 						<iframe src="/images/delete-24px.svg" sandbox>
 							<img src="/images/delete-24px.png" alt="Delete"/>
@@ -66,14 +78,7 @@
 						<td class="song-author-row">@music.Author</td>
 						<td class="song-add-date-row">@music.CreationDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)</td>
 						<td class="song-actions-row">
-							<button class="btn2 showing-icon">
-								<div class="btn-effect-box">
-									<object data="/images/delete-24px.svg" type="image/svg+xml">
-										<img src="/images/delete-24px.png" alt="Delete"/>
-									</object>
-								</div>
-								<span>Supprimer</span>
-							</button>
+							@{ await Html.RenderPartialAsync("DelMusicFormPartial", new Music { MusicId = music.MusicId, PlaylistId = music.PlaylistId }); }
 						</td>
 					</tr>
 				}

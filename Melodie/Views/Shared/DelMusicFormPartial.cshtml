@@ -1,0 +1,16 @@
+﻿@model Melodie.Models.Music
+
+@using (Html.BeginForm("Delete", "Music", FormMethod.Post)) {
+	@Html.AntiForgeryToken()
+								
+	@Html.HiddenFor(m => m.MusicId)
+	@Html.HiddenFor(m => m.PlaylistId)
+	<button class="btn2 showing-icon" type="submit">
+		<div class="btn-effect-box">
+			<object data="/images/delete-24px.svg" type="image/svg+xml">
+				<img src="/images/delete-24px.png" alt="Delete"/>
+			</object>
+		</div>
+		<span>Supprimer</span>
+	</button>
+}
