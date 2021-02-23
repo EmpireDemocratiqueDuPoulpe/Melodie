@@ -1,23 +1,39 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Melodie.Data;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Melodie.Models
 {
     public class Playlist
     {
-        private MelodieDbContext _context;
+        [Key, Column("playlist_id")]
+        public int? PlaylistId { get; set; }
         
-        [Key] public int? playlist_id { get; set; }
-        [Required] public int? user_id { get; set; }
-        [Required] public int? color_id { get; set; }
-        [Required] [MaxLength(100)] public string name { get; set; }
-        [DataType(DataType.MultilineText)] [MaxLength(255)] public string description { get; set; }
+        
+        [Required, Column("user_id")]
+        public int? UserId { get; set; }
+        
+        
+        [Required, Column("color_id")]
+        public int? ColorId { get; set; }
+        
+        
+        [Required, Column("name"), MaxLength(100)]
+        public string Name { get; set; }
+        
+        
+        [DataType(DataType.MultilineText), Column("Description"), MaxLength(255)]
+        public string Description { get; set; }
+        
+        
+        public List<Music> Musics { get; set; }
 
         public Playlist()
         {
-            user_id = 1;
-            color_id = 1;
-            name = "Nouvelle playlist";
+            UserId = 1;
+            ColorId = 1;
+            Name = "Nouvelle playlist";
+            //Musics = new List<Music>();
         }
     }
 }

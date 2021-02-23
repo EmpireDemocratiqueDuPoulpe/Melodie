@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Lr3kT9qytrlVkXUg4XvTPS0hzGyq2HklGCb+Q9X90G/0n40JWqpRVICCcTRlItF7xIw7B4tmU1ZDboQBhicZgg==",
+  "dgSpecHash": "wKs6Tk0WPUbMZkelzOaVtgxXbwjXh4WLu819xnutBrD7ru5/ZQTk/iHhAbezC/gvB6UKzcSl+0c/Z86z7MdJeQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\alexi\\RiderProjects\\Melodie\\Melodie\\Melodie.csproj",
   "expectedPackageFiles": [
@@ -17,11 +17,20 @@
     "C:\\Users\\alexi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\microsoft.netcore.platforms\\6.0.0-preview.1.21102.12\\microsoft.netcore.platforms.6.0.0-preview.1.21102.12.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0-preview.1.21102.12\\microsoft.win32.systemevents.6.0.0-preview.1.21102.12.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\mysqlconnector\\1.1.0\\mysqlconnector.1.1.0.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\5.0.0-alpha.2\\pomelo.entityframeworkcore.mysql.5.0.0-alpha.2.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "C:\\Users\\alexi\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
+    "C:\\Users\\alexi\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0-preview.1.21102.12\\system.configuration.configurationmanager.6.0.0-preview.1.21102.12.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\system.drawing.common\\6.0.0-preview.1.21102.12\\system.drawing.common.6.0.0-preview.1.21102.12.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\system.security.accesscontrol\\6.0.0-preview.1.21102.12\\system.security.accesscontrol.6.0.0-preview.1.21102.12.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0-preview.1.21102.12\\system.security.cryptography.protecteddata.6.0.0-preview.1.21102.12.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\system.security.permissions\\6.0.0-preview.1.21102.12\\system.security.permissions.6.0.0-preview.1.21102.12.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\system.security.principal.windows\\6.0.0-preview.1.21102.12\\system.security.principal.windows.6.0.0-preview.1.21102.12.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\system.windows.extensions\\6.0.0-preview.1.21102.12\\system.windows.extensions.6.0.0-preview.1.21102.12.nupkg.sha512"
   ],
   "logs": []
 }

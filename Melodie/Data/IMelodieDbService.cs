@@ -14,17 +14,24 @@ namespace Melodie.Data
         Task<Playlist> GetPlaylistById(int playlistId);
         Task<IEnumerable<Playlist>> GetPlaylistsOf(int userId);
         
+        Task<Music> GetMusicById(int musicId);
+        Task<IEnumerable<Music>> GetMusicsOf(int playlistId);
+        
         // ADD
         Task<int> AddUser(User user);
         Task<int> AddPlaylist(Playlist playlist);
+        Task<int> AddMusic(Music music);
         
         // UPDATE
         Task<int> UpdateUser(User user);
         Task<int> UpdatePlaylist(Playlist playlist);
+        Task<int> UpdateMusic(Music music);
         
         // DELETE
         Task<int> DeleteUser(int userId);
         Task<int> DeletePlaylist(Playlist playlist);
         Task<int> DeletePlaylistById(int playlistId);
+        Task<int> DeleteMusic(Music music);
+        Task<int> DeleteMusicById(int musicId);
     }
 }

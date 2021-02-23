@@ -7,6 +7,7 @@
     <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.2" />
       <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0-alpha.2" />
+      <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0-preview.1.21102.12" />
     </ItemGroup>
 
     <ItemGroup>
@@ -15,6 +16,11 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Views\Musics" />
+      <Folder Include="wwwroot\images" />
     </ItemGroup>
 
 </Project>

@@ -42,18 +42,6 @@ namespace Melodie.Controllers
             
             return View();
         }
-        
-        //Home/PlaylistOf/ID
-        //[HttpGet("Home/PlaylistOf/{uid}", Name = "GetByUserId")]
-        //public async Task<IActionResult> Playlist(int uid)
-        //{
-        //    var playlists = await _dbService.GetPlaylistsOf(uid);
-        //    
-        //    ViewBag.Title = "Playlists";
-        //    ViewBag.Playlists = playlists;
-//
-        //    return (playlists != default) ? View() : NotFound();
-        //}
 
         /* Playlists
         -------------------------------------------------- */
@@ -75,7 +63,7 @@ namespace Melodie.Controllers
 
             if (playlist == default) return RedirectToAction("Index");
             
-            ViewBag.Title = "Playlist - " + playlist.name;
+            ViewBag.Title = "Playlist - " + playlist.Name;
             //ViewBag.Playlist = playlist;
 
             return View(playlist);
@@ -101,7 +89,7 @@ namespace Melodie.Controllers
         [HttpPost("Home/UpdatePlaylist", Name = "UpdatePlaylist")]
         public async Task<ActionResult<Playlist>> UpdatePlaylist(Playlist playlist)
         {
-            if (playlist.playlist_id == null)
+            if (playlist.PlaylistId == null)
             {
                 return BadRequest("ID must be set for UPDATE query.");
             }
@@ -116,7 +104,7 @@ namespace Melodie.Controllers
         [HttpPost("Home/DeletePlaylist", Name = "DelPlaylist")]
         public async Task<ActionResult<Playlist>> DeletePlaylist(Playlist playlist)
         {
-            if (playlist.playlist_id == null)
+            if (playlist.PlaylistId == null)
             {
                 return BadRequest("ID must be set for DELETE query.");
             }
@@ -131,7 +119,7 @@ namespace Melodie.Controllers
             var result = await _dbService.DeletePlaylistById(pid);
             return (result > 0) ? RedirectToAction("Index") : NotFound();
         }
-        
+
         /* Error
         -------------------------------------------------- */
 

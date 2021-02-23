@@ -12,6 +12,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
+          <e p="MusicController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
@@ -22,6 +23,7 @@
         <e p="Melodie.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="Music.cs" t="Include" />
           <e p="Playlist.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
@@ -46,9 +48,11 @@
             <e p="Playlist.cshtml" t="Include" />
             <e p="Playlist.cshtml.cs" t="Include" />
           </e>
+          <e p="Musics" t="Include" />
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+            <e p="AddMusicFormPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
           </e>
         </e>
@@ -59,6 +63,10 @@
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
+          <e p="images" t="Include">
+            <e p="delete-24px.png" t="Include" />
+            <e p="delete-24px.svg" t="Include" />
+          </e>
           <e p="js" t="Include">
             <e p="playlists_logo_filler.js" t="Include" />
             <e p="site.js" t="Include" />

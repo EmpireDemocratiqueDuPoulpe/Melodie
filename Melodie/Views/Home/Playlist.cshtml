@@ -1,37 +1,48 @@
-﻿@page "{pid?}"
-@model Melodie.Models.Playlist
-@{
-	//var playlist = (Playlist) ViewBag.Playlist;
-}
+﻿@model Melodie.Models.Playlist
 
 @section Scripts {
     <script src="~/js/playlists_logo_filler.js"></script>
 }
 
 <div id="playlist-container">
-	<a asp-controller="Home" asp-action="Index">&lt;-- Retour</a>
+	<a id="back-to-home" class="btn2 slide-effect" asp-controller="Home" asp-action="Index">
+		<div class="btn-effect-box"></div>
+		<span>&lt;-- Retour</span>
+	</a>
 	
 	<div id="playlist-info">
 		<div class="playlist-logo"></div>
 		@using (Html.BeginForm("UpdatePlaylist", "Home", FormMethod.Post, new { id = "playlist-info-text" }))
 		{
-			@Html.HiddenFor(p => p.playlist_id)
-			@Html.EditorFor(p => p.name, new { htmlAttributes = new { @class = "playlist-title", placeholder = "Nom de la playlist" } })
+			@Html.HiddenFor(p => p.PlaylistId)
+			@Html.EditorFor(p => p.Name, new { htmlAttributes = new { @class = "playlist-title", placeholder = "Nom de la playlist" } })
 			<p class="playlist-duration">5 musiques</p>
-			@Html.EditorFor(p => p.description, new { htmlAttributes = new { @class = "playlist-desc", placeholder = "Description" } })
+			@Html.EditorFor(p => p.Description, new { htmlAttributes = new { @class = "playlist-desc", placeholder = "Description" } })
 			
 			<div class="playlist-info-buttons">
-				<button class="btn red hover-vertical-rec" type="submit">
+				<button class="btn2 growing-circle" type="submit">
+					<div class="btn-effect-box"></div>
 					<span>Enregistrer</span>
 				</button>
 				
-				<button class="btn red hover-vertical-rec" type="submit" formaction="@Url.Action("DeletePlaylist")">
+				<button class="btn2 showing-icon" type="submit" formaction="@Url.Action("DeletePlaylist")">
+					<!--<div class="btn-effect-box">
+						<iframe src="/images/delete-24px.svg" sandbox>
+							<img src="/images/delete-24px.png" alt="Delete"/>
+						</iframe>
+					</div>-->
+					<div class="btn-effect-box">
+						<object data="/images/delete-24px.svg" type="image/svg+xml">
+							<img src="/images/delete-24px.png" alt="Delete"/>
+						</object>
+					</div>
 					<span>Supprimer</span>
 				</button>
 			</div>
 		}
 	</div>
 
+	<!-- TODO: Replace this container with a HTML table -->
 	<div id="songs-container">
 		<div class="song-block">
 			<div class="song-play no-play-button song-row"></div>
@@ -40,33 +51,21 @@
 			<p class="song-author song-row">Auteur</p>
 			<p class="song-add-date song-row">Date d'ajout</p>
 		</div>
-		<div class="song-block">
-			<div class="song-play song-row"></div>
-			<p class="song-name song-row">Musique 1</p>
-			<p class="song-duration song-row">3:41</p>
-			<p class="song-author song-row">Captain Diabète</p>
-			<p class="song-add-date song-row">12/02/2021</p>
-		</div>
-		<div class="song-block">
-			<div class="song-play song-row"></div>
-			<p class="song-name song-row">Musique 1</p>
-			<p class="song-duration song-row">3:41</p>
-			<p class="song-author song-row">Captain Diabète</p>
-			<p class="song-add-date song-row">12/02/2021</p>
-		</div>
-		<div class="song-block">
-			<div class="song-play song-row"></div>
-			<p class="song-name song-row">Musique 1</p>
-			<p class="song-duration song-row">3:41</p>
-			<p class="song-author song-row">Captain Diabète</p>
-			<p class="song-add-date song-row">12/02/2021</p>
-		</div>
-		<div class="song-block">
-			<div class="song-play song-row"></div>
-			<p class="song-name song-row">Musique 1</p>
-			<p class="song-duration song-row">3:41</p>
-			<p class="song-author song-row">Captain Diabète</p>
-			<p class="song-add-date song-row">12/02/2021</p>
-		</div>
+		
+		@if (Model.Musics != null)
+		{
+			@foreach (var music in Model.Musics)
+			{
+				<div class="song-block">
+					<div class="song-play song-row"></div>
+					<p class="song-name song-row">@music.Name</p>
+					<p class="song-duration song-row">DURATION</p>
+					<p class="song-author song-row">AUTHOR</p>
+					<p class="song-add-date song-row">ADD DATE</p>
+				</div>
+			}
+		}
+		
+		@{ await Html.RenderPartialAsync("AddMusicFormPartial", new Music { PlaylistId = Model.PlaylistId }); }
 	</div>
 </div>

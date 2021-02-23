@@ -28,6 +28,125 @@ header {
 /* Global - Buttons
 -------------------------------------------------- */
 
+/** TODO: Delete one of the buttons group **/
+/** Button 2 **/
+.btn2 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    font-size: 0.8em;
+    margin: 0;
+    background: transparent;
+    color: #BFC0C0;
+    border: 2px solid #BFC0C0;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1.5px; /* TODO: Keep? */
+    transition: all 300ms;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn2 span {
+    color: #BFC0C0;
+    text-decoration: none;
+    letter-spacing: 1px; /* TODO: Keep? */
+    z-index: 20;
+}
+
+.btn2 a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/** Effect **/
+/* Horizontal growing rectangle */
+.btn2.slide-effect { position: relative; }
+.btn2.slide-effect span {
+    position: relative;
+    transition: all 350ms ease-out;
+}
+
+.btn2.slide-effect .btn-effect-box {
+    position: absolute;
+    bottom: 0;
+    left: -200px;
+    width: 100%;
+    height: 100%;
+    background: #BFC0C0;
+    transition: all 350ms ease-out;
+}
+
+.btn2.slide-effect:hover .btn-effect-box { left: 0; }
+.btn2.slide-effect:hover span { color: #2D3142; } /* Background color */
+
+/* Background growing circle */
+.btn2.growing-circle { position: relative; }
+.btn2.growing-circle span {
+    position: relative;
+    transition: all 450ms ease-out;
+}
+
+.btn2.growing-circle .btn-effect-box {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    width: 0;
+    height: 0;
+    line-height: 40px;
+    background: #BFC0C0;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 500ms ease-out;
+}
+
+.btn2.growing-circle:hover .btn-effect-box {
+    top: -70px;
+    left: -70px;
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+}
+.btn2.growing-circle:hover span { color: #2D3142; } /* Background color */
+
+/* Showing icon */
+.btn2.showing-icon { position: relative; }
+.btn2.showing-icon span {
+    position: relative;
+    left: 0;
+    transition: all 350ms ease-out;
+}
+
+.btn2.showing-icon .btn-effect-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: -200px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: #BFC0C0;
+    transition: all 350ms ease-out;
+}
+
+.btn2.showing-icon .btn-effect-box object,
+.btn2.showing-icon .btn-effect-box img {
+    display: inline-block;
+    width: 20px;
+    height: auto;
+    background: none;
+    border: none;
+    pointer-events: none;
+}
+
+.btn2.showing-icon:hover .btn-effect-box { left: 0; }
+.btn2.showing-icon:hover span { left: 150px; }
+
 /** Button **/
 .btn {
     display: block;
@@ -268,6 +387,10 @@ header {
     padding: 50px 50px 20px 50px;
 }
 
+#playlist-container #back-to-home {
+    margin-bottom: 1.33em;
+}
+
 /* Playlist - Info
 -------------------------------------------------- */
 
@@ -277,6 +400,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: left;
+    padding: 0 20px;
     margin-bottom: 40px;
 }
 
@@ -293,8 +417,8 @@ header {
 }
 
 #playlist-container .playlist-logo {
-    width: 12.5%;
-    padding-bottom: 12.5%;
+    width: 15%;
+    padding-bottom: 13%;
     margin: 0 25px 0 0;
 }
 

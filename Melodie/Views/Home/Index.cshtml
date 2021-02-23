@@ -22,10 +22,10 @@
             
             @foreach (var playlist in playlists)
             {
-                <a class="playlist-block" asp-controller="Home" asp-action="Playlist" asp-route-pid="@playlist.playlist_id">
+                <a class="playlist-block" asp-controller="Home" asp-action="Playlist" asp-route-pid="@playlist.PlaylistId">
                     <div class="playlist-logo"></div>
-                    <p class="playlist-title">@playlist.name</p>
-                    <p class="playlist-desc">@playlist.description</p>
+                    <p class="playlist-title">@playlist.Name</p>
+                    <p class="playlist-desc">@playlist.Description</p>
                 </a>
             }
         </div>
