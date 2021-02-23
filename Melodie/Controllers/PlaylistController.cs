@@ -42,7 +42,7 @@ namespace Melodie.Controllers
 
             var playlistId = await _dbService.AddPlaylist(playlist);
             return (playlist != default)
-                ? RedirectToAction("Playlist", new {pid = playlistId})
+                ? RedirectToAction("Playlist", new { pid = playlistId })
                 : BadRequest();
         }
         

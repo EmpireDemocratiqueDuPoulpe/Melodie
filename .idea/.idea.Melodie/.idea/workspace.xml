@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,6 @@
       <option value="$PROJECT_DIR$/Melodie/Views/Musics/AddMusic.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Data/IMelodieDbService.cs" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/Web.config" />
-      <option value="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Web.config" />
       <option value="$PROJECT_DIR$/Melodie/Models/Music.cs" />
       <option value="$PROJECT_DIR$/Melodie/Data/MelodieDbContext.cs" />
@@ -72,11 +70,12 @@
       <option value="$PROJECT_DIR$/Melodie/Data/MelodieDbService.cs" />
       <option value="$PROJECT_DIR$/Melodie/Views/Home/Playlist.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/HomeController.cs" />
-      <option value="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" />
       <option value="$PROJECT_DIR$/Melodie/Views/Home/Index.cshtml" />
-      <option value="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" />
       <option value="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" />
+      <option value="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" />
+      <option value="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" />
+      <option value="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1o4TnRmOu64XrIIxtmBo7OSf87P" />
@@ -148,7 +147,7 @@
       <workItem from="1613940236187" duration="3422000" />
       <workItem from="1613992211861" duration="13131000" />
       <workItem from="1614024283227" duration="11033000" />
-      <workItem from="1614081529470" duration="16364000" />
+      <workItem from="1614081529470" duration="17813000" />
     </task>
     <task id="LOCAL-00001" summary="Added Playlist page">
       <created>1613846759594</created>
@@ -213,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614098798141</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Replace song list div by a table">
+      <created>1614100260864</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1614100260864</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +249,26 @@
     <MESSAGE value="Can now delete a playlist" />
     <MESSAGE value="Now possible to add music" />
     <MESSAGE value="Moved playlist functions to its own controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved playlist functions to its own controller" />
+    <MESSAGE value="Replace song list div by a table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replace song list div by a table" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Melodie/Controllers/MusicController.cs</url>
+          <line>78</line>
+          <properties documentPath="C:\Users\alexi\RiderProjects\Melodie\Melodie\Controllers\MusicController.cs" initialLine="74" containingFunctionPresentation="method 'IsFileAMusic'">
+            <startOffsets>
+              <option value="2754" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2827" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

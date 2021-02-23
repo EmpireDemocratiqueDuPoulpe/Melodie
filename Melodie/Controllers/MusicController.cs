@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,6 +15,11 @@ namespace Melodie.Controllers
         private readonly ILogger<MusicController> _logger;
         private readonly IMelodieDbService _dbService;
 
+        private List<string> _audioFilesExt = new(new[]
+        {
+            "wav", "ogg", "oga", "aif", "caf", "flac", "alac", "ac3", "mp3", "wma", "au", "asf", "aac"
+        });
+
         public MusicController(ILogger<MusicController> logger, IMelodieDbService service)
         {
             _logger = logger;
@@ -27,15 +33,22 @@ namespace Melodie.Controllers
             return PartialView("AddMusicFormPartial");
         }
         
-        /* ADD */
-        //Home/AddMusic
-        [HttpPost("Home/AddMusic", Name = "AddMusic")]
+        /* ADD
+        -------------------------------------------------- */
+        //Music/Add
+        [HttpPost("Music/Add", Name = "AddMusic")]
         public async Task<ActionResult<Music>> Add(Music music)
         {
             // Get file path
             var filePath = Path.GetFileNameWithoutExtension(music.MusicFile.FileName);
             var fileExtension = Path.GetExtension(music.MusicFile.FileName);
             filePath = DateTime.Now.ToString("yyyy_MM_dd_hh_mm_ss") + filePath.Trim() + fileExtension;
+            
+            // Check file extension
+            if (!IsFileAMusic(fileExtension))
+            {
+                return RedirectToAction("Playlist", "Playlist", new { pid = music.PlaylistId });
+            }
 
             // Get upload path
             // TODO: Doesn't work !
@@ -57,6 +70,13 @@ namespace Melodie.Controllers
             return (music != default)
                 ? RedirectToAction("Playlist", "Playlist", new { pid = music.PlaylistId })
                 : BadRequest();
+        }
+        
+        /* OTHER
+        -------------------------------------------------- */
+        public bool IsFileAMusic(string ext)
+        {
+            return _audioFilesExt.Contains(ext.Replace(".", string.Empty).ToLower());
         }
     }
 }
