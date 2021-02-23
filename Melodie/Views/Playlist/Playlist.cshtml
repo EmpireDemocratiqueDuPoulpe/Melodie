@@ -12,7 +12,7 @@
 	
 	<div id="playlist-info">
 		<div class="playlist-logo"></div>
-		@using (Html.BeginForm("UpdatePlaylist", "Home", FormMethod.Post, new { id = "playlist-info-text" }))
+		@using (Html.BeginForm("UpdatePlaylist", "Playlist", FormMethod.Post, new { id = "playlist-info-text" }))
 		{
 			@Html.HiddenFor(p => p.PlaylistId)
 			@Html.EditorFor(p => p.Name, new { htmlAttributes = new { @class = "playlist-title", placeholder = "Nom de la playlist" } })

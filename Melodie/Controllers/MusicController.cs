@@ -11,16 +11,17 @@ namespace Melodie.Controllers
 {
     public class MusicController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<MusicController> _logger;
         private readonly IMelodieDbService _dbService;
 
-        public MusicController(ILogger<HomeController> logger, IMelodieDbService service)
+        public MusicController(ILogger<MusicController> logger, IMelodieDbService service)
         {
             _logger = logger;
             _dbService = service;
         }
         
-        /* GET */
+        /* GET
+        -------------------------------------------------- */
         public PartialViewResult AddMusic()
         {
             return PartialView("AddMusicFormPartial");
@@ -54,7 +55,7 @@ namespace Melodie.Controllers
             var musicId = await _dbService.AddMusic(music);
 
             return (music != default)
-                ? RedirectToAction("Playlist", "Home", new { pid = music.PlaylistId })
+                ? RedirectToAction("Playlist", "Playlist", new { pid = music.PlaylistId })
                 : BadRequest();
         }
     }

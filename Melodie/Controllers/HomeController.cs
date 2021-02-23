@@ -18,9 +18,8 @@ namespace Melodie.Controllers
             _dbService = service;
         }
         
-        /* Index
+        /* GET
         -------------------------------------------------- */
-        /* GET */
         //Home/Index/
         [Route("")]
         [Route("Home")]
@@ -34,90 +33,13 @@ namespace Melodie.Controllers
         public async Task<IActionResult> Index()
         {
             var playlists = await _dbService.GetPlaylistsOf(1);
-            
+
             if (playlists.Equals(default)) return RedirectToAction("Error");
-            
+
             ViewBag.Title = "Home Page";
             ViewBag.Playlists = playlists;
-            
+
             return View();
-        }
-
-        /* Playlists
-        -------------------------------------------------- */
-        /* GET */
-        //Home/Playlist/
-        [Route("Home/Playlist")]
-        public IActionResult Playlist()
-        {
-            // TODO: Delete function?
-            ViewBag.Title = "Playlist";
-            return View();
-        }
-        
-        //Home/Playlist/ID
-        [HttpGet("Home/Playlist/{pid:int}", Name = "GetByPlaylistId")]
-        public async Task<IActionResult> Playlist(int pid)
-        {
-            var playlist = await _dbService.GetPlaylistById(pid);
-
-            if (playlist == default) return RedirectToAction("Index");
-            
-            ViewBag.Title = "Playlist - " + playlist.Name;
-            //ViewBag.Playlist = playlist;
-
-            return View(playlist);
-        }
-
-        /* ADD */
-        //Home/AddPlaylist
-        [HttpPost("Home/AddPlaylist", Name = "AddPlaylist")]
-        public async Task<ActionResult<Playlist>> AddPlaylist()
-        {
-            var playlist = new Playlist();
-
-            var playlistId = await _dbService.AddPlaylist(playlist);
-            return (playlist != default)
-                //? CreatedAtRoute("GetByPlaylistId", new {pid = playlistId}, playlist)
-                ? RedirectToAction("Playlist", new {pid = playlistId})
-                : BadRequest();
-        }
-
-        /* UPDATE */
-        //Home/UpdatePlaylist
-        //[HttpPut("Home/UpdatePlaylist", Name = "UpdatePlaylist")]
-        [HttpPost("Home/UpdatePlaylist", Name = "UpdatePlaylist")]
-        public async Task<ActionResult<Playlist>> UpdatePlaylist(Playlist playlist)
-        {
-            if (playlist.PlaylistId == null)
-            {
-                return BadRequest("ID must be set for UPDATE query.");
-            }
-
-            var result = await _dbService.UpdatePlaylist(playlist);
-            return (result > 0) ? NoContent() : NotFound();
-        }
-        
-        /* DELETE */
-        //Home/DeletePlaylist
-        //[HttpDelete("Home/Playlist/Delete/{pid}", Name = "DelPlaylist")]
-        [HttpPost("Home/DeletePlaylist", Name = "DelPlaylist")]
-        public async Task<ActionResult<Playlist>> DeletePlaylist(Playlist playlist)
-        {
-            if (playlist.PlaylistId == null)
-            {
-                return BadRequest("ID must be set for DELETE query.");
-            }
-            
-            var result = await _dbService.DeletePlaylist(playlist);
-            return (result > 0) ? RedirectToAction("Index") : NotFound();
-        }
-        
-        [HttpPost("Home/DeletePlaylistById", Name = "DelPlaylistById")]
-        public async Task<ActionResult<Playlist>> DeletePlaylistById(int pid)
-        {
-            var result = await _dbService.DeletePlaylistById(pid);
-            return (result > 0) ? RedirectToAction("Index") : NotFound();
         }
 
         /* Error
