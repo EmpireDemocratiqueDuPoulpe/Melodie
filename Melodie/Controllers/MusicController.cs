@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
 using Melodie.Data;
@@ -56,6 +57,9 @@ namespace Melodie.Controllers
             const string uploadPath = "D:\\MelodieStorage\\Musics\\";
 
             music.FilePath = uploadPath + filePath;
+            
+            // Set the creation date
+            music.CreationDate = DateTime.Now;
             
             // Save the file onto the server
             if (music.MusicFile.Length > 0)

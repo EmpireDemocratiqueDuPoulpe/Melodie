@@ -5,8 +5,14 @@
 	@Html.AntiForgeryToken()
 	
 	@Html.HiddenFor(m => m.PlaylistId)
-	@Html.EditorFor(m => m.Name, new { htmlAttributes = new { placeholder = "Nom", @required = "required" } })
-	<input type="file" name="MusicFile" required/>
-	                                    
-	<input type="submit" value="Ajouter">
+	<td class="song-name-row">@Html.EditorFor(m => m.Name, new { htmlAttributes = new { placeholder = "Nom", @required = "required" } })</td>
+	<td class="song-duration-row"></td>
+	<td class="song-author-row">@Html.EditorFor(m => m.Author, new { htmlAttributes = new { placeholder = "Auteur" } })</td>
+	<td class="song-add-date-row"><input type="file" name="MusicFile" required/></td>
+	<td class="song-actions-row">
+		<button class="btn2 growing-circle" type="submit">
+			<div class="btn-effect-box"></div>
+			<span>Ajouter</span>
+		</button>
+	</td>
 }

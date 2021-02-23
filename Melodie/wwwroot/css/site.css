@@ -464,11 +464,13 @@ header {
     display: block;
     width: 25px;
     height: 25px;
+    margin: 0 auto;
     border-radius: 50%;
     background: red;
     cursor: pointer;
 }
 
+.song-play-row      { width: 30px; text-align: center; }
 .song-name-row      { width: 25%; }
 .song-duration-row  { width: 5%; }
 .song-author-row    { width: 20%; }

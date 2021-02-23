@@ -7,9 +7,11 @@
     <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/Models/Music.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Models/Music.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +47,7 @@
     <setting file="file://$USER_HOME$/Desktop/Day2/Day2TP1/Pages/Wonder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/647FAEDF-A0C0-4C01-B79E-04471FFD80DF/233/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/alexi/RiderProjects/Melodie/Melodie/Views/Shared/AddMusicFormPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -63,7 +66,6 @@
       <option value="$PROJECT_DIR$/Melodie/Data/IMelodieDbService.cs" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/Web.config" />
       <option value="$PROJECT_DIR$/Melodie/Web.config" />
-      <option value="$PROJECT_DIR$/Melodie/Models/Music.cs" />
       <option value="$PROJECT_DIR$/Melodie/Data/MelodieDbContext.cs" />
       <option value="$PROJECT_DIR$/Melodie/Models/Playlist.cs" />
       <option value="$PROJECT_DIR$/Melodie/Startup.cs" />
@@ -71,11 +73,12 @@
       <option value="$PROJECT_DIR$/Melodie/Views/Home/Playlist.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/HomeController.cs" />
       <option value="$PROJECT_DIR$/Melodie/Views/Home/Index.cshtml" />
-      <option value="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" />
-      <option value="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" />
-      <option value="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" />
+      <option value="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" />
+      <option value="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" />
+      <option value="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" />
+      <option value="$PROJECT_DIR$/Melodie/Models/Music.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1o4TnRmOu64XrIIxtmBo7OSf87P" />
@@ -147,7 +150,7 @@
       <workItem from="1613940236187" duration="3422000" />
       <workItem from="1613992211861" duration="13131000" />
       <workItem from="1614024283227" duration="11033000" />
-      <workItem from="1614081529470" duration="17813000" />
+      <workItem from="1614081529470" duration="20240000" />
     </task>
     <task id="LOCAL-00001" summary="Added Playlist page">
       <created>1613846759594</created>
@@ -219,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614100260864</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added a verification to prevent a user from uploading file that is not a music">
+      <created>1614101884209</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1614101884209</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,20 +260,21 @@
     <MESSAGE value="Now possible to add music" />
     <MESSAGE value="Moved playlist functions to its own controller" />
     <MESSAGE value="Replace song list div by a table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replace song list div by a table" />
+    <MESSAGE value="Added a verification to prevent a user from uploading file that is not a music" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a verification to prevent a user from uploading file that is not a music" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Melodie/Controllers/MusicController.cs</url>
-          <line>78</line>
+          <line>82</line>
           <properties documentPath="C:\Users\alexi\RiderProjects\Melodie\Melodie\Controllers\MusicController.cs" initialLine="74" containingFunctionPresentation="method 'IsFileAMusic'">
             <startOffsets>
-              <option value="2754" />
+              <option value="2879" />
             </startOffsets>
             <endOffsets>
-              <option value="2827" />
+              <option value="2952" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />

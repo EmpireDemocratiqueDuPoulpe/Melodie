@@ -1,4 +1,5 @@
-﻿@model Melodie.Models.Playlist
+﻿@using System.Globalization
+@model Melodie.Models.Playlist
 
 @section Scripts {
     <script src="~/js/playlists_logo_filler.js"></script>
@@ -62,8 +63,8 @@
 						<td class="song-play-row"><div class="song-play-btn"></div></td>
 						<td class="song-name-row">@music.Name</td>
 						<td class="song-duration-row">DURATION</td>
-						<td class="song-author-row">AUTHOR</td>
-						<td class="song-add-date-row">ADD DATE</td>
+						<td class="song-author-row">@music.Author</td>
+						<td class="song-add-date-row">@music.CreationDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)</td>
 						<td class="song-actions-row">
 							<button class="btn2 showing-icon">
 								<div class="btn-effect-box">
@@ -79,7 +80,8 @@
 			}
 			
 			<tr>
-				@{ await Html.RenderPartialAsync("AddMusicFormPartial", new Music { PlaylistId = Model.PlaylistId }); }
+				<td class="song-play-row"></td>
+				@{ await Html.RenderPartialAsync("AddMusicFormPartial", new Music {PlaylistId = Model.PlaylistId}); }
 			</tr>
 		</tbody>
 	</table>
