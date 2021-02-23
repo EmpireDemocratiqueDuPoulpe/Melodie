@@ -452,28 +452,15 @@ header {
 
 #playlist-info-text .playlist-info-buttons button:not(:last-child) { margin-right: 10px; }
 
-/* Playlist - Songs list
+/* Playlist - Songs list 2
 -------------------------------------------------- */
 
-.song-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding: 0 10px;
-}
+#songs-table                        { width: 100%; text-align: left; border-collapse: collapse; }
+#songs-table tr                     { height: 50px; }
+#songs-table tr:hover               { background: violet; }
+#songs-table th, #songs-table td    { padding: 0 10px; }
 
-.song-block:hover {
-    background: violet;
-}
-
-.song-block .song-row                   { flex-grow: 1; }
-.song-block .song-row:not(:last-child)  { margin-right: 5%; }
-
-.song-block .song-play {
-    flex-grow: 0;
-    flex-shrink: 0;
+.song-play-btn {
     display: block;
     width: 25px;
     height: 25px;
@@ -482,28 +469,8 @@ header {
     cursor: pointer;
 }
 
-.song-block .song-play.no-play-button {
-    background: transparent;
-    cursor: default;
-    pointer-events: none;
-}
-
-.song-block .song-name {
-    width: 15%;
-    background: #007bff;
-}
-
-.song-block .song-duration {
-    width: 5%;
-    background: peru;
-}
-
-.song-block .song-author {
-    width: 10%;
-    background: hotpink;
-}
-
-.song-block .song-add-date {
-    width: 7%;
-    background: papayawhip;
-}
+.song-name-row      { width: 25%; }
+.song-duration-row  { width: 5%; }
+.song-author-row    { width: 20%; }
+.song-add-date-row  { width: 7%; }
+.song-actions-row   { text-align: right; }

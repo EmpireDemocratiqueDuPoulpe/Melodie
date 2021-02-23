@@ -42,30 +42,45 @@
 		}
 	</div>
 
-	<!-- TODO: Replace this container with a HTML table -->
-	<div id="songs-container">
-		<div class="song-block">
-			<div class="song-play no-play-button song-row"></div>
-			<p class="song-name song-row">Nom</p>
-			<p class="song-duration song-row">Durée</p>
-			<p class="song-author song-row">Auteur</p>
-			<p class="song-add-date song-row">Date d'ajout</p>
-		</div>
-		
-		@if (Model.Musics != null)
-		{
-			@foreach (var music in Model.Musics)
+	<table id="songs-table">
+		<thead>
+			<tr>
+				<th class="song-play-row"></th>
+				<th class="song-name-row">Nom</th>
+				<th class="song-duration-row">Durée</th>
+				<th class="song-author-row">Auteur</th>
+				<th class="song-add-date-row">Date d'ajout</th>
+				<th class="song-actions-row"></th>
+			</tr>
+		</thead>
+		<tbody>
+			@if (Model.Musics != null)
 			{
-				<div class="song-block">
-					<div class="song-play song-row"></div>
-					<p class="song-name song-row">@music.Name</p>
-					<p class="song-duration song-row">DURATION</p>
-					<p class="song-author song-row">AUTHOR</p>
-					<p class="song-add-date song-row">ADD DATE</p>
-				</div>
+				@foreach (var music in Model.Musics)
+				{
+					<tr>
+						<td class="song-play-row"><div class="song-play-btn"></div></td>
+						<td class="song-name-row">@music.Name</td>
+						<td class="song-duration-row">DURATION</td>
+						<td class="song-author-row">AUTHOR</td>
+						<td class="song-add-date-row">ADD DATE</td>
+						<td class="song-actions-row">
+							<button class="btn2 showing-icon">
+								<div class="btn-effect-box">
+									<object data="/images/delete-24px.svg" type="image/svg+xml">
+										<img src="/images/delete-24px.png" alt="Delete"/>
+									</object>
+								</div>
+								<span>Supprimer</span>
+							</button>
+						</td>
+					</tr>
+				}
 			}
-		}
-		
-		@{ await Html.RenderPartialAsync("AddMusicFormPartial", new Music { PlaylistId = Model.PlaylistId }); }
-	</div>
+			
+			<tr>
+				@{ await Html.RenderPartialAsync("AddMusicFormPartial", new Music { PlaylistId = Model.PlaylistId }); }
+			</tr>
+		</tbody>
+	</table>
 </div>
