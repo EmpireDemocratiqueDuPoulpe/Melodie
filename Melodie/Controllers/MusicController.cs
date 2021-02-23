@@ -6,6 +6,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Melodie.Data;
 using Melodie.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -15,16 +16,20 @@ namespace Melodie.Controllers
     {
         private readonly ILogger<MusicController> _logger;
         private readonly IMelodieDbService _dbService;
+        private readonly IWebHostEnvironment _env;
 
         private List<string> _audioFilesExt = new(new[]
         {
             "wav", "ogg", "oga", "aif", "caf", "flac", "alac", "ac3", "mp3", "wma", "au", "asf", "aac"
         });
 
-        public MusicController(ILogger<MusicController> logger, IMelodieDbService service)
+        private string _uploadFolder = "musics/";
+
+        public MusicController(ILogger<MusicController> logger, IMelodieDbService service, IWebHostEnvironment env)
         {
             _logger = logger;
             _dbService = service;
+            _env = env;
         }
         
         /* GET
@@ -54,9 +59,13 @@ namespace Melodie.Controllers
             // Get upload path
             // TODO: Doesn't work !
             // var uploadPath = ConfigurationManager.AppSettings["UserMusicPath"];
-            const string uploadPath = "D:\\MelodieStorage\\Musics\\";
+            //const string uploadPath = "D:\\MelodieStorage\\Musics\\";
 
-            music.FilePath = uploadPath + filePath;
+            //music.FilePath = uploadPath + filePath;
+            var relativePath = Path.Combine(_uploadFolder, filePath);
+            var absolutePath = Path.Combine(_env.WebRootPath, _uploadFolder, filePath);
+
+            music.FilePath = relativePath;
             
             // Set the creation date
             music.CreationDate = DateTime.Now;
@@ -64,7 +73,7 @@ namespace Melodie.Controllers
             // Save the file onto the server
             if (music.MusicFile.Length > 0)
             {
-                await using Stream fileStream = new FileStream(music.FilePath, FileMode.Create);
+                await using Stream fileStream = new FileStream(absolutePath, FileMode.Create);
                 await music.MusicFile.CopyToAsync(fileStream);
             }
             

@@ -5,6 +5,7 @@
     <e p="C:\Users\alexi\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Melodie.372990550.00" t="ExcludeRecursive" />
     <e p="C:\Users\alexi\AppData\Roaming\JetBrains\Rider2020.3\consoles\db" t="IncludeRecursive" />
     <e p="C:\Users\alexi\AppData\Roaming\JetBrains\Rider2020.3\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\alexi\AppData\Roaming\JetBrains\Rider2020.3\javascript\extLibs\http_unpkg.com_wavesurfer.js.js" t="IncludeRecursive" />
     <e p="C:\Users\alexi\RiderProjects\Melodie" t="IncludeFlat">
       <e p="Melodie" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -57,6 +58,7 @@
             <e p="AddMusicFormPartial.cshtml" t="Include" />
             <e p="DelMusicFormPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
+            <e p="MusicPlayer.cshtml" t="Include" />
           </e>
         </e>
         <e p="Web.config" t="Include" />
@@ -71,8 +73,9 @@
             <e p="delete-24px.svg" t="Include" />
           </e>
           <e p="js" t="Include">
-            <e p="playlists_logo_filler.js" t="Include" />
-            <e p="site.js" t="Include" />
+            <e p="GlobalFunctions.js" t="Include" />
+            <e p="MusicPlayer.js" t="Include" />
+            <e p="PlaylistsLogoFiller.js" t="Include" />
           </e>
           <e p="lib" t="Include">
             <e p="bootstrap" t="Include">
@@ -126,6 +129,14 @@
               <e p="jquery.validate.unobtrusive.min.js" t="Include" />
               <e p="LICENSE.txt" t="Include" />
             </e>
+          </e>
+          <e p="Musics" t="Include">
+            <e p=".gitignore" t="Include" />
+            <e p=".keep" t="Include" />
+            <e p="2021_02_23_08_59_45Rick Astley - Never Gonna Give You Up.mp3" t="Include" />
+            <e p="2021_02_23_09_04_36Daft Punk - Harder Better Faster.mp3" t="Include" />
+            <e p="2021_02_23_09_04_50French 79 - By Your Side ft Sarah Rebecca.mp3" t="Include" />
+            <e p="2021_02_23_09_05_10Rick Astley - Never Gonna Give You Up.mp3" t="Include" />
           </e>
         </e>
       </e>

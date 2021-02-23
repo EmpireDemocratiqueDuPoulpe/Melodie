@@ -1,11 +1,4 @@
-﻿/** Custom foreach **/
-const forEach = function (array, callback, scope) {
-    for (let i = 0; i < array.length; i++) {
-        callback.call(scope, i, array[i]);
-    }
-}
-
-/** Get playlists **/
+﻿/** Get playlists **/
 const smallPlaylists = document.querySelectorAll(".playlist-block");
 const fullPlaylist = document.querySelectorAll("#playlist-info");
 

@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="~/css/normalize.css"/>
         <link rel="stylesheet" href="~/css/site.css"/>
     </head>
-    <body>
+    <body class=" @(ViewBag.BodyClasses != null ? ViewBag.BodyClasses : "")">
         <!-- Header -->
         <header>
             <!-- Empty item -->
@@ -50,7 +50,7 @@
         <!-- Scripts -->
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/GlobalFunctions.js"></script>
         @await RenderSectionAsync("Scripts", required: false)
     </body>
 </html>

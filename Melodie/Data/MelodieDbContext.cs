@@ -12,10 +12,10 @@ namespace Melodie.Data
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Music>()
-                .HasOne(m => m.Playlist)
-                .WithMany(p => p.Musics)
-                .HasForeignKey(m => m.PlaylistId);
+            //modelBuilder.Entity<Music>()
+            //    .HasOne(m => m.Playlist)
+            //    .WithMany(p => p.Musics)
+            //    .HasForeignKey(m => m.PlaylistId);
         }
     }
 }

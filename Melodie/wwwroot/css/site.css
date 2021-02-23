@@ -258,6 +258,81 @@ header {
     text-overflow: ellipsis;
 }
 
+/* Global - Music player
+-------------------------------------------------- */
+
+body.has-music-player { padding-bottom: 150px; } /* Music player height */
+
+#music-player {
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: #AAAAAA;
+    z-index: 500;
+}
+
+/** Waveform **/
+#music-player-waveform {
+    display: block;
+    width: 100%;
+    height: 64px;
+}
+
+/** Controls **/
+#music-player-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#music-player-controls .section {
+    width: 33%;
+    height: 100%;
+}
+
+/* Buttons */
+#music-player-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 510;
+}
+
+.music-player-btn {
+    width: 40px;
+    height: 40px;
+    background: cornflowerblue;
+    margin: 0 5px;
+    border: thin dodgerblue solid;
+    border-radius: 50%;
+}
+
+.music-player-btn:hover { background: dodgerblue; border: thin royalblue solid; }
+.music-player-btn.smaller { width: 25px; height: 25px }
+.music-player-btn.bigger { width: 55px; height: 55px }
+
+/* Sliders */
+#music-player-sliders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.music-player-slider { height: 11px; }
+.music-player-slider:not(:last-child) { margin-bottom: 5px; }
+
+.music-player-slider img,
+.music-player-slider input[type="range"] {
+    height: 100%;
+}
 
 /* Home
 -------------------------------------------------- */
@@ -452,7 +527,7 @@ header {
 
 #playlist-info-text .playlist-info-buttons button:not(:last-child) { margin-right: 10px; }
 
-/* Playlist - Songs list 2
+/* Playlist - Songs list
 -------------------------------------------------- */
 
 #songs-table                        { width: 100%; text-align: left; border-collapse: collapse; }

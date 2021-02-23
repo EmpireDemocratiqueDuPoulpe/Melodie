@@ -2,6 +2,7 @@
 @model Melodie.Models.Playlist
 
 @{
+	// Music count
 	var musicsCount = "";
 	
 	if (Model.Musics != null)
@@ -9,10 +10,13 @@
 		var count = Model.Musics.Count;
 		musicsCount = count + " musique" + (count > 0 ? "s" : "");
 	}
+	
+	// Music player
+	ViewBag.BodyClasses = "has-music-player";
 }
 
 @section Scripts {
-    <script src="~/js/playlists_logo_filler.js"></script>
+	<script src="~/js/PlaylistsLogoFiller.js"></script>
 }
 
 <div id="playlist-container">
@@ -72,7 +76,7 @@
 				@foreach (var music in Model.Musics)
 				{
 					<tr>
-						<td class="song-play-row"><div class="song-play-btn"></div></td>
+						<td class="song-play-row"><div class="song-play-btn" data-url="@music.FilePath"></div></td>
 						<td class="song-name-row">@music.Name</td>
 						<td class="song-duration-row">DURATION</td>
 						<td class="song-author-row">@music.Author</td>
@@ -91,3 +95,5 @@
 		</tbody>
 	</table>
 </div>
+
+@{ await Html.RenderPartialAsync("MusicPlayer", Model); }
