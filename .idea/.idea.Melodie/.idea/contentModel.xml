@@ -6,6 +6,7 @@
     <e p="C:\Users\alexi\AppData\Roaming\JetBrains\Rider2020.3\consoles\db" t="IncludeRecursive" />
     <e p="C:\Users\alexi\AppData\Roaming\JetBrains\Rider2020.3\extensions" t="IncludeRecursive" />
     <e p="C:\Users\alexi\AppData\Roaming\JetBrains\Rider2020.3\javascript\extLibs\http_unpkg.com_wavesurfer.js.js" t="IncludeRecursive" />
+    <e p="C:\Users\alexi\AppData\Roaming\JetBrains\Rider2020.3\javascript\extLibs\http_unpkg.com_wavesurfer.js_dist_plugin_wavesurfer.cursor.js" t="IncludeRecursive" />
     <e p="C:\Users\alexi\RiderProjects\Melodie" t="IncludeFlat">
       <e p="Melodie" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />

@@ -73,10 +73,13 @@
 		<tbody>
 			@if (Model.Musics != null)
 			{
+				var i = 0;
 				@foreach (var music in Model.Musics)
 				{
-					<tr>
-						<td class="song-play-row"><div class="song-play-btn" data-url="@music.FilePath"></div></td>
+					<tr class="song-row">
+						<td class="song-play-row">
+							<div class="song-play-btn" data-id="@i" data-uri="@music.FilePath"></div>
+						</td>
 						<td class="song-name-row">@music.Name</td>
 						<td class="song-duration-row">DURATION</td>
 						<td class="song-author-row">@music.Author</td>
@@ -85,6 +88,8 @@
 							@{ await Html.RenderPartialAsync("DelMusicFormPartial", new Music { MusicId = music.MusicId, PlaylistId = music.PlaylistId }); }
 						</td>
 					</tr>
+
+					i++;
 				}
 			}
 			

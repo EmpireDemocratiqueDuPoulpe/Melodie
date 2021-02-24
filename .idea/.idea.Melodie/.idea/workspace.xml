@@ -5,22 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Melodie/Views/Shared/MusicPlayer.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Melodie/wwwroot/js/GlobalFunctions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Melodie/wwwroot/js/MusicPlayer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Data/MelodieDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Data/MelodieDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/Views/Shared/MusicPlayer.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Shared/MusicPlayer.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/js/playlists_logo_filler.js" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/js/PlaylistsLogoFiller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/js/site.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/js/MusicPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/js/MusicPlayer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +54,6 @@
     <setting file="file://$USER_HOME$/Desktop/Day2/Day2TP1/Pages/Wonder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/647FAEDF-A0C0-4C01-B79E-04471FFD80DF/233/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/alexi/RiderProjects/Melodie/Melodie/Views/Shared/AddMusicFormPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/alexi/RiderProjects/Melodie/Melodie/Views/Shared/AddMusicFormPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -92,13 +81,13 @@
       <option value="$PROJECT_DIR$/Melodie/Views/Shared/DelMusicFormPartial.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/playlists_logo_filler.js" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/forEach_function.js" />
-      <option value="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Views/Home/Index.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Views/Shared/_Layout.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" />
       <option value="$PROJECT_DIR$/Melodie/Data/MelodieDbContext.cs" />
-      <option value="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" />
       <option value="$PROJECT_DIR$/Melodie/Views/Shared/MusicPlayer.cshtml" />
+      <option value="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" />
+      <option value="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/MusicPlayer.js" />
     </changedPaths>
   </component>
@@ -171,7 +160,8 @@
       <workItem from="1613940236187" duration="3422000" />
       <workItem from="1613992211861" duration="13131000" />
       <workItem from="1614024283227" duration="11033000" />
-      <workItem from="1614081529470" duration="36603000" />
+      <workItem from="1614081529470" duration="36753000" />
+      <workItem from="1614166801714" duration="6096000" />
     </task>
     <task id="LOCAL-00001" summary="Added Playlist page">
       <created>1613846759594</created>
@@ -264,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614105826540</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added WaveSurfer API">
+      <created>1614121588276</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614121588276</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +295,7 @@
     <MESSAGE value="Added a verification to prevent a user from uploading file that is not a music" />
     <MESSAGE value="Improved music addition form" />
     <MESSAGE value="Added music deletion and improved playlist interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added music deletion and improved playlist interface" />
+    <MESSAGE value="Added WaveSurfer API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added WaveSurfer API" />
   </component>
 </project>
