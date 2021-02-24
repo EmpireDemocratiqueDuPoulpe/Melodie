@@ -59,6 +59,8 @@
             <e p="AddMusicFormPartial.cshtml" t="Include" />
             <e p="DelMusicFormPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
+            <e p="Footer.cshtml" t="Include" />
+            <e p="FooterContent.cshtml" t="Include" />
             <e p="MusicPlayer.cshtml" t="Include" />
           </e>
         </e>
@@ -72,8 +74,21 @@
           <e p="images" t="Include">
             <e p="delete-24px.png" t="Include" />
             <e p="delete-24px.svg" t="Include" />
+            <e p="pause-24px.png" t="Include" />
+            <e p="pause-24px.svg" t="Include" />
+            <e p="play_arrow-24px.png" t="Include" />
+            <e p="play_arrow-24px.svg" t="Include" />
+            <e p="skip_next-24px.png" t="Include" />
+            <e p="skip_next-24px.svg" t="Include" />
+            <e p="skip_previous-24px.png" t="Include" />
+            <e p="skip_previous-24px.svg" t="Include" />
+            <e p="volume_up-24px.png" t="Include" />
+            <e p="volume_up-24px.svg" t="Include" />
+            <e p="zoom_in-24px.png" t="Include" />
+            <e p="zoom_in-24px.svg" t="Include" />
           </e>
           <e p="js" t="Include">
+            <e p="FooterFixer.js" t="Include" />
             <e p="GlobalFunctions.js" t="Include" />
             <e p="MusicPlayer.js" t="Include" />
             <e p="PlaylistsLogoFiller.js" t="Include" />
@@ -139,6 +154,8 @@
             <e p="2021_02_23_09_04_50French 79 - By Your Side ft Sarah Rebecca.mp3" t="Include" />
             <e p="2021_02_23_09_05_10Rick Astley - Never Gonna Give You Up.mp3" t="Include" />
             <e p="2021_02_24_02_26_35Cloud 9 - Hide The Pain.mp3" t="Include" />
+            <e p="2021_02_24_09_38_53M83 - Outro.mp3" t="Include" />
+            <e p="2021_02_24_09_42_38M83 - Outro.mp3" t="Include" />
           </e>
         </e>
       </e>

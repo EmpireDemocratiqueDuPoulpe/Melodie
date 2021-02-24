@@ -32,9 +32,9 @@
 			@Html.AntiForgeryToken()
 			
 			@Html.HiddenFor(p => p.PlaylistId)
-			@Html.EditorFor(p => p.Name, new { htmlAttributes = new { @class = "playlist-title", placeholder = "Nom de la playlist" } })
-			<p class="playlist-duration">@musicsCount</p>
-			@Html.EditorFor(p => p.Description, new { htmlAttributes = new { @class = "playlist-desc", placeholder = "Description" } })
+			@Html.EditorFor(p => p.Name, new { htmlAttributes = new { @class = "playlist-title bg-on-hover", placeholder = "Nom de la playlist" } })
+			<p class="playlist-duration light-text">@musicsCount</p>
+			@Html.EditorFor(p => p.Description, new { htmlAttributes = new { @class = "playlist-desc bg-on-hover", placeholder = "Description" } })
 			
 			<div class="playlist-info-buttons">
 				<button class="btn2 growing-circle" type="submit">
@@ -78,7 +78,11 @@
 				{
 					<tr class="song-row">
 						<td class="song-play-row">
-							<div class="song-play-btn" data-id="@i" data-uri="@music.FilePath"></div>
+							<div class="song-play-btn" data-id="@i" data-uri="@music.FilePath">
+								<object id="play-icon" data="/images/play_arrow-24px.svg" type="image/svg+xml">
+                                	<img src="/images/play_arrow-24px.png" alt="Play"/>
+                                </object>
+							</div>
 						</td>
 						<td class="song-name-row">@music.Name</td>
 						<td class="song-duration-row">DURATION</td>

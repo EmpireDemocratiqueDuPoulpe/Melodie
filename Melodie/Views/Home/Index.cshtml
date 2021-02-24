@@ -14,7 +14,7 @@
         
         <div id="playlists-grid">
             <form class="playlist-block" asp-controller="Playlist" asp-action="Add">
-                <button class="playlist-sub-block" type="submit">
+                <button id="add-playlist-btn" class="playlist-sub-block" type="submit">
                     <div class="playlist-logo"></div>
                     <p class="playlist-title">Ajouter une playlist</p>
                 </button>
@@ -22,7 +22,7 @@
             
             @foreach (var playlist in playlists)
             {
-                <a class="playlist-block" asp-controller="Playlist" asp-action="Playlist" asp-route-pid="@playlist.PlaylistId">
+                <a class="playlist-block disable-link-color" asp-controller="Playlist" asp-action="Playlist" asp-route-pid="@playlist.PlaylistId">
                     <div class="playlist-logo"></div>
                     <p class="playlist-title">@playlist.Name</p>
                     <p class="playlist-desc">@playlist.Description</p>
@@ -43,92 +43,94 @@
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
             
             <div class="last-song-block">
                 <div class="last-song-logo"></div>
                 <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author">Captain Diabète</p>
+                <p class="last-song-author light-text">Captain Diabète</p>
             </div>
         </div>
     </div>
 </div>
+
+@{ await Html.RenderPartialAsync("Footer"); }

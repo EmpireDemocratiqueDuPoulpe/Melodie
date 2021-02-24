@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="fr">
+<html class="dark-theme" lang="fr">
     <head>
         <title>@ViewBag.Title - Melodie</title>
         <meta charset="utf-8"/>
@@ -34,23 +34,11 @@
             </main>
         </div>
 
-        <!-- Footer and player -->
-        <footer>
-            <div id="footer-player">
-                
-            </div>
-            
-            <div id="footer-copyright">
-            <!-- TODO: Privacy page 
-            <p>&copy; 2021 - Melodie - <a asp-area="" asp-controller="Home" asp action="Privacy">Privacy</a></p>-->
-            <p>&copy; 2021 - Melodie - <a asp-area="" asp-controller="Home">Privacy</a></p>
-            </div>
-        </footer>
-    
         <!-- Scripts -->
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="~/js/GlobalFunctions.js"></script>
+        <script src="~/js/FooterFixer.js"></script>
         @await RenderSectionAsync("Scripts", required: false)
     </body>
 </html>
