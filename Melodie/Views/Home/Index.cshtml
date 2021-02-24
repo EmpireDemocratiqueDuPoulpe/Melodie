@@ -43,95 +43,19 @@
         <h2>Derni&egrave;res musiques ajout&eacute;es</h2>
         
         <div id="last-songs-scroller">
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
-            
-            <div class="last-song-block">
-                <div class="last-song-logo"></div>
-                <p class="last-song-name">Une music trop M&Eacute;taL !</p>
-                <p class="last-song-author light-text">Captain Diabète</p>
-            </div>
+            @if (ViewBag.LastMusics != null)
+            {
+                @foreach (var lastMusic in ViewBag.LastMusics)
+                {
+                    <div class="last-song-block">
+                        <div class="last-song-logo">
+
+                        </div>
+                        <p class="last-song-name">@lastMusic.Name</p>
+                        <p class="last-song-author light-text">@lastMusic.Author</p>
+                    </div>
+                }
+            }
         </div>
     </div>
 </div>

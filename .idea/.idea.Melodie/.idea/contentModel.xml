@@ -72,6 +72,8 @@
           </e>
           <e p="favicon.ico" t="Include" />
           <e p="images" t="Include">
+            <e p="album-24px.png" t="Include" />
+            <e p="album-24px.svg" t="Include" />
             <e p="delete-24px.png" t="Include" />
             <e p="delete-24px.svg" t="Include" />
             <e p="pause-24px.png" t="Include" />

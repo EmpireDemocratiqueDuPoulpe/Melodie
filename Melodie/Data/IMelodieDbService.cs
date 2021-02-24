@@ -16,6 +16,7 @@ namespace Melodie.Data
         
         Task<Music> GetMusicById(int musicId);
         Task<IEnumerable<Music>> GetMusicsOf(int playlistId);
+        Task<IEnumerable<Music>> GetLastMusics(int count = 10);
         
         // ADD
         Task<int> AddUser(User user);

@@ -33,11 +33,13 @@ namespace Melodie.Controllers
         public async Task<IActionResult> Index()
         {
             var playlists = await _dbService.GetPlaylistsOf(1);
+            var lastMusics = await _dbService.GetLastMusics(10);
 
             if (playlists.Equals(default)) return RedirectToAction("Error");
 
             ViewBag.Title = "Home Page";
             ViewBag.Playlists = playlists;
+            ViewBag.LastMusics = lastMusics;
 
             return View();
         }

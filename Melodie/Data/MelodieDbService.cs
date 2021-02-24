@@ -57,7 +57,15 @@ namespace Melodie.Data
                 .OrderBy(m => m.MusicId)
                 .ToListAsync();
         }
-        
+
+        public async Task<IEnumerable<Music>> GetLastMusics(int count = 10)
+        {
+            return await _db.Musics
+                .OrderByDescending(m => m.MusicId)
+                .Take(count)
+                .ToListAsync();
+        }
+
         /* ADD
         -------------------------------------------------- */
         // Users
