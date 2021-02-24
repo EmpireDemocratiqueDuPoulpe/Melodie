@@ -33,6 +33,10 @@ namespace Melodie.Models
         public string Author { get; set; }
         
         
+        [Column("duration")]
+        public string Duration { get; set; }
+        
+        
         [Column("creation_date", TypeName = "Date")]
         public DateTime CreationDate { get; set; }
         
@@ -42,6 +46,12 @@ namespace Melodie.Models
 
 
         [NotMapped]
-        public IFormFile MusicFile { get; set; }  
+        public IFormFile MusicFile { get; set; }
+
+
+        public Music()
+        {
+            Duration = "00:00";
+        }
     }
 }

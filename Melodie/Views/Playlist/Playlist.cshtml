@@ -20,7 +20,7 @@
 }
 
 <div id="playlist-container">
-	<a id="back-to-home" class="btn2 slide-effect" asp-controller="Home" asp-action="Index">
+	<a id="back-to-home" class="btn orange slide-effect" asp-controller="Home" asp-action="Index">
 		<div class="btn-effect-box"></div>
 		<span>&lt;-- Retour</span>
 	</a>
@@ -37,12 +37,12 @@
 			@Html.EditorFor(p => p.Description, new { htmlAttributes = new { @class = "playlist-desc bg-on-hover", placeholder = "Description" } })
 			
 			<div class="playlist-info-buttons">
-				<button class="btn2 growing-circle" type="submit">
+				<button class="btn yellow growing-circle" type="submit">
 					<div class="btn-effect-box"></div>
 					<span>Enregistrer</span>
 				</button>
 				
-				<button class="btn2 showing-icon" type="submit" formaction="@Url.Action("Delete")">
+				<button class="btn orange showing-icon" type="submit" formaction="@Url.Action("Delete")">
 					<!--<div class="btn-effect-box">
 						<iframe src="/images/delete-24px.svg" sandbox>
 							<img src="/images/delete-24px.png" alt="Delete"/>
@@ -85,7 +85,7 @@
 							</div>
 						</td>
 						<td class="song-name-row">@music.Name</td>
-						<td class="song-duration-row">DURATION</td>
+						<td class="song-duration-row">@music.Duration</td>
 						<td class="song-author-row">@music.Author</td>
 						<td class="song-add-date-row">@music.CreationDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)</td>
 						<td class="song-actions-row">
