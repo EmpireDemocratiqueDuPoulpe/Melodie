@@ -73,8 +73,9 @@ html.dark-theme { background: #353535; color: #F7F9F9; }
 .dark-theme input[type=range]::-ms-fill-upper                   { background: #212121; }
 
 /** Buttons **/
-.dark-theme #theme-selector                     { background: #212121; }
+.dark-theme #theme-selector                     { background: #212121; color: #F7F9F9 !important; }
 .dark-theme #theme-selector-icon                { background: #171717; }
+.dark-theme #theme-selector-icon .theme-icon    { filter: invert(46%) sepia(7%) saturate(111%) hue-rotate(131deg) brightness(91%) contrast(84%); }
 .dark-theme #theme-selector-icon #dark-icon     { display: block; }
 .dark-theme #theme-selector-icon #light-icon    { display: none; }
 .dark-theme #theme-selector #dark-theme-text    { display: block; }
@@ -191,6 +192,7 @@ header {
     width: 150px;
     height: 35px;
     border-radius: 75px; /* Half of the width */
+    text-decoration: none;
     cursor: pointer;
 }
 

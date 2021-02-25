@@ -29,13 +29,13 @@
             <!-- Theme selector -->
             <div class="header-section left">
                 <div id="theme-selector-wrapper">
-                    <a id="theme-selector" asp-controller="Home" asp-action="ChangeTheme" asp-route-url="@Context.Request.GetEncodedUrl()">
+                    <a id="theme-selector" class="disable-visited" asp-controller="Home" asp-action="ChangeTheme" asp-route-url="@Context.Request.GetEncodedUrl()">
                         <div id="theme-selector-icon">
-                            <object id="dark-icon" data="/images/nights_stay-24px.svg" type="image/svg+xml">
+                            <object id="dark-icon" class="theme-icon" data="/images/nights_stay-24px.svg" type="image/svg+xml">
                                 <img src="/images/nights_stay-24px.png" alt="Dark mode"/>
                             </object>
 
-                            <object id="light-icon" data="/images/wb_sunny-24px.svg" type="image/svg+xml">
+                            <object id="light-icon" class="theme-icon" data="/images/wb_sunny-24px.svg" type="image/svg+xml">
                                 <img src="/images/wb_sunny-24px.png" alt="Light mode"/>
                             </object>
                         </div>
