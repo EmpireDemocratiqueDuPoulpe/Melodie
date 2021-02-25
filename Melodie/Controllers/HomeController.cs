@@ -4,6 +4,7 @@ using Melodie.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Melodie.Models;
+using Microsoft.AspNetCore.Http.Extensions;
 
 namespace Melodie.Controllers
 {
@@ -42,6 +43,23 @@ namespace Melodie.Controllers
             ViewBag.LastMusics = lastMusics;
 
             return View();
+        }
+        
+        public IActionResult ChangeTheme(string url)
+        {
+            if (HttpContext.Request.Cookies.Keys.Contains("theme"))
+            {
+                var currentTheme = HttpContext.Request.Cookies["theme"];
+
+                HttpContext.Response.Cookies.Append("theme",
+                    currentTheme == "dark-theme" ? "light-theme" : "dark-theme");
+            }
+            else
+            {
+                HttpContext.Response.Cookies.Append("theme", "light-theme");
+            }
+
+            return Redirect(url);
         }
 
         /* Error

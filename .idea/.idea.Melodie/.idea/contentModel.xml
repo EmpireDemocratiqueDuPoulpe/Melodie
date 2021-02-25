@@ -76,6 +76,8 @@
             <e p="album-24px.svg" t="Include" />
             <e p="delete-24px.png" t="Include" />
             <e p="delete-24px.svg" t="Include" />
+            <e p="nights_stay-24px.png" t="Include" />
+            <e p="nights_stay-24px.svg" t="Include" />
             <e p="pause-24px.png" t="Include" />
             <e p="pause-24px.svg" t="Include" />
             <e p="play_arrow-24px.png" t="Include" />
@@ -88,6 +90,8 @@
             <e p="volume_off-24px.svg" t="Include" />
             <e p="volume_up-24px.png" t="Include" />
             <e p="volume_up-24px.svg" t="Include" />
+            <e p="wb_sunny-24px.png" t="Include" />
+            <e p="wb_sunny-24px.svg" t="Include" />
             <e p="zoom_in-24px.png" t="Include" />
             <e p="zoom_in-24px.svg" t="Include" />
           </e>
@@ -96,6 +100,7 @@
             <e p="GlobalFunctions.js" t="Include" />
             <e p="MusicPlayer.js" t="Include" />
             <e p="PlaylistsLogoFiller.js" t="Include" />
+            <e p="ThemeChanger.js" t="Include" />
           </e>
           <e p="lib" t="Include">
             <e p="bootstrap" t="Include">

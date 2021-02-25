@@ -1,5 +1,6 @@
 ﻿/* Const
 -------------------------------------------------- */
+
 let wavesurfer;
 const waveformHeight = 54;
 const defaultVolume = 0.5;

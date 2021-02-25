@@ -1,5 +1,21 @@
-﻿<!DOCTYPE html>
-<html class="dark-theme" lang="fr">
+﻿@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Extensions
+@{
+    var theme = "";
+
+    if (Context.Request.Cookies.Keys.Contains("theme"))
+    {
+        theme = Context.Request.Cookies["theme"];;
+    }
+    else
+    {
+        Context.Response.Cookies.Append("theme", "dark-theme");
+    }
+}
+
+
+<!DOCTYPE html>
+<html lang="fr" class="@theme">
     <head>
         <title>@ViewBag.Title - Melodie</title>
         <meta charset="utf-8"/>
@@ -10,8 +26,27 @@
     <body class=" @(ViewBag.BodyClasses != null ? ViewBag.BodyClasses : "")">
         <!-- Header -->
         <header>
-            <!-- Empty item -->
-            <div class="header-section left"></div>
+            <!-- Theme selector -->
+            <div class="header-section left">
+                <div id="theme-selector-wrapper">
+                    <a id="theme-selector" asp-controller="Home" asp-action="ChangeTheme" asp-route-url="@Context.Request.GetEncodedUrl()">
+                        <div id="theme-selector-icon">
+                            <object id="dark-icon" data="/images/nights_stay-24px.svg" type="image/svg+xml">
+                                <img src="/images/nights_stay-24px.png" alt="Dark mode"/>
+                            </object>
+
+                            <object id="light-icon" data="/images/wb_sunny-24px.svg" type="image/svg+xml">
+                                <img src="/images/wb_sunny-24px.png" alt="Light mode"/>
+                            </object>
+                        </div>
+
+                        <div id="theme-selector-text">
+                            <span id="dark-theme-text">Th&egrave;me sombre</span>
+                            <span id="light-theme-text">Th&egrave;me clair</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
             <!-- Logo -->
             <div class="header-section center">
@@ -39,6 +74,7 @@
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="~/js/GlobalFunctions.js"></script>
         <script src="~/js/FooterFixer.js"></script>
+        <!--<script src="~/js/ThemeChanger.js"></script>-->
         @await RenderSectionAsync("Scripts", required: false)
     </body>
 </html>
