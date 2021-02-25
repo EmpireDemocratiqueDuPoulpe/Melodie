@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Melodie/wwwroot/images/volume_off-24px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Melodie/wwwroot/images/volume_off-24px.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/Views/Shared/MusicPlayer.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Shared/MusicPlayer.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/images/volume_up-24px.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/images/volume_up-24px.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/js/FooterFixer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/js/FooterFixer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/js/MusicPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/js/MusicPlayer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +73,6 @@
       <option value="$PROJECT_DIR$/Melodie/Views/Musics/AddMusic.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/Web.config" />
       <option value="$PROJECT_DIR$/Melodie/Web.config" />
-      <option value="$PROJECT_DIR$/Melodie/Models/Playlist.cs" />
       <option value="$PROJECT_DIR$/Melodie/Startup.cs" />
       <option value="$PROJECT_DIR$/Melodie/Views/Home/Playlist.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" />
@@ -73,7 +80,6 @@
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/forEach_function.js" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" />
       <option value="$PROJECT_DIR$/Melodie/Data/MelodieDbContext.cs" />
-      <option value="$PROJECT_DIR$/Melodie/wwwroot/images/volume_up-24px.svg" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/SliderColor.js" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/images/zoom_in-24px.svg" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/images/play_arrow-24px.svg" />
@@ -82,8 +88,6 @@
       <option value="$PROJECT_DIR$/Melodie/wwwroot/images/pause-24px.svg" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/GlobalFunctions.js" />
       <option value="$PROJECT_DIR$/Melodie/Views/Shared/Footer.cshtml" />
-      <option value="$PROJECT_DIR$/Melodie/Views/Shared/MusicPlayer.cshtml" />
-      <option value="$PROJECT_DIR$/Melodie/wwwroot/js/FooterFixer.js" />
       <option value="$PROJECT_DIR$/Melodie/Views/Shared/FooterContent.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Views/Shared/DelMusicFormPartial.cshtml" />
@@ -94,8 +98,12 @@
       <option value="$PROJECT_DIR$/Melodie/Data/MelodieDbService.cs" />
       <option value="$PROJECT_DIR$/Melodie/Views/Home/Index.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Views/Shared/_Layout.cshtml" />
+      <option value="$PROJECT_DIR$/Melodie/Models/Playlist.cs" />
+      <option value="$PROJECT_DIR$/Melodie/wwwroot/images/volume_up-24px.svg" />
+      <option value="$PROJECT_DIR$/Melodie/Views/Shared/MusicPlayer.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/MusicPlayer.js" />
+      <option value="$PROJECT_DIR$/Melodie/wwwroot/js/FooterFixer.js" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1o4TnRmOu64XrIIxtmBo7OSf87P" />
@@ -169,7 +177,7 @@
       <workItem from="1614024283227" duration="11033000" />
       <workItem from="1614081529470" duration="36753000" />
       <workItem from="1614166801714" duration="38776000" />
-      <workItem from="1614251041715" duration="587000" />
+      <workItem from="1614251041715" duration="8069000" />
     </task>
     <task id="LOCAL-00001" summary="Added Playlist page">
       <created>1613846759594</created>
@@ -325,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614208347220</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added next and previous button in the music player">
+      <created>1614251673329</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1614251673329</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,6 +381,7 @@
     <MESSAGE value="Fixed a bug with the footer z-index" />
     <MESSAGE value="Added last songs and improved header" />
     <MESSAGE value="Added missing files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added missing files" />
+    <MESSAGE value="Added next and previous button in the music player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added next and previous button in the music player" />
   </component>
 </project>

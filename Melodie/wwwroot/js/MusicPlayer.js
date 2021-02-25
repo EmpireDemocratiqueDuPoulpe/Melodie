@@ -20,6 +20,12 @@ let currentSong;
 
 let playIcon;
 let pauseIcon;
+let volumeIcon;
+let muteIcon;
+
+let muteBtn;
+let volumeSlider;
+let currentVolume;
 
 /* Wavesurfer and events
 -------------------------------------------------- */
@@ -87,9 +93,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
         wavesurfer.play();
     });
 
-    wavesurfer.on('mute', function (isMuted) {
-    });
-
     wavesurfer.on('play', function () {
         updatePlayIcon();
     });
@@ -119,15 +122,19 @@ document.addEventListener('DOMContentLoaded', function(event) {
     nextBtn.addEventListener('click', playNextMusic, false);
 
     // Mute button event
-    //const muteBtn = document.querySelector('#music-player-mute-btn');
-    //muteBtn.addEventListener('click', mute, false);
+    muteBtn = document.querySelector('#music-player-mute-btn');
+    volumeIcon = muteBtn.querySelector('#volume-icon');
+    muteIcon = muteBtn.querySelector('#mute-icon');
+    muteBtn.addEventListener('click', mute, false);
 
     // Volume slider event
-    const volumeSlider = document.querySelector('#music-player-volume-slider');
+    volumeSlider = document.querySelector('#music-player-volume-slider');
     volumeSlider.value = defaultVolume;
 
     volumeSlider.oninput = function () {
         wavesurfer.setVolume(Number(this.value));
+        wavesurfer.setMute(false);
+        updateMuteIcon();
     };
 
     // Zoom slider event
@@ -196,6 +203,25 @@ function updatePlayIcon() {
     }
 }
 
+function updateMuteIcon() {
+    if (wavesurfer.isMuted || volumeSlider.value === "0") {
+        volumeIcon.style.display = 'none';
+        muteIcon.style.display = 'block';
+    } else {
+        muteIcon.style.display = 'none';
+        volumeIcon.style.display = 'block';
+    }
+}
+
 function mute() {
     wavesurfer.toggleMute();
+    
+    if (wavesurfer.isMuted) {
+        currentVolume = volumeSlider.value;
+        volumeSlider.value = volumeSlider.min;
+    } else {
+        volumeSlider.value = currentVolume;
+    }
+    
+    updateMuteIcon();
 }

@@ -5,7 +5,17 @@
 		<div id="music-player-waveform"></div>
     	
 		<div id="music-player-controls">
-			<div class="section"></div>
+			<div class="section music-player-sliders-wrapper align-left">
+				<div class="music-player-slider no-select">
+                	<div class="slider-icon">
+                		<object data="/images/zoom_in-24px.svg" type="image/svg+xml">
+                			<img src="/images/zoom_in-24px.png" alt="Zoom"/>
+                		</object>
+                	</div>
+                
+                	<input id="music-player-zoom-slider" type="range" min="0" max="500" value="0" step="250">
+                </div>
+			</div>
     		
 			<div id="music-player-buttons" class="section">
 				<div id="music-player-previous-btn" class="music-player-btn no-select">
@@ -28,21 +38,21 @@
 					</object>
 				</div>
 			</div>
-    
-			<div id="music-player-sliders" class="section">
+			
+			<div class="section music-player-sliders-wrapper align-right">
 				<div class="music-player-slider no-select">
-					<object data="/images/volume_up-24px.svg" type="image/svg+xml">
-						<img src="/images/volume_up-24px.png" alt="Volume"/>
-					</object>
-					<input id="music-player-volume-slider" type="range" min="0" max="1" value="0.5" step="0.01">
-				</div>
-    			
-				<div class="music-player-slider no-select">
-					<object data="/images/zoom_in-24px.svg" type="image/svg+xml">
-						<img src="/images/zoom_in-24px.png" alt="Zoom"/>
-					</object>
-					<input id="music-player-zoom-slider" type="range" min="0" max="500" value="0" step="250">
-				</div>
+                	<div id="music-player-mute-btn" class="slider-icon clickable-icon">
+	                    <object id="volume-icon" data="/images/volume_up-24px.svg" type="image/svg+xml">
+		                    <img src="/images/volume_up-24px.png" alt="Volume"/>
+	                    </object>
+	                    
+	                    <object id="mute-icon" data="/images/volume_off-24px.svg" type="image/svg+xml">
+                        	<img src="/images/volume_off-24px.png" alt="Mute"/>
+                        </object>
+                    </div>
+                
+                	<input id="music-player-volume-slider" type="range" min="0" max="1" value="0.5" step="0.01">
+                </div>
 			</div>
 		</div>
 	</div>
