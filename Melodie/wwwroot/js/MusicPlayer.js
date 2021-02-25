@@ -18,6 +18,7 @@ class Music {
 // TODO: Change the object for something with a constant order (Map, Array, ...)
 const playlist = {};
 let currentSong;
+let playFirstSong = false;
 
 let playIcon;
 let pauseIcon;
@@ -160,6 +161,7 @@ function playOnEvent(event) {
 }
 
 function playMusic(music) {
+    playFirstSong = true;
     currentSong = Number(music.id);
     wavesurfer.load('../' + music.uri);
 }
@@ -191,6 +193,10 @@ function playPreviousMusic() {
 }
 
 function playPause() {
+    if (!playFirstSong) {
+        playMusic(playlist[Object.keys(playlist)[0]]);
+    }
+
     wavesurfer.playPause();
 }
 
