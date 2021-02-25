@@ -14,6 +14,7 @@ class Music {
     }
 }
 
+// TODO: Change the object for something with a constant order (Map, Array, ...)
 const playlist = {};
 let currentSong;
 
@@ -98,13 +99,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     });
 
     wavesurfer.on('finish', function () {
-        let nextMusic = playlist[Object.keys(playlist)[currentSong + 1]];
-
-        if (nextMusic == null) {
-            nextMusic = playlist[Object.keys(playlist)[0]];
-        }
-
-        playMusic(nextMusic);
+        playNextMusic();
     });
 
     // DOM events
@@ -114,6 +109,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
     pauseIcon = playBtn.querySelector('#pause-icon');
 
     playBtn.addEventListener('click', playPause, false);
+
+    // Previous button event
+    const previousBtn = document.querySelector('#music-player-previous-btn');
+    previousBtn.addEventListener('click', playPreviousMusic, false);
+
+    // Next button event
+    const nextBtn = document.querySelector('#music-player-next-btn');
+    nextBtn.addEventListener('click', playNextMusic, false);
 
     // Mute button event
     //const muteBtn = document.querySelector('#music-player-mute-btn');
@@ -151,6 +154,32 @@ function playOnEvent(event) {
 function playMusic(music) {
     currentSong = Number(music.id);
     wavesurfer.load('../' + music.uri);
+}
+
+function playNextMusic() {
+    let nextMusic = playlist[Object.keys(playlist)[currentSong + 1]];
+
+    if (nextMusic == null) {
+        nextMusic = playlist[Object.keys(playlist)[0]];
+    }
+
+    playMusic(nextMusic);
+}
+
+function playPreviousMusic() {
+    let previousMusic;
+    
+    if (currentSong - 1 === -1) {
+        previousMusic = playlist[Object.keys(playlist)[Object.keys(playlist).length - 1]]
+    } else {
+        previousMusic = playlist[Object.keys(playlist)[currentSong - 1]];
+
+        if (previousMusic == null) {
+            previousMusic = playlist[Object.keys(playlist)[0]];
+        }
+    }
+    
+    playMusic(previousMusic);
 }
 
 function playPause() {
