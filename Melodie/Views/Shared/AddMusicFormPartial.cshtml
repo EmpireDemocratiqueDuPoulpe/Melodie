@@ -5,10 +5,41 @@
 	@Html.AntiForgeryToken()
 	
 	@Html.HiddenFor(m => m.PlaylistId)
-	<td class="song-name-row">@Html.EditorFor(m => m.Name, new { htmlAttributes = new { placeholder = "Nom", @required = "required" } })</td>
+	
+	<td class="song-name-row">
+		<span class="field white field-madoka">
+        	@Html.EditorFor(m => m.Name, new {htmlAttributes = new { id = "name", @class = "field-input", placeholder = " ", @required = "required" } })
+        	<label class="field-label" for="name">
+        		<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+        			<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+        		</svg>
+        		<span class="field-label-content">Nom</span>
+        	</label>
+        </span>
+	</td>
 	<td class="song-duration-row"></td>
-	<td class="song-author-row">@Html.EditorFor(m => m.Author, new { htmlAttributes = new { placeholder = "Auteur" } })</td>
-	<td class="song-add-date-row"><input type="file" name="MusicFile" required/></td>
+	<td class="song-author-row">
+		<span class="field white field-madoka">
+        	@Html.EditorFor(m => m.Author, new { htmlAttributes = new { id = "author", @class = "field-input", placeholder = " " } })
+        	<label class="field-label" for="author">
+        		<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+        			<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+        		</svg>
+        		<span class="field-label-content">Auteur</span>
+        	</label>
+        </span>
+		
+	</td>
+	<td class="song-add-date-row">
+		<div class="file-input">
+			<input type="file" id="musicFile" name="MusicFile" required/>
+			<label class="btn long yellow growing-circle" for="musicFile">
+				<div class="btn-effect-box"></div>
+				<span>Choisir un fichier</span>
+			</label>
+		</div>
+		
+	</td>
 	<td class="song-actions-row">
 		<button class="btn yellow growing-circle" type="submit">
 			<div class="btn-effect-box"></div>

@@ -22,11 +22,11 @@
 <div id="playlist-container">
 	<a id="back-to-home" class="btn orange slide-effect" asp-controller="Home" asp-action="Index">
 		<div class="btn-effect-box"></div>
-		<span>&lt;-- Retour</span>
+		<span>&larr; Retour</span>
 	</a>
 	
 	<div id="playlist-info">
-		<div class="playlist-logo"></div>
+		<div class="playlist-logo auto-acronym"></div>
 		@using (Html.BeginForm("Update", "Playlist", FormMethod.Post, new { id = "playlist-info-text" }))
 		{
 			@Html.AntiForgeryToken()
@@ -43,11 +43,6 @@
 				</button>
 				
 				<button class="btn orange showing-icon" type="submit" formaction="@Url.Action("Delete")">
-					<!--<div class="btn-effect-box">
-						<iframe src="/images/delete-24px.svg" sandbox>
-							<img src="/images/delete-24px.png" alt="Delete"/>
-						</iframe>
-					</div>-->
 					<div class="btn-effect-box">
 						<object data="/images/delete-24px.svg" type="image/svg+xml">
 							<img src="/images/delete-24px.png" alt="Delete"/>

@@ -78,6 +78,8 @@
           <e p="images" t="Include">
             <e p="album-24px.png" t="Include" />
             <e p="album-24px.svg" t="Include" />
+            <e p="cloud_upload-24px.png" t="Include" />
+            <e p="cloud_upload-24px.svg" t="Include" />
             <e p="delete-24px.png" t="Include" />
             <e p="delete-24px.svg" t="Include" />
             <e p="nights_stay-24px.png" t="Include" />
@@ -86,6 +88,8 @@
             <e p="pause-24px.svg" t="Include" />
             <e p="play_arrow-24px.png" t="Include" />
             <e p="play_arrow-24px.svg" t="Include" />
+            <e p="playlist_add-24px.png" t="Include" />
+            <e p="playlist_add-24px.svg" t="Include" />
             <e p="register_img.jpg" t="Include" />
             <e p="skip_next-24px.png" t="Include" />
             <e p="skip_next-24px.svg" t="Include" />
@@ -101,6 +105,7 @@
             <e p="zoom_in-24px.svg" t="Include" />
           </e>
           <e p="js" t="Include">
+            <e p="CustomInputFile.js" t="Include" />
             <e p="FooterFixer.js" t="Include" />
             <e p="GlobalFunctions.js" t="Include" />
             <e p="MusicPlayer.js" t="Include" />
@@ -171,6 +176,7 @@
             <e p="2021_02_24_09_38_53M83 - Outro.mp3" t="Include" />
             <e p="2021_02_24_09_42_38M83 - Outro.mp3" t="Include" />
             <e p="2021_02_24_11_19_50Nasser - Chaos A.D..mp3" t="Include" />
+            <e p="2021_02_26_07_35_06Little Big - Liar.mp3" t="Include" />
           </e>
         </e>
       </e>

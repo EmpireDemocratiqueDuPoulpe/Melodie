@@ -16,19 +16,21 @@ if (smallPlaylists != null && fullPlaylist != null) {
 
 /** Set playlists logo text **/
 forEach(playlists, function (index, playlist) {
-   const logo = playlist.querySelector(".playlist-logo");
+   const logo = playlist.querySelector(".playlist-logo.auto-acronym");
    const title = playlist.querySelector(".playlist-title");
    let acronym;
    
-   if (title.tagName.toLowerCase() === "p") {
-       acronym = title.textContent;
-   } else {
-       acronym = title.value;
-   }
-   
-   if (acronym != null) {
-       acronym = acronym.match(/\b(\w)/g).join("").toUpperCase();
+   if (logo != null) {
+       if (title.tagName.toLowerCase() === "input") {
+           acronym = title.value;
+       } else {
+           acronym = title.textContent;
+       }
 
-       logo.setAttribute("data-acronym", acronym);
+       if (acronym != null) {
+           acronym = acronym.match(/\b(\w)/g).join("").toUpperCase();
+
+           logo.setAttribute("data-acronym", acronym);
+       }
    }
 });

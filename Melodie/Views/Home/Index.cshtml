@@ -15,7 +15,7 @@
         <div id="playlists-grid">
             <form class="playlist-block" asp-controller="Playlist" asp-action="Add">
                 <button id="add-playlist-btn" class="playlist-sub-block" type="submit">
-                    <div class="playlist-logo"></div>
+                    <div class="playlist-logo add-icon"></div>
                     <p class="playlist-title">Ajouter une playlist</p>
                 </button>
             </form>
@@ -23,9 +23,9 @@
             @foreach (var playlist in playlists)
             {
                 <a class="playlist-block disable-link-color" asp-controller="Playlist" asp-action="Playlist" asp-route-pid="@playlist.PlaylistId">
-                    <div class="playlist-logo"></div>
+                    <div class="playlist-logo auto-acronym"></div>
                     <p class="playlist-title">@playlist.Name</p>
-                    <p class="playlist-desc">@playlist.Description</p>
+                    <p class="playlist-desc light-text">@playlist.Description</p>
                 </a>
             }
         </div>
@@ -48,9 +48,7 @@
                 @foreach (var lastMusic in ViewBag.LastMusics)
                 {
                     <div class="last-song-block">
-                        <div class="last-song-logo">
-
-                        </div>
+                        <div class="last-song-logo"></div>
                         <p class="last-song-name">@lastMusic.Name</p>
                         <p class="last-song-author light-text">@lastMusic.Author</p>
                     </div>
