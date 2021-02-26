@@ -24,44 +24,47 @@
         <link rel="stylesheet" href="~/css/site.css"/>
     </head>
     <body class=" @(ViewBag.BodyClasses != null ? ViewBag.BodyClasses : "")">
-        <!-- Header -->
-        <header>
-            <!-- Theme selector -->
-            <div class="header-section left">
-                <div id="theme-selector-wrapper">
-                    <a id="theme-selector" class="disable-visited" asp-controller="Home" asp-action="ChangeTheme" asp-route-url="@Context.Request.GetEncodedUrl()">
-                        <div id="theme-selector-icon">
-                            <object id="dark-icon" class="theme-icon" data="/images/nights_stay-24px.svg" type="image/svg+xml">
-                                <img src="/images/nights_stay-24px.png" alt="Dark mode"/>
-                            </object>
+        @if (ViewBag.NoHeader == null)
+        {
+            <!-- Header -->
+            <header>
+                <!-- Theme selector -->
+                <div class="header-section left">
+                    <div id="theme-selector-wrapper">
+                        <a id="theme-selector" class="disable-visited" asp-controller="Home" asp-action="ChangeTheme" asp-route-url="@Context.Request.GetEncodedUrl()">
+                            <div id="theme-selector-icon">
+                                <object id="dark-icon" class="theme-icon" data="/images/nights_stay-24px.svg" type="image/svg+xml">
+                                    <img src="/images/nights_stay-24px.png" alt="Dark mode"/>
+                                </object>
 
-                            <object id="light-icon" class="theme-icon" data="/images/wb_sunny-24px.svg" type="image/svg+xml">
-                                <img src="/images/wb_sunny-24px.png" alt="Light mode"/>
-                            </object>
-                        </div>
+                                <object id="light-icon" class="theme-icon" data="/images/wb_sunny-24px.svg" type="image/svg+xml">
+                                    <img src="/images/wb_sunny-24px.png" alt="Light mode"/>
+                                </object>
+                            </div>
 
-                        <div id="theme-selector-text">
-                            <span id="dark-theme-text">Th&egrave;me sombre</span>
-                            <span id="light-theme-text">Th&egrave;me clair</span>
-                        </div>
+                            <div id="theme-selector-text">
+                                <span id="dark-theme-text">Th&egrave;me sombre</span>
+                                <span id="light-theme-text">Th&egrave;me clair</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Logo -->
+                <div class="header-section center">
+                    <img src="" alt="app logo"/>
+                </div>
+
+                <!-- User info -->
+                <div class="header-section right">
+                    <a class="user-display disable-visited" asp-controller="" asp-action="">
+                        <img src="https://cdn130.picsart.com/329072184134211.png?type=webp&to=min&r=640" alt="Profile pic"/>
+                        <p>Empire D&eacute;mocratique du Poulpe</p>
                     </a>
                 </div>
-            </div>
-
-            <!-- Logo -->
-            <div class="header-section center">
-                <img src="" alt="app logo"/>
-            </div>
-
-            <!-- User info -->
-            <div class="header-section right">
-                <a class="user-display disable-visited" asp-controller="" asp-action="">
-                    <img src="https://cdn130.picsart.com/329072184134211.png?type=webp&to=min&r=640" alt="Profile pic"/>
-                    <p>Empire D&eacute;mocratique du Poulpe</p>
-                </a>
-            </div>
-        </header>
-
+            </header>
+        }
+        
         <!-- Body -->
         <div class="container">
             <main role="main">

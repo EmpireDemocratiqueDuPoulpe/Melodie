@@ -67,3 +67,16 @@ C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\Shared
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\Shared\MusicPlayer.cshtml.g.cs
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\Shared\Footer.cshtml.g.cs
 C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\Shared\FooterContent.cshtml.g.cs
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\User\Login.cshtml.g.cs
+C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Razor\Views\User\Register.cshtml.g.cs
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Melodie.StaticWebAssets.xml
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\alexi\RiderProjects\Melodie\Melodie\obj\Debug\net5.0\Melodie.MvcApplicationPartsAssemblyInfo.cs

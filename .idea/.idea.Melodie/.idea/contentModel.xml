@@ -63,6 +63,10 @@
             <e p="FooterContent.cshtml" t="Include" />
             <e p="MusicPlayer.cshtml" t="Include" />
           </e>
+          <e p="User" t="Include">
+            <e p="Login.cshtml" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+          </e>
         </e>
         <e p="Web.config" t="Include" />
         <e p="wwwroot" t="Include">
@@ -82,6 +86,7 @@
             <e p="pause-24px.svg" t="Include" />
             <e p="play_arrow-24px.png" t="Include" />
             <e p="play_arrow-24px.svg" t="Include" />
+            <e p="register_img.jpg" t="Include" />
             <e p="skip_next-24px.png" t="Include" />
             <e p="skip_next-24px.svg" t="Include" />
             <e p="skip_previous-24px.png" t="Include" />

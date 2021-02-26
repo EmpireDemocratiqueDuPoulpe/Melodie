@@ -1,72 +1,98 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Melodie.Data;
 using Melodie.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace Melodie.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class UserController : ControllerBase
+    [Authorize]
+    public class UserController : Controller
     {
         private readonly ILogger<UserController> _logger;
         private readonly IMelodieDbService _dbService;
+        //private readonly UserManager<User> _userManager;
+        //private readonly SignInManager<User> _loginManager;
 
-        public UserController(ILogger<UserController> logger, IMelodieDbService service)
+        public UserController(
+            ILogger<UserController> logger,
+            IMelodieDbService service
+            //UserManager<User> userManager,
+            //SignInManager<User> loginManager)
+            )
         {
             _logger = logger;
             _dbService = service;
-        }
-        
-        // GET
-        [HttpGet("{uid}", Name = "GetById")]
-        public async Task<ActionResult<User>> Get(int userId)
-        {
-            var user = await _dbService.GetUserById(userId);
-            return (user != default) ? Ok(user) : NotFound();
+            //_userManager = userManager;
+            //_loginManager = loginManager;
         }
 
-        [HttpGet]
-        public async Task<IEnumerable<User>> Get()
+        /* GET
+        -------------------------------------------------- */
+        //User/Register
+        [AllowAnonymous]
+        [Route("User/Register")]
+        public IActionResult Register()
         {
-            return await _dbService.GetAllUsers();
+            return View();
         }
         
-        // ADD
-        [HttpPost]
-        public async Task<ActionResult<User>> Add(User user)
+        //User/Login
+        [AllowAnonymous]
+        [Route("User/Login")]
+        public IActionResult Login()
         {
-            if (user.UserId != null)
-            {
-                return BadRequest("ID cannot be set for INSERT query.");
-            }
-
-            var userId = await _dbService.AddUser(user);
-            return (user != default) ? CreatedAtRoute("GetById", new {uid = userId}, user) : BadRequest();
+            return View();
         }
         
-        // UPDATE
-        [HttpPut]
-        public async Task<ActionResult<User>> Update(User user)
-        {
-            if (user.UserId == null)
-            {
-                return BadRequest("ID must be set for UPDATE query.");
-            }
-
-            var result = await _dbService.UpdateUser(user);
-            return (result > 0) ? NoContent() : NotFound();
-        }
+        //User/Logout
+        //[Route("User/Logout")]
+        //public IActionResult Logout()
+        //{
+        //    _loginManager.SignOutAsync();
+        //    return RedirectToAction("Login", "User");
+        //}
         
-        // DELETE
-        [HttpDelete("{uid}")]
-        public async Task<ActionResult<User>> Delete(int userId)
-        {
-            var result = await _dbService.DeleteUser(userId);
-            return (result > 0) ? NoContent() : NotFound();
-        }
+        /* ADD
+        -------------------------------------------------- */
+        //User/Register
+        //[AllowAnonymous]
+        //[HttpPost("User/Register")]
+        //public async Task<IActionResult> AddUser(User user)
+        //{
+        //    if (user.Password != user.PasswordConfirmation)
+        //    {
+        //        ViewBag.RegisterError = "Les mots de passe doivent correspondre.";
+        //        return RedirectToAction("Register", "User");
+        //    }
+        //    
+        //    var userCreation = await _userManager.CreateAsync(user, user.Password);
+//
+        //    if (userCreation.Succeeded)
+        //    {
+        //        return RedirectToAction("Login", "User");
+        //    }
+//
+        //    ViewBag.RegisterError = "Erreur lors de l'inscription";
+        //    return RedirectToAction("Register", "User");
+        //}
         
+        //User/Login
+        //[AllowAnonymous]
+        //[HttpPost("User/Login")]
+        //public async Task<IActionResult> LoginUser(User user)
+        //{
+        //    var userLogin = await _loginManager.PasswordSignInAsync(user.Username, user.Password, false, false);
+//
+        //    if (userLogin.Succeeded)
+        //    {
+        //        return RedirectToAction("Index", "Home");
+        //    }
+//
+        //    ViewBag.LoginError = "Erreur lors de la connexion";
+        //    return RedirectToAction("Login", "User");
+        //}
     }
 }

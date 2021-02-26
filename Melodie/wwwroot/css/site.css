@@ -29,8 +29,8 @@ html.dark-theme { background: #353535; color: #F7F9F9; }
 .dark-theme .light-text         { color: #BDBFBF; }
 .dark-theme .light-text-revert  { color: #6d7070; }
 
-.dark-theme a       { color: #F98350; }
-.dark-theme a:hover { color: #c36742; }
+.dark-theme a       { color: #F98350; text-decoration: none; }
+.dark-theme a:hover { text-decoration: underline; }
 
 .dark-theme a:visited { color: #c36742; }
 
@@ -164,7 +164,7 @@ header {
     height: 75px;
     line-height: 75px;
     padding: 0 10px;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .user-display img {
@@ -225,6 +225,140 @@ header {
 
 /* Global - Inputs
 -------------------------------------------------- */
+
+/** Inputs **/
+.field {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    max-width: 350px;
+    width: calc(100% - 2em);
+    margin: 1em;
+    z-index: 1;
+}
+
+.field .field-input {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    position: relative;
+    float: right;
+    display: block;
+    width: 60%;
+    padding: 0.8em;
+    background: #F0F0F0;
+    color: #AAAAAA;
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /** Todo: Change **/
+}
+
+.field input:focus { outline: none; }
+
+.field-label {
+    box-sizing: border-box;
+    float: right;
+    display: inline-block;
+    width: 40%;
+    font-size: 70.25%;
+    padding: 0 1em;
+    color: #6A7989;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.field-label-content {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 1.6em 0;
+}
+
+.field-graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+}
+
+/** Input - Madoka **/
+.field.field-madoka { margin: 1.1em; }
+
+.field.field-madoka input {
+    width: 100%;
+    background: transparent;
+    color: #7A7593;
+}
+
+.field.field-madoka .field-label {
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    color: #7A7593;
+    cursor: text;
+}
+
+.field.field-madoka .field-label-content {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+}
+
+.field.field-madoka .field-graphic {
+    stroke: #7A7593;
+    stroke-width: 4px;
+    stroke-dasharray: 962;
+    stroke-dashoffset: 558;
+    -webkit-transform: scale3d(1, -1, 1);
+    transform: scale3d(1, -1, 1);
+    -webkit-transition: stroke-dashoffset 300ms;
+    transition: stroke-dashoffset 300ms;
+    pointer-events: none;
+}
+
+.field.field-madoka:focus + .field-label,
+/*.field.field-madoka.field-filled .field-label {*/
+.field.field-madoka .field-input:focus + .field-label,
+.field.field-madoka .field-input:not(:placeholder-shown) + .field-label {
+    cursor: default;
+    pointer-events: none;
+}
+
+.field.field-madoka:focus + .field-label .field-graphic,
+/*.field.field-madoka.field-filled .field-graphic {*/
+.field.field-madoka .field-input:focus + .field-label .field-graphic,
+.field.field-madoka .field-input:not(:placeholder-shown) + .field-label .field-graphic {
+    stroke-dashoffset: 0;
+}
+
+.field.field-madoka:focus + .field-label .field-label-content,
+/*.field.field-madoka.field-filled .field-label-content*/
+.field.field-madoka .field-input:focus + .field-label .field-label-content,
+.field.field-madoka .field-input:not(:placeholder-shown) + .field-label .field-label-content {
+    -webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
+    transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
+}
+
+/* Colors */
+.field.white .field-input {
+    background: #2B2B2B;
+    color: #F7F9F9;
+}
+
+.field.white .field-label { color: #BDBFBF; }
+
+.field.white.field-madoka input             { color: #F7F9F9; }
+.field.white.field-madoka .field-label      { color: #BDBFBF; } 
+.field.white.field-madoka .field-graphic    { stroke: #BDBFBF; }
 
 /** Slider **/
 input[type=range]       { -webkit-appearance: none; width: 130px }
@@ -301,7 +435,7 @@ input[type=range]::-ms-fill-upper { border-radius: 10px; }
     color: #BFC0C0;
     border: 2px solid #BFC0C0;
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: none !important;
     letter-spacing: 1.5px; /* TODO: Keep? */
     transition: all 300ms;
     overflow: hidden;
@@ -614,6 +748,87 @@ body.has-music-player footer {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Auth container
+-------------------------------------------------- */
+
+/* TODO: MOVE */
+.dark-theme .auth-container {
+    background: #2B2B2B;
+    -webkit-box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.25);
+    -moz-box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.25);
+    box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.25);
+}
+
+/** Containers **/
+.auth-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 1000px;
+    border-radius: 30px;
+    overflow: hidden;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/** Auth img **/
+.auth-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    overflow: hidden;
+}
+
+.auth-img img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/** Auth box **/
+.auth-box {
+    flex-grow: 1;
+    min-width: 50%;
+    padding: 70px 35px;
+}
+
+.auth-left-container.auth-box   { margin-right: 400px; }
+.auth-right-container.auth-box  { margin-left: 400px; }
+
+/* Title */
+.auth-title {
+    width: 100%;
+    padding: 0 20px 20px 70px;
+}
+
+.auth-title h2,
+.auth-title p   { margin: 0; }
+
+/* Form */
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-box form input[type=submit],
+.auth-box form button[type=submit] {
+    margin-top: 40px;
+}
+
+.auth-box #have-an-account,
+.auth-box #need-an-account {
+    margin-top: 10px;
 }
 
 /* Home
