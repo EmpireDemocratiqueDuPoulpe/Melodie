@@ -613,10 +613,13 @@ input[type=range]::-ms-fill-upper { border-radius: 10px; }
     position: absolute;
     top: 50%;
     right: 0;
-    left: 0;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 2em;
     text-align: center;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .playlist-logo.add-icon:after {
@@ -624,11 +627,11 @@ input[type=range]::-ms-fill-upper { border-radius: 10px; }
     position: absolute;
     top: 50%;
     right: 0;
-    left: 0;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 100%;
     background: url("../images/playlist_add-24px.svg") no-repeat center;
-    background-size: 45%;
+    background-size: 65%;
     text-align: center;
 }
 
