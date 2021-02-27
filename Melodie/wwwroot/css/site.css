@@ -1,9 +1,5 @@
 ﻿/* Global - Dark theme
 -------------------------------------------------- */
-/* #e0a800 */
- /* #F95950 */
-/* #F7444E */
- /* #F94144 */
 /** Body **/
 html.dark-theme { background: #353535; color: #F7F9F9; }
 
@@ -22,7 +18,7 @@ html.dark-theme { background: #353535; color: #F7F9F9; }
 .dark-theme #footer-copyright { background: #0D0D0D; }
 
 /** App logo **/
-.dark-theme .header-section .app-logo   { background: url("../images/melodie_white.png") center no-repeat; }
+.dark-theme .header-section .app-logo { background: url("../images/melodie_white.png") center no-repeat; }
 
 /** Titles, texts, links **/
 .dark-theme h1, .dark-theme h2,
@@ -30,12 +26,12 @@ html.dark-theme { background: #353535; color: #F7F9F9; }
 .dark-theme h5, .dark-theme h6 { color: #F95950; }
 
 .dark-theme .light-text         { color: #BDBFBF; }
-.dark-theme .light-text-revert  { color: #6d7070; }
+.dark-theme .light-text-revert  { color: #6D7070; }
 
 .dark-theme a       { color: #F98350; text-decoration: none; }
 .dark-theme a:hover { text-decoration: underline; }
 
-.dark-theme a:visited { color: #c36742; }
+.dark-theme a:visited { color: #C36742; }
 
 .dark-theme a.disable-visited       { color: #F98350 !important; }
 .dark-theme a.disable-visited:hover { color: #C36742 !important; }
@@ -59,7 +55,7 @@ html.dark-theme { background: #353535; color: #F7F9F9; }
 .dark-theme input.bg-on-hover:focus,
 .dark-theme textarea.bg-on-hover:focus,
 .dark-theme input.bg-on-hover:active,
-.dark-theme textarea.bg-on-hover:active { background: #3f3f3f; }
+.dark-theme textarea.bg-on-hover:active { background: #3F3F3F; }
 
 .dark-theme input[type=range]                                   { background: #212121; }
 
@@ -108,8 +104,6 @@ html.dark-theme { background: #353535; color: #F7F9F9; }
 
 /** Last songs **/
 .dark-theme .last-song-logo         { background: #2B2B2B; }
-/* TODO: Choose color: */ 
-/*.dark-theme .last-song-logo:after { filter: invert(100%) sepia(64%) saturate(216%) hue-rotate(75deg) brightness(108%) contrast(95%); }*/
 .dark-theme .last-song-logo:after   { filter: invert(46%) sepia(7%) saturate(111%) hue-rotate(131deg) brightness(91%) contrast(84%); }
 
 /** Music player **/
@@ -128,22 +122,138 @@ html.dark-theme { background: #353535; color: #F7F9F9; }
 }
 
 .dark-theme .song-play-btn,
-.dark-theme #music-player-play-btn          { background: #f95950; }
+.dark-theme #music-player-play-btn          { background: #F95950; }
 .dark-theme .song-play-btn:hover,
 .dark-theme #music-player-play-btn:hover    { background: #D93B39; }
 
 /* Global - Light theme
 -------------------------------------------------- */
 
+/** Body **/
 html.light-theme { background: #F7F9F9; color: #353535; }
 
-/** App logo **/
-.light-theme .header-section .app-logo  { background: url("../images/melodie_black.png") center no-repeat; }
+/** Header **/
+.light-theme header                     { background: #EDEFEF; }
+.light-theme header .user-display:hover { background: #E3E5E5; }
+.light-theme header .user-display img   { background: #D9DBDB; }
 
+/** Footer **/
+.light-theme footer { background: #D9DBDB; }
+.light-theme body.has-music-player footer {
+    -webkit-box-shadow: 0 -5px 40px 0 rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 -5px 40px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 -5px 40px 0 rgba(0,0,0,0.25);
+}
+.light-theme #footer-copyright { background: #CFD1D1; }
+
+/** App logo **/
+.light-theme .header-section .app-logo { background: url("../images/melodie_black.png") center no-repeat; }
+
+/** Titles, texts, links **/
+.light-theme h1, .light-theme h2,
+.light-theme h3, .light-theme h4,
+.light-theme h5, .light-theme h6 { color: #F95950; }
+
+.light-theme .light-text        { color: #6D7070; }
+.light-theme .light-text-revert { color: #1D2121; }
+
+.light-theme a          { color: #F98350; text-decoration: none; }
+.light-theme a:hover    { text-decoration: underline; }
+
+.light-theme a:visited { color: #C36742; }
+
+.light-theme a.disable-visited       { color: #F98350 !important; }
+.light-theme a.disable-visited:hover { color: #C36742 !important; }
+
+.light-theme a.disable-link-color,
+.light-theme a.disable-link-color:visited { color: #353535; }
+
+.light-theme footer a:hover { color: #F98350 !important; }
+
+/** Forms and inputs **/
+.light-theme textarea,
+.light-theme input[type=text] { background: #EDEFEF; color: #353535; }
+
+.light-theme input::placeholder,
+.light-theme textarea::placeholder { color: #6D7070; }
+
+.light-theme input.bg-on-hover,
+.light-theme textarea.bg-on-hover           { background: transparent; border-color: transparent !important; }
+.light-theme input.bg-on-hover:hover,
+.light-theme textarea.bg-on-hover:hover,
+.light-theme input.bg-on-hover:focus,
+.light-theme textarea.bg-on-hover:focus,
+.light-theme input.bg-on-hover:active,
+.light-theme textarea.bg-on-hover:active    { background: #E3E5E5; }
+
+.light-theme input[type=range]                                  { background: #E3E5E5; }
+
+.light-theme input[type=range]::-moz-range-track                { background: #E3E5E5; }
+.light-theme input[type=range]::-webkit-slider-runnable-track   { background: #E3E5E5; }
+
+.light-theme input[type=range]::-ms-thumb                       { background: #F95950; }
+.light-theme input[type=range]::-moz-range-thumb                { background: #F95950; }
+.light-theme input[type=range]::-webkit-slider-thumb            { background: #F95950; }
+
+.light-theme input[type=range]::-ms-fill-lower                  { background: #F95950; }
+.light-theme input[type=range]::-moz-range-progress             { background: #F95950; }
+
+.light-theme input[type=range]::-ms-fill-upper                  { background: #E3E5E5; }
+
+/** Buttons **/
+.light-theme #theme-selector                    { background: #E3E5E5; color: #353535 !important; }
+.light-theme #theme-selector-icon               { background: #D9DBDB; }
+.light-theme #theme-selector-icon .theme-icon   { filter: invert(46%) sepia(7%) saturate(111%) hue-rotate(131deg) brightness(91%) contrast(84%); }
 .light-theme #theme-selector-icon #dark-icon    { display: none; }
 .light-theme #theme-selector-icon #light-icon   { display: block; }
 .light-theme #theme-selector #dark-theme-text   { display: none; }
 .light-theme #theme-selector #light-theme-text  { display: block; }
+
+.light-theme .btn.growing-circle:hover span { color: #F7F9F9; } /* Background color */
+.light-theme .btn.slide-effect:hover span   { color: #F7F9F9; } /* Background color */
+
+/** Auth container **/
+.light-theme .auth-container {
+    background: #EDEFEF;
+    -webkit-box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.25);
+    -moz-box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.25);
+    box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.25);
+}
+
+/** Playlists **/
+.light-theme #add-playlist-btn { color: #353535; }
+
+.light-theme .playlist-block:hover { background: #E3E5E5; }
+
+.light-theme .playlist-logo { background: #EDEFEF; }
+.light-theme .playlist-logo:not(.auto-acronym):after { filter: invert(46%) sepia(7%) saturate(111%) hue-rotate(131deg) brightness(91%) contrast(84%); }
+
+.light-theme #songs-table thead             { background: #F95950; color: #F7F9F9; }
+.light-theme #songs-table tbody tr:hover    { background: #E3E5E5; }
+
+/** Last songs **/
+.light-theme .last-song-logo        { background: #EDEFEF; }
+.light-theme .last-song-logo:after  { filter: invert(46%) sepia(7%) saturate(111%) hue-rotate(131deg) brightness(91%) contrast(84%); }
+
+/** Music player **/
+.light-theme #music-player { background: #EDEFEF; }
+
+.light-theme #music-player-waveform { background: #DEE0E0; }
+
+.light-theme .slider-icon.clickable-icon,
+.light-theme .music-player-btn:not(#music-player-play-btn) {
+    filter: invert(54%) sepia(44%) saturate(4546%) hue-rotate(329deg) brightness(99%) contrast(97%);
+}
+
+.light-theme .slider-icon.clickable-icon:hover,
+.light-theme .music-player-btn:not(#music-player-play-btn):hover {
+    filter: invert(22%) sepia(88%) saturate(1433%) hue-rotate(336deg) brightness(119%) contrast(95%);
+}
+
+.light-theme .song-play-btn,
+.light-theme #music-player-play-btn         { background: #F95950; }
+.light-theme .song-play-btn:hover,
+.light-theme #music-player-play-btn:hover   { background: #D93B39; }
 
 /* Global - Titles, texts, links
 -------------------------------------------------- */
@@ -362,7 +472,6 @@ header {
 }
 
 .field.field-madoka:focus + .field-label,
-/*.field.field-madoka.field-filled .field-label {*/
 .field.field-madoka .field-input:focus + .field-label,
 .field.field-madoka .field-input:not(:placeholder-shown) + .field-label {
     cursor: default;
@@ -370,14 +479,12 @@ header {
 }
 
 .field.field-madoka:focus + .field-label .field-graphic,
-/*.field.field-madoka.field-filled .field-graphic {*/
 .field.field-madoka .field-input:focus + .field-label .field-graphic,
 .field.field-madoka .field-input:not(:placeholder-shown) + .field-label .field-graphic {
     stroke-dashoffset: 0;
 }
 
 .field.field-madoka:focus + .field-label .field-label-content,
-/*.field.field-madoka.field-filled .field-label-content*/
 .field.field-madoka .field-input:focus + .field-label .field-label-content,
 .field.field-madoka .field-input:not(:placeholder-shown) + .field-label .field-label-content {
     -webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
@@ -385,16 +492,27 @@ header {
 }
 
 /* Colors */
-.field.white .field-input {
+.dark-theme .field.white .field-input {
     background: #2B2B2B;
     color: #F7F9F9;
 }
 
-.field.white .field-label { color: #BDBFBF; }
+.dark-theme .field.white .field-label { color: #BDBFBF; }
 
-.field.white.field-madoka input             { color: #F7F9F9; }
-.field.white.field-madoka .field-label      { color: #BDBFBF; } 
-.field.white.field-madoka .field-graphic    { stroke: #BDBFBF; }
+.dark-theme .field.white.field-madoka input             { color: #F7F9F9; }
+.dark-theme .field.white.field-madoka .field-label      { color: #BDBFBF; }
+.dark-theme .field.white.field-madoka .field-graphic    { stroke: #BDBFBF; }
+
+.light-theme .field.white .field-input {
+    background: #EDEFEF;
+    color: #353535;
+}
+
+.light-theme .field.white .field-label { color: #6D7070; }
+
+.light-theme .field.white.field-madoka input            { color: #353535; }
+.light-theme .field.white.field-madoka .field-label     { color: #6D7070; }
+.light-theme .field.white.field-madoka .field-graphic   { stroke: #6D7070; }
 
 /** File input **/
 html.no-js .file-input label { display: none !important; }
