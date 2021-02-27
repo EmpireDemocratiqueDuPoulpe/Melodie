@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Melodie/wwwroot/images/melodie_black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Melodie/wwwroot/images/melodie_simple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Melodie/wwwroot/images/melodie_white.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/Shared/_Layout.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +44,7 @@
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/Recipe.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Models/BlogDataContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/alexi/RiderProjects/Melodie/Melodie/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day2/Day2TP1/Pages/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Startup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day2/Day2TP1/Pages/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
@@ -194,7 +185,7 @@
       <workItem from="1614166801714" duration="38776000" />
       <workItem from="1614251041715" duration="25103000" />
       <workItem from="1614342761873" duration="21894000" />
-      <workItem from="1614442433365" duration="783000" />
+      <workItem from="1614442433365" duration="6763000" />
     </task>
     <task id="LOCAL-00001" summary="Added Playlist page">
       <created>1613846759594</created>
@@ -420,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614369702245</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Added logo">
+      <created>1614443663447</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1614443663447</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +440,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Can now update a playlist title/desc" />
     <MESSAGE value="Can now delete a playlist" />
     <MESSAGE value="Now possible to add music" />
     <MESSAGE value="Moved playlist functions to its own controller" />
@@ -467,6 +464,7 @@
     <MESSAGE value="Added font-family and revamped the whole css" />
     <MESSAGE value="Fixed a bug where the playlist logo acronym didn't change after an update" />
     <MESSAGE value="Fixed a bug where the logo acronym was able to overflow its container" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a bug where the logo acronym was able to overflow its container" />
+    <MESSAGE value="Added logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added logo" />
   </component>
 </project>
