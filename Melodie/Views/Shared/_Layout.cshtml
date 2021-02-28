@@ -1,4 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Http.Extensions
+@using Microsoft.AspNet.Identity
 @{
     var theme = "";
 
@@ -61,10 +62,21 @@
 
                 <!-- User info -->
                 <div class="header-section right">
-                    <a class="user-display disable-visited" asp-controller="" asp-action="">
-                        <img src="https://cdn130.picsart.com/329072184134211.png?type=webp&to=min&r=640" alt="Profile pic"/>
-                        <p>Empire D&eacute;mocratique du Poulpe</p>
-                    </a>
+                    @if (User.Identity != null && User.Identity.IsAuthenticated)
+                    {
+                        <a class="user-display disable-visited" asp-controller="User" asp-action="Disconnect">
+                            <img src="https://cdn130.picsart.com/329072184134211.png?type=webp&to=min&r=640" alt="Profile pic"/>
+                            <p>@User.Identity.Name</p>
+                        </a>
+                    }
+                    else
+                    {
+                        // TODO: Change to Connect button
+                        <a class="user-display disable-visited" asp-controller="User" asp-action="Disconnect">
+                            <img src="/images/user_profile_pic.png" alt="Profile pic"/>
+                            <p>Spoon Overlord</p>
+                        </a>
+                    }
                 </div>
             </header>
         }

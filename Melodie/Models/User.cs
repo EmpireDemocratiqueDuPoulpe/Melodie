@@ -1,12 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNetCore.Identity;
 
 namespace Melodie.Models
 {
-    public class User : IdentityUser, IUser
+    public class User
     {
         [Key, Column("user_id")]
         public int? UserId { get; set; }
@@ -20,11 +18,11 @@ namespace Melodie.Models
         public string EmailAddress { get; set; }
         
         
-        [Required, Column("password"), MaxLength(2000)]
+        [Required, Column("password"), DataType(DataType.Password), MaxLength(2000)]
         public string Password { get; set; }
         
         
-        [NotMapped]
+        [NotMapped, DataType(DataType.Password), MaxLength(2000)]
         public string PasswordConfirmation { get; set; }
         
         

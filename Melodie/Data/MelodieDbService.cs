@@ -27,7 +27,33 @@ namespace Melodie.Data
         {
             return await _db.Users.ToListAsync();
         }
-        
+
+        public async Task<int?> GetUserId(string username)
+        {
+            var user = await _db.Users.FirstOrDefaultAsync(u => u.Username == username);
+            return user?.UserId;
+        }
+
+        public async Task<string?> SearchForUsername(string username)
+        {
+            var user = await _db.Users.FirstOrDefaultAsync(u => u.Username == username);
+            return user?.Username;
+        }
+
+        public async Task<string?> SearchForEmail(string email)
+        {
+            var user = await _db.Users.FirstOrDefaultAsync(u => u.EmailAddress == email);
+            return user?.EmailAddress;
+        }
+
+        public async Task<bool> IsUserPassword(int userId, string password)
+        {
+            var user = await _db.Users
+                .Where(u => u.UserId == userId && u.Password == password)
+                .FirstOrDefaultAsync();
+            return user != null;
+        }
+
         // Playlists
         public async Task<Playlist> GetPlaylistById(int playlistId)
         {

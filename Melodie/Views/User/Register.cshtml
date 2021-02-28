@@ -2,12 +2,8 @@
 
 @{
 	ViewBag.NoHeader = true;
-}
-
-<!-- TODO: Move error onto fields -->
-@if (ViewBag.RegisterError != null)
-{
-	<h3>@ViewBag.RegisterError</h3>
+	
+	var errors = ViewBag.RegisterError ?? new Dictionary<string, string>();
 }
 
 <div class="auth-container">
@@ -20,13 +16,24 @@
 			<h2>Inscription</h2>
 			<span>&Agrave; un monde rempli de musique.</span>
 		</div>
-
-		<!-- TODO: Change "Register" to "AddUser" -->
-		@using (Html.BeginForm("Register", "User", FormMethod.Post))
+		
+		@if (errors.Count > 0)
+		{
+			<div class="auth-errors">
+				<ol>
+					@foreach (KeyValuePair<string, string> error in errors)
+					{
+						<li>@error.Value</li>
+					}
+				</ol>
+			</div>
+		}
+		
+		@using (Html.BeginForm("AddUser", "User", FormMethod.Post))
 		{
 			@Html.AntiForgeryToken()
 
-			<span class="field white field-madoka">
+			<span class="field @(errors.ContainsKey("InvalidUsername") ? "red" : "white" ) field-madoka">
 				@Html.EditorFor(u => u.Username, new {htmlAttributes = new {id = "username", @class = "field-input", placeholder = " ", @required = "required"}})
 				<label class="field-label" for="username">
 					<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
@@ -36,7 +43,7 @@
 				</label>
 			</span>
 
-			<span class="field white field-madoka">
+			<span class="field @(errors.ContainsKey("InvalidEmail") ? "red" : "white" ) field-madoka">
 				@Html.EditorFor(u => u.EmailAddress, new {htmlAttributes = new {id = "email", @class = "field-input", placeholder = " "}})
 				<label class="field-label" for="email">
 					<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
@@ -46,7 +53,7 @@
 				</label>
 			</span>
 
-			<span class="field white field-madoka">
+			<span class="field @(errors.ContainsKey("PasswordsDontMatch") || errors.ContainsKey("InvalidPassword") ? "red" : "white" ) field-madoka">
 				@Html.EditorFor(u => u.Password, new {htmlAttributes = new {id = "password1", @class = "field-input", placeholder = " ", @required = "required"}})
 				<label class="field-label" for="password1">
 					<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
@@ -56,7 +63,7 @@
 				</label>
 			</span>
 
-			<span class="field white field-madoka">
+			<span class="field @(errors.ContainsKey("PasswordsDontMatch") || errors.ContainsKey("InvalidPassword") ? "red" : "white" ) field-madoka">
 				@Html.EditorFor(u => u.PasswordConfirmation, new {htmlAttributes = new {id = "password2", @class = "field-input", placeholder = " ", @required = "required"}})
 				<label class="field-label" for="password2">
 					<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">

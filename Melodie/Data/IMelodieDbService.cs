@@ -10,6 +10,10 @@ namespace Melodie.Data
         // GET
         Task<User> GetUserById(int userId);
         Task<IEnumerable<User>> GetAllUsers();
+        Task<int?> GetUserId(string username);
+        Task<string?> SearchForUsername(string username);
+        Task<string?> SearchForEmail(string email);
+        Task<bool> IsUserPassword(int userId, string password);
 
         Task<Playlist> GetPlaylistById(int playlistId);
         Task<IEnumerable<Playlist>> GetPlaylistsOf(int userId);

@@ -492,6 +492,7 @@ header {
 }
 
 /* Colors */
+/* White */
 .dark-theme .field.white .field-input {
     background: #2B2B2B;
     color: #F7F9F9;
@@ -513,6 +514,29 @@ header {
 .light-theme .field.white.field-madoka input            { color: #353535; }
 .light-theme .field.white.field-madoka .field-label     { color: #6D7070; }
 .light-theme .field.white.field-madoka .field-graphic   { stroke: #6D7070; }
+
+/* Red */
+.dark-theme .field.red .field-input {
+    background: #2B2B2B;
+    color: #F7F9F9;
+}
+
+.dark-theme .field.red .field-label { color: #BDBFBF; }
+
+.dark-theme .field.red.field-madoka input           { color: #F7F9F9; }
+.dark-theme .field.red.field-madoka .field-label    { color: #F95950; }
+.dark-theme .field.red.field-madoka .field-graphic  { stroke: #F95950; }
+
+.light-theme .field.red .field-input {
+    background: #EDEFEF;
+    color: #353535;
+}
+
+.light-theme .field.red .field-label { color: #6D7070; }
+
+.light-theme .field.red.field-madoka input              { color: #353535; }
+.light-theme .field.red.field-madoka .field-label       { color: #F95950; }
+.light-theme .field.red.field-madoka .field-graphic     { stroke: #F95950; }
 
 /** File input **/
 html.no-js .file-input label { display: none !important; }

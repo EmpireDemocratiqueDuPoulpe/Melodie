@@ -1,6 +1,7 @@
 using System;
 using Melodie.Data;
 using Melodie.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -70,6 +71,9 @@ namespace Melodie
             //    options.AccessDeniedPath = "/User/AccessDenied";
             //    options.SlidingExpiration = true;
             //});
+            
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie();
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -90,6 +94,7 @@ namespace Melodie
             app.UseRouting();
 
             //app.UseAuthentication();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
