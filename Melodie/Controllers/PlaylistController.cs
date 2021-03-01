@@ -2,18 +2,16 @@
 using Melodie.Data;
 using Melodie.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Melodie.Controllers
 {
     public class PlaylistController : Controller
     {
-        private readonly ILogger<PlaylistController> _logger;
+        //private readonly ILogger<PlaylistController> _logger;
         private readonly IMelodieDbService _dbService;
 
-        public PlaylistController(ILogger<PlaylistController> logger, IMelodieDbService service)
+        public PlaylistController(IMelodieDbService service)
         {
-            _logger = logger;
             _dbService = service;
         }
         
@@ -36,14 +34,13 @@ namespace Melodie.Controllers
         -------------------------------------------------- */
         //Playlist/Add
         [HttpPost("Playlist/Add", Name = "AddPlaylist")]
+        // TODO: Update after login system
         public async Task<ActionResult<Playlist>> Add()
         {
             var playlist = new Playlist();
 
             var playlistId = await _dbService.AddPlaylist(playlist);
-            return (playlist != default)
-                ? RedirectToAction("Playlist", new { pid = playlistId })
-                : BadRequest();
+            return RedirectToAction("Playlist", new { pid = playlistId });
         }
         
         /* UPDATE

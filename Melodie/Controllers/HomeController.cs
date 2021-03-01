@@ -2,20 +2,17 @@
 using System.Threading.Tasks;
 using Melodie.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Melodie.Models;
-using Microsoft.AspNetCore.Http.Extensions;
 
 namespace Melodie.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        //private readonly ILogger<HomeController> _logger;
         private readonly IMelodieDbService _dbService;
 
-        public HomeController(ILogger<HomeController> logger, IMelodieDbService service)
+        public HomeController(IMelodieDbService service)
         {
-            _logger = logger;
             _dbService = service;
         }
         
@@ -26,15 +23,10 @@ namespace Melodie.Controllers
         [Route("Home")]
         [Route("Home/Index")]
         // TODO: Update after login system
-        //[HttpGet(Name = "GetByUserId")]
-        //[Route("{uid}")]
-        //[Route("Home/{uid}")]
-        //[Route("Home/Index/{uid}")]
-        //public async Task<IActionResult> Index(int uid)
         public async Task<IActionResult> Index()
         {
             var playlists = await _dbService.GetPlaylistsOf(1);
-            var lastMusics = await _dbService.GetLastMusics(10);
+            var lastMusics = await _dbService.GetLastMusics();
 
             if (playlists.Equals(default)) return RedirectToAction("Error");
 

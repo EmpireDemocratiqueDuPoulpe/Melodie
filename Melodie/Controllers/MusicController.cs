@@ -6,26 +6,24 @@ using Melodie.Data;
 using Melodie.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Melodie.Controllers
 {
     public class MusicController : Controller
     {
-        private readonly ILogger<MusicController> _logger;
+        //private readonly ILogger<MusicController> _logger;
         private readonly IMelodieDbService _dbService;
         private readonly IWebHostEnvironment _env;
 
-        private List<string> _audioFilesExt = new(new[]
+        private readonly List<string> _audioFilesExt = new(new[]
         {
             "wav", "ogg", "oga", "aif", "caf", "flac", "alac", "ac3", "mp3", "wma", "au", "asf", "aac"
         });
 
-        private string _uploadFolder = "musics/";
+        private const string UploadFolder = "musics/";
 
-        public MusicController(ILogger<MusicController> logger, IMelodieDbService service, IWebHostEnvironment env)
+        public MusicController(IMelodieDbService service, IWebHostEnvironment env)
         {
-            _logger = logger;
             _dbService = service;
             _env = env;
         }
@@ -58,10 +56,9 @@ namespace Melodie.Controllers
             // TODO: Doesn't work !
             // var uploadPath = ConfigurationManager.AppSettings["UserMusicPath"];
             //const string uploadPath = "D:\\MelodieStorage\\Musics\\";
-
-            //music.FilePath = uploadPath + filePath;
-            var relativePath = Path.Combine(_uploadFolder, filePath);
-            var absolutePath = Path.Combine(_env.WebRootPath, _uploadFolder, filePath);
+            
+            var relativePath = Path.Combine(UploadFolder, filePath);
+            var absolutePath = Path.Combine(_env.WebRootPath, UploadFolder, filePath);
 
             music.FilePath = relativePath;
             
@@ -76,11 +73,9 @@ namespace Melodie.Controllers
             }
             
             // Save the music into the database
-            var musicId = await _dbService.AddMusic(music);
+            await _dbService.AddMusic(music);
 
-            return (music != default)
-                ? RedirectToAction("Playlist", "Playlist", new { pid = music.PlaylistId })
-                : BadRequest();
+            return RedirectToAction("Playlist", "Playlist", new { pid = music.PlaylistId });
         }
         
         /* DELETE

@@ -7,11 +7,11 @@ namespace Melodie.Models
     public class Playlist
     {
         [Key, Column("playlist_id")]
-        public int? PlaylistId { get; set; }
+        public int? PlaylistId { get; init; }
         
         
         [Required, Column("user_id")]
-        public int? UserId { get; set; }
+        public int? UserId { get; init; }
         
         
         [Required, Column("color_id")]
@@ -28,12 +28,12 @@ namespace Melodie.Models
         
         public List<Music> Musics { get; set; }
 
+        // TODO: Remove UserId after login system
         public Playlist()
         {
             UserId = 1;
             ColorId = 1;
             Name = "Nouvelle playlist";
-            //Musics = new List<Music>();
         }
     }
 }

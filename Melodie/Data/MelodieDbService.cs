@@ -34,13 +34,13 @@ namespace Melodie.Data
             return user?.UserId;
         }
 
-        public async Task<string?> SearchForUsername(string username)
+        public async Task<string> SearchForUsername(string username)
         {
             var user = await _db.Users.FirstOrDefaultAsync(u => u.Username == username);
             return user?.Username;
         }
 
-        public async Task<string?> SearchForEmail(string email)
+        public async Task<string> SearchForEmail(string email)
         {
             var user = await _db.Users.FirstOrDefaultAsync(u => u.EmailAddress == email);
             return user?.EmailAddress;

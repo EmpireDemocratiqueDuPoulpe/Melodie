@@ -82,6 +82,7 @@
             <e p="cloud_upload-24px.svg" t="Include" />
             <e p="delete-24px.png" t="Include" />
             <e p="delete-24px.svg" t="Include" />
+            <e p="login_img.png" t="Include" />
             <e p="melodie_black.png" t="Include" />
             <e p="melodie_simple.png" t="Include" />
             <e p="melodie_white.png" t="Include" />
@@ -94,6 +95,7 @@
             <e p="playlist_add-24px.png" t="Include" />
             <e p="playlist_add-24px.svg" t="Include" />
             <e p="register_img.jpg" t="Include" />
+            <e p="register_img.png" t="Include" />
             <e p="skip_next-24px.png" t="Include" />
             <e p="skip_next-24px.svg" t="Include" />
             <e p="skip_previous-24px.png" t="Include" />
@@ -184,10 +186,16 @@
             <e p="2021_02_28_09_07_19Nasser - Chaos A.D..mp3" t="Include" />
             <e p="2021_02_28_09_07_41Little Big - Liar.mp3" t="Include" />
             <e p="2021_02_28_09_08_44Transforyou.mp3" t="Include" />
+            <e p="2021_02_28_09_40_00Christopher Tin - Sogno di Volare - The Dream of Flight.ogg" t="Include" />
+            <e p="2021_03_01_08_19_09Daft Punk - Harder Better Faster.mp3" t="Include" />
+            <e p="2021_03_01_08_19_25French 79 - By Your Side ft Sarah Rebecca.mp3" t="Include" />
           </e>
         </e>
       </e>
       <e p="Melodie.sln" t="IncludeFlat" />
+      <e p="Melodie.UnitTests" t="IncludeRecursive">
+        <e p="Melodie.UnitTests.csproj" t="IncludeRecursive" />
+      </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>

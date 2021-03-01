@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "zQ9aNuU9xSWq2kGXN+j1VpPJ4aEOe4dM+kFVxe6K8FeO5CFTZAKgb5p7c4yMr3tV6KxlUAXsWK6M+x5Bh9IGAA==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\alexi\\RiderProjects\\Melodie\\Melodie.UnitTests\\Melodie.UnitTests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alexi\\.nuget\\packages\\nunit\\2.6.4\\nunit.2.6.4.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\xamarin.uitest\\2.2.4\\xamarin.uitest.2.2.4.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Xamarin.UITest 2.2.4 is not compatible with net35 (.NETFramework,Version=v3.5). Package Xamarin.UITest 2.2.4 supports:\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - portable-net45+win8+wp8 (.NETPortable,Version=v0.0,Profile=Profile78)\r\n  - tools (tools,Version=v0.0)",
+      "libraryId": "Xamarin.UITest",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5"
+      ]
+    }
+  ]
+}

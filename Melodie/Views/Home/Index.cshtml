@@ -1,7 +1,4 @@
 ﻿@page "{uid?}"
-@{
-	var playlists = (IEnumerable<Playlist>) ViewBag.Playlists;
-}
 
 @section Scripts {
     <script src="~/js/PlaylistsLogoFiller.js"></script>
@@ -20,14 +17,18 @@
                 </button>
             </form>
             
-            @foreach (var playlist in playlists)
+            @if (ViewBag.Playlists != null)
             {
-                <a class="playlist-block disable-link-color" asp-controller="Playlist" asp-action="Playlist" asp-route-pid="@playlist.PlaylistId">
-                    <div class="playlist-logo auto-acronym"></div>
-                    <p class="playlist-title">@playlist.Name</p>
-                    <p class="playlist-desc light-text">@playlist.Description</p>
-                </a>
+                @foreach (var playlist in ViewBag.Playlists)
+                {
+                    <a class="playlist-block disable-link-color" asp-controller="Playlist" asp-action="Playlist" asp-route-pid="@playlist.PlaylistId">
+                        <div class="playlist-logo auto-acronym"></div>
+                        <p class="playlist-title">@playlist.Name</p>
+                        <p class="playlist-desc light-text">@playlist.Description</p>
+                    </a>
+                }
             }
+            
         </div>
         
         <div id="playlists-see-all">

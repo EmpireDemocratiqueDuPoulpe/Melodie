@@ -1,4 +1,9 @@
-﻿/* Const
+﻿/*
+	Not used anymore.
+	Switched to a solution using ASP.NET Cookies to prevent screen blinking on page load
+*/
+
+/* Const
 -------------------------------------------------- */
 
 let root;

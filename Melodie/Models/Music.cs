@@ -8,26 +8,18 @@ namespace Melodie.Models
     public class Music
     {
         [Key, Column("music_id")]
-        public int? MusicId { get; set; }
+        public int? MusicId { get; init; }
         
         
         [Required, Column("playlist_id")]
-        public int? PlaylistId { get; set; }
-        //[ForeignKey("playlist_id")]
-        //public virtual Playlist Playlist { get; set; }
+        public int? PlaylistId { get; init; }
+
         public Playlist Playlist { get; set; }
         
         
         [Required, Column("name"), MaxLength(100)]
         public string Name { get; set; }
-
-
-        //[Column("author")]
-        //public string? Author
-        //{
-        //    get => Author;
-        //    set => Author ??= "";
-        //}
+        
         
         [Column("author")]
         public string Author { get; set; }

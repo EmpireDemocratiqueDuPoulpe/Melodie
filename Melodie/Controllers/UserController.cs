@@ -7,29 +7,26 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Melodie.Controllers
 {
     [Authorize]
     public class UserController : Controller
     {
-        private readonly ILogger<UserController> _logger;
         private readonly IMelodieDbService _dbService;
         //private readonly UserManager<User> _userManager;
         //private readonly SignInManager<User> _loginManager;
-        private string _scheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        private Dictionary<string, string> _registerError = new();
-        private Dictionary<string, string> _loginError = new();
+        private const string Scheme = CookieAuthenticationDefaults.AuthenticationScheme;
+        // TODO: Not working, the dictionary reset after a redirect.
+        private readonly Dictionary<string, string> _registerError = new();
+        private readonly Dictionary<string, string> _loginError = new();
 
         public UserController(
-            ILogger<UserController> logger,
             IMelodieDbService service
             //UserManager<User> userManager,
             //SignInManager<User> loginManager)
             )
         {
-            _logger = logger;
             _dbService = service;
             //_userManager = userManager;
             //_loginManager = loginManager;
@@ -95,11 +92,11 @@ namespace Melodie.Controllers
                         new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
                         new Claim(ClaimTypes.Name, user.Username)
                     },
-                    _scheme
+                    Scheme
                 )
             );
             
-            SignIn(userClaim, _scheme);
+            SignIn(userClaim, Scheme);
 
             return RedirectToAction("Index", "Home");
         }
@@ -175,21 +172,24 @@ namespace Melodie.Controllers
             return await _dbService.SearchForEmail(email) == null;
         }
 
-        private bool IsPasswordPairIdentical(string password1, string password2)
+        private static bool IsPasswordPairIdentical(string password1, string password2)
         {
             return (password1.Equals(password2));
         }
         
         // TODO: Make this
-        private bool IsPasswordValid(string password)
+        private static bool IsPasswordValid(string password)
         {
-            return true;
+            return password != "";
         }
 
         private async Task<bool> IsUserPassword(int userId, string password)
         {
             return await _dbService.IsUserPassword(userId, password);
         }
+        
+        /* Old login system (not working at all)
+        -------------------------------------------------- */
 
         //User/Logout
         //[Route("User/Logout")]
