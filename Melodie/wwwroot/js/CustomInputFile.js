@@ -17,7 +17,7 @@
 
         input.addEventListener('change', function(e)
         {
-            // If the input has an attribute "data-multiple-caption", it will show a text like "X files selected.
+            // If the input has an attribute "data-multiple-caption", it will show a text like "X files selected".
             // Else it will show the file name
             var fileName = '';
             if(this.files && this.files.length > 1)

@@ -4,7 +4,7 @@
 class PlaylistLogo {
     logo = null;
     titleContainer = null;
-    acronym = "";
+    acronym = '';
     
     constructor(logo, titleContainer) {
         this.logo = logo;
@@ -14,12 +14,12 @@ class PlaylistLogo {
     isTitleContainerAnInput() {
         if (this.titleContainer == null) return false;
         
-        return this.titleContainer.tagName.toLowerCase() === "input" ||
-                this.titleContainer.tagName.toLowerCase() === "textarea";
+        return this.titleContainer.tagName.toLowerCase() === 'input' ||
+                this.titleContainer.tagName.toLowerCase() === 'textarea';
     }
     
     getTitle() {
-        if (this.titleContainer == null) return "";
+        if (this.titleContainer == null) return '';
         let title;
         
         if (this.isTitleContainerAnInput()) {
@@ -32,14 +32,14 @@ class PlaylistLogo {
     }
     
     buildAcronym(title) {
-        this.acronym = title.match(/\b(\w)/g).join("").toUpperCase();
+        this.acronym = title.match(/\b(\w)/g).join('').toUpperCase();
     }
     
     setAcronym() {
         if (this.logo == null) return;
         
         this.buildAcronym(this.getTitle());
-        this.logo.setAttribute("data-acronym", this.acronym);
+        this.logo.setAttribute('data-acronym', this.acronym);
     }
 }
 
@@ -49,11 +49,11 @@ const logos = [];
 -------------------------------------------------- */
 
 document.addEventListener('DOMContentLoaded', function(event) {
-    const playlists = document.querySelectorAll(".playlist-block, #playlist-info") || [];
+    const playlists = document.querySelectorAll('.playlist-block, #playlist-info') || [];
 
     forEach(playlists, function (index, playlist) {
-        const logo = playlist.querySelector(".playlist-logo.auto-acronym");
-        const titleContainer = playlist.querySelector(".playlist-title");
+        const logo = playlist.querySelector('.playlist-logo.auto-acronym');
+        const titleContainer = playlist.querySelector('.playlist-title');
 
         if (logo != null) {
             logos[index] = new PlaylistLogo(logo, titleContainer);

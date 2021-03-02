@@ -72,10 +72,14 @@
 				@foreach (var music in Model.Musics)
 				{
 					<tr class="song-row">
-						<td class="song-play-row">
+						<td class="song-play-row no-select">
 							<div class="song-play-btn" data-id="@i" data-uri="@music.FilePath">
-								<object id="play-icon" data="/images/play_arrow-24px.svg" type="image/svg+xml">
-                                	<img src="/images/play_arrow-24px.png" alt="Play"/>
+								<object class="play-icon" data="/images/play_arrow-24px.svg" type="image/svg+xml">
+									<img src="/images/play_arrow-24px.png" alt="Play"/>
+								</object>
+								
+								<object class="pause-icon" data="/images/pause-24px.svg" type="image/svg+xml">
+                                	<img src="/images/pause-24px.png" alt="Pause"/>
                                 </object>
 							</div>
 						</td>

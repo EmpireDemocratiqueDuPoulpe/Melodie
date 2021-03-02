@@ -94,7 +94,6 @@
             <e p="play_arrow-24px.svg" t="Include" />
             <e p="playlist_add-24px.png" t="Include" />
             <e p="playlist_add-24px.svg" t="Include" />
-            <e p="register_img.jpg" t="Include" />
             <e p="register_img.png" t="Include" />
             <e p="skip_next-24px.png" t="Include" />
             <e p="skip_next-24px.svg" t="Include" />
@@ -114,6 +113,7 @@
             <e p="CustomInputFile.js" t="Include" />
             <e p="FooterFixer.js" t="Include" />
             <e p="GlobalFunctions.js" t="Include" />
+            <e p="KeepScrollPosition.js" t="Include" />
             <e p="MusicPlayer.js" t="Include" />
             <e p="PlaylistsLogoFiller.js" t="Include" />
             <e p="ThemeChanger.js" t="Include" />
@@ -174,21 +174,35 @@
           <e p="Musics" t="Include">
             <e p=".gitignore" t="Include" />
             <e p=".keep" t="Include" />
-            <e p="2021_02_23_08_59_45Rick Astley - Never Gonna Give You Up.mp3" t="Include" />
-            <e p="2021_02_23_09_04_36Daft Punk - Harder Better Faster.mp3" t="Include" />
-            <e p="2021_02_23_09_04_50French 79 - By Your Side ft Sarah Rebecca.mp3" t="Include" />
-            <e p="2021_02_23_09_05_10Rick Astley - Never Gonna Give You Up.mp3" t="Include" />
-            <e p="2021_02_24_02_26_35Cloud 9 - Hide The Pain.mp3" t="Include" />
-            <e p="2021_02_24_09_38_53M83 - Outro.mp3" t="Include" />
-            <e p="2021_02_24_09_42_38M83 - Outro.mp3" t="Include" />
-            <e p="2021_02_24_11_19_50Nasser - Chaos A.D..mp3" t="Include" />
-            <e p="2021_02_26_07_35_06Little Big - Liar.mp3" t="Include" />
-            <e p="2021_02_28_09_07_19Nasser - Chaos A.D..mp3" t="Include" />
-            <e p="2021_02_28_09_07_41Little Big - Liar.mp3" t="Include" />
-            <e p="2021_02_28_09_08_44Transforyou.mp3" t="Include" />
-            <e p="2021_02_28_09_40_00Christopher Tin - Sogno di Volare - The Dream of Flight.ogg" t="Include" />
-            <e p="2021_03_01_08_19_09Daft Punk - Harder Better Faster.mp3" t="Include" />
-            <e p="2021_03_01_08_19_25French 79 - By Your Side ft Sarah Rebecca.mp3" t="Include" />
+            <e p="2021_03_02_06_56_39a-ha - Take on Me.mp3" t="Include" />
+            <e p="2021_03_02_06_58_23Eagles - Hotel California.mp3" t="Include" />
+            <e p="2021_03_02_06_58_42Rick Astley - Never Gonna Give You Up.mp3" t="Include" />
+            <e p="2021_03_02_07_09_06Wolfgang Amadeus Mozart - Symphony n°40 in G Minor - K 550 - Molto Allegro.mp3" t="Include" />
+            <e p="2021_03_02_07_10_18Cloud 9+ - Hide The Pain.mp3" t="Include" />
+            <e p="2021_03_02_07_10_50Lanterns On The Lake - Through The Cellar Door.mp3" t="Include" />
+            <e p="2021_03_02_07_11_21Daft Punk - Harder Better Faster Stronger.mp3" t="Include" />
+            <e p="2021_03_02_07_11_36Daft Punk - One More Time.mp3" t="Include" />
+            <e p="2021_03_02_07_12_24Little Big - Skibidi.mp3" t="Include" />
+            <e p="2021_03_02_07_12_47Little Big - Rock-Paper-Scissors.mp3" t="Include" />
+            <e p="2021_03_02_07_13_13Little Big - Dead Unicorn.mp3" t="Include" />
+            <e p="2021_03_02_07_13_53Little Big - Liar.mp3" t="Include" />
+            <e p="2021_03_02_07_14_17Little Big - Hypnodancer.mp3" t="Include" />
+            <e p="2021_03_02_07_15_17M83 - Midnight City.mp3" t="Include" />
+            <e p="2021_03_02_07_15_40M83 - Echoes Of Mine.mp3" t="Include" />
+            <e p="2021_03_02_07_16_12M83 - Outro.mp3" t="Include" />
+            <e p="2021_03_02_07_16_46Bill Wurtz - i'm Best Friends with my Own Front Door.mp3" t="Include" />
+            <e p="2021_03_02_07_22_45Bill Wurtz - long long long journey.mp3" t="Include" />
+            <e p="2021_03_02_07_30_14Bill Wurtz - i just did a bad thing.mp3" t="Include" />
+            <e p="2021_03_02_07_48_37French 79 - By Your Side ft. Sarah Rebecca.mp3" t="Include" />
+            <e p="2021_03_02_07_50_32French 79 - Quartz.mp3" t="Include" />
+            <e p="2021_03_02_07_51_22French 79 - Louise and Thelma.mp3" t="Include" />
+            <e p="2021_03_02_07_51_49Nasser - Chaos AD.mp3" t="Include" />
+            <e p="2021_03_02_07_52_10Nasser - Listeners.mp3" t="Include" />
+            <e p="2021_03_02_07_52_39Caravan Palace - Lone Digger.mp3" t="Include" />
+            <e p="2021_03_02_07_53_02Caravan Palace - Moonshine.mp3" t="Include" />
+            <e p="2021_03_02_07_53_20Caravan Palace - Miracle.mp3" t="Include" />
+            <e p="2021_03_02_11_21_50Christopher Tin - Sogno di Volare - The Dream of Flight.ogg" t="Include" />
+            <e p="2021_03_02_11_24_27Christopher Tin - Sogno di Volare - The Dream of Flight.ogg" t="Include" />
           </e>
         </e>
       </e>
