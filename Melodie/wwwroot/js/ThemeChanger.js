@@ -53,5 +53,5 @@ function switchTheme() {
 
 function switchToTheme(theme = darkTheme) {
     localStorage.setItem(themeKeyName, theme);
-    root.setAttribute('class', theme);
+    addClass(root, theme);
 }

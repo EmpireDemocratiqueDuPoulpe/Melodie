@@ -13,3 +13,12 @@ function getStyle(el, styleProp)
 
     return document.defaultView.getComputedStyle(el,null)[styleProp];
 }
+
+/** Classes **/
+function addClass(el, className) {
+    el.className = el.className.trim() + ' ' + className;
+}
+
+function delClass(el, className) {
+    el.className = el.className.replace(new RegExp("\\b"+className+"\\b", "g"), "");
+}

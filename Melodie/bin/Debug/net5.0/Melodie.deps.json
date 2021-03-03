@@ -29,6 +29,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.2",
           "Microsoft.AspNetCore.Identity.UI": "5.0.2",
           "Microsoft.EntityFrameworkCore": "5.0.2",
+          "Microsoft.jQuery.Unobtrusive.Ajax": "3.2.6",
           "Pomelo.EntityFrameworkCore.MySql": "5.0.0-alpha.2",
           "System.Configuration.ConfigurationManager": "6.0.0-preview.1.21102.12",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -311,6 +312,7 @@
           "Melodie.dll": {}
         }
       },
+      "jQuery/1.8.0": {},
       "Microsoft.AspNet.Identity.Core/2.2.3": {
         "runtime": {
           "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
@@ -531,6 +533,11 @@
         }
       },
       "Microsoft.Extensions.Primitives/5.0.0": {},
+      "Microsoft.jQuery.Unobtrusive.Ajax/3.2.6": {
+        "dependencies": {
+          "jQuery": "1.8.0"
+        }
+      },
       "Microsoft.NETCore.Platforms/6.0.0-preview.1.21102.12": {},
       "Microsoft.Win32.SystemEvents/6.0.0-preview.1.21102.12": {
         "dependencies": {
@@ -2373,6 +2380,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "jQuery/1.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-laDFQRJrIRHT0Z0GVYklMt3bE0iu0MZFJwHwg21kt3SHb7Bj8TdNiM3K+ZdK1DzB8ZxKy8z7NkJvwMas+dmHBw==",
+      "path": "jquery/1.8.0",
+      "hashPath": "jquery.1.8.0.nupkg.sha512"
+    },
     "Microsoft.AspNet.Identity.Core/2.2.3": {
       "type": "package",
       "serviceable": true,
@@ -2526,6 +2540,13 @@
       "sha512": "sha512-cI/VWn9G1fghXrNDagX9nYaaB/nokkZn0HYAawGaELQrl8InSezfe9OnfPZLcJq3esXxygh3hkq2c3qoV3SDyQ==",
       "path": "microsoft.extensions.primitives/5.0.0",
       "hashPath": "microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.jQuery.Unobtrusive.Ajax/3.2.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-udg7ZBszgqxloQ+ShJRONKQAzPnJIlUhKZB+AIvZdKh7CDc5Nms69T9X0hN5i+NqMmQE6njkzdCcEb16lPdJTw==",
+      "path": "microsoft.jquery.unobtrusive.ajax/3.2.6",
+      "hashPath": "microsoft.jquery.unobtrusive.ajax.3.2.6.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/6.0.0-preview.1.21102.12": {
       "type": "package",

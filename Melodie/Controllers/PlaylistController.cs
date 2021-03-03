@@ -29,7 +29,7 @@ namespace Melodie.Controllers
 
             return View(playlist);
         }
-        
+
         /* ADD
         -------------------------------------------------- */
         //Playlist/Add
@@ -56,7 +56,15 @@ namespace Melodie.Controllers
             }
 
             var result = await _dbService.UpdatePlaylist(playlist);
-            return (result > 0) ? NoContent() : NotFound();
+            
+            // Fix a bug where the modal confirmation message wasn't updated with the name.
+            // Possibles fixes:
+            // 1 - Reload the page on update (current)
+            // 2 - Use Ajax.BeginForm
+            //return (result > 0) ? NoContent() : NotFound();
+            return (result > 0)
+                ? RedirectToAction("Playlist", "Playlist", new {pid = playlist.PlaylistId})
+                : NotFound();
         }
         
         /* DELETE
@@ -66,9 +74,20 @@ namespace Melodie.Controllers
         [HttpPost("Playlist/Delete", Name = "DelPlaylist")]
         public async Task<ActionResult<Playlist>> Delete(Playlist playlist)
         {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.OpenDeleteModal = true;
+                return View("Playlist", playlist);
+            }
+            
             if (playlist.PlaylistId == null)
             {
                 return BadRequest("ID must be set for DELETE query.");
+            }
+
+            if (playlist.Name != playlist.DeleteConfirmation)
+            {
+                return BadRequest("The confirmation doesn't match the playlist name.");
             }
             
             var result = await _dbService.DeletePlaylist(playlist);

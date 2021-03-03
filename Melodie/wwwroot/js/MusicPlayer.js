@@ -247,18 +247,32 @@ function updatePlayPauseIcon(selector, playing) {
 
 // Set a play button and its parent .playing
 function setPlayRowAsPlaying(playBtn, playing) {
-    playBtn.setAttribute('class', 'song-play-btn' + (playing ? ' playing' : ''));
-    playBtn.parentElement.parentElement.setAttribute('class', 'song-row' + (playing ? ' playing' : ''));
+    if (playing) {
+        addClass(playBtn, 'playing');
+        addClass(playBtn.parentElement.parentElement, 'playing');
+    } else {
+        delClass(playBtn, 'playing');
+        delClass(playBtn.parentElement.parentElement, 'playing');
+    }
+    
 }
 
 // Update the global Play/Pause button icon
 function updatePlayIcon() {
-    globalPlayBtn.setAttribute('class', 'music-player-btn bigger no-select' + (wavesurfer.isPlaying() ? ' playing' : ''));
+    if (wavesurfer.isPlaying()) {
+        addClass(globalPlayBtn, 'playing');
+    } else {
+        delClass(globalPlayBtn, 'playing');
+    }
 }
 
 // Update the mute button icon
 function updateMuteIcon() {
-    muteBtn.setAttribute('class', 'slider-icon clickable-icon' + (wavesurfer.isMuted || volumeSlider.value === '0' ? ' muted' : ''));
+    if (wavesurfer.isMuted || volumeSlider.value === '0') {
+        addClass(muteBtn, 'muted');
+    } else {
+        delClass(muteBtn, 'muted');
+    }
 }
 
 // Function called when the mute button is pressed

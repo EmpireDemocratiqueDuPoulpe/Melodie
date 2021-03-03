@@ -83,6 +83,7 @@ function scrollIt(duration = 200, easing = 'linear', callback) {
 
 function fixFooterPos() {
     const footer = document.querySelector("body.has-music-player footer");
+    if (footer == null) return;
 
     // Get window height
     const visibleHeight = window.innerHeight;

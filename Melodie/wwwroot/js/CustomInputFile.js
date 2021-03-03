@@ -32,7 +32,7 @@
         });
 
         // Firefox bug fix
-        input.addEventListener('focus', function(){ input.classList.add('has-focus'); });
-        input.addEventListener('blur', function(){ input.classList.remove('has-focus'); });
+        input.addEventListener('focus', function(){ addClass(input, 'has-focus'); });
+        input.addEventListener('blur', function(){ delClass(input, 'has-focus'); });
     });
 }(document, window, 0));

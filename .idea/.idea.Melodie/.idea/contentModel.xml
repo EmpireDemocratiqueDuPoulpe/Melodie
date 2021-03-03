@@ -114,6 +114,7 @@
             <e p="FooterFixer.js" t="Include" />
             <e p="GlobalFunctions.js" t="Include" />
             <e p="KeepScrollPosition.js" t="Include" />
+            <e p="ModalOpener.js" t="Include" />
             <e p="MusicPlayer.js" t="Include" />
             <e p="PlaylistsLogoFiller.js" t="Include" />
             <e p="ThemeChanger.js" t="Include" />
@@ -201,8 +202,6 @@
             <e p="2021_03_02_07_52_39Caravan Palace - Lone Digger.mp3" t="Include" />
             <e p="2021_03_02_07_53_02Caravan Palace - Moonshine.mp3" t="Include" />
             <e p="2021_03_02_07_53_20Caravan Palace - Miracle.mp3" t="Include" />
-            <e p="2021_03_02_11_21_50Christopher Tin - Sogno di Volare - The Dream of Flight.ogg" t="Include" />
-            <e p="2021_03_02_11_24_27Christopher Tin - Sogno di Volare - The Dream of Flight.ogg" t="Include" />
           </e>
         </e>
       </e>

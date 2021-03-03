@@ -2,6 +2,8 @@
 @model Melodie.Models.Playlist
 
 @{
+	var bodyClasses = "";
+	
 	// Music count
 	var musicsCount = "";
 	
@@ -11,8 +13,20 @@
 		musicsCount = count + " musique" + (count > 0 ? "s" : "");
 	}
 	
+	// Delete modal
+	var modalClass = "";
+
+	if (ViewBag.OpenDeleteModal != null)
+	{
+		modalClass = "open";
+		bodyClasses += " no-scroll";
+	}
+
 	// Music player
-	ViewBag.BodyClasses = "has-music-player";
+	bodyClasses += "has-music-player";
+	
+	// Body classes
+	ViewBag.BodyClasses = bodyClasses;
 }
 
 @section Scripts {
@@ -42,7 +56,7 @@
 					<span>Enregistrer</span>
 				</button>
 				
-				<button class="btn orange showing-icon" type="submit" formaction="@Url.Action("Delete")">
+				<button class="btn orange showing-icon" type="button" data-open-modal="1">
 					<div class="btn-effect-box">
 						<object data="/images/delete-24px.svg" type="image/svg+xml">
 							<img src="/images/delete-24px.png" alt="Delete"/>
@@ -52,6 +66,51 @@
 				</button>
 			</div>
 		}
+	</div>
+	
+	<div id="playlist-delete-confirm" class="modal @modalClass" data-modal-id="1">
+		<div class="modal-wrapper">
+			<div class="modal-header">
+				<h3>Confirmation</h3>
+			</div>
+			<div class="modal-body">
+				<p>&Eacute;crivez <b>"@Model.Name"</b> dans la bo&icirc;te ci-dessous pour supprimer la playlist.</p>
+				
+				@using (Html.BeginForm("Delete", "Playlist", FormMethod.Post))
+				{
+					@Html.HiddenFor(p => p.PlaylistId)
+					@Html.HiddenFor(p => p.Name)
+					
+					@Html.ValidationMessageFor(p => p.DeleteConfirmation, null, new {@class = "error"})
+					
+					<span class="field white field-madoka">
+						@Html.EditorFor(p => p.DeleteConfirmation, new {htmlAttributes = new {id = "playlist-delete-confirm", @class = "field-input", placeholder = " ", @required = "required"}})
+						<label class="field-label" for="playlist-delete-confirm">
+							<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+								<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+							</svg>
+							<span class="field-label-content">Confirmation</span>
+						</label>
+					</span>
+					
+					<div class="modal-buttons">
+						<button class="btn yellow slide-effect" type="button" data-close-modal="1">
+							<div class="btn-effect-box"></div>
+							<span>Annuler</span>
+						</button>
+						
+						<button class="btn orange showing-icon" type="submit">
+                        	<div class="btn-effect-box">
+                        		<object data="/images/delete-24px.svg" type="image/svg+xml">
+                        			<img src="/images/delete-24px.png" alt="Delete"/>
+                        		</object>
+                        	</div>
+                        	<span>Supprimer</span>
+                        </button>
+					</div>
+				}
+			</div>
+		</div>
 	</div>
 
 	<table id="songs-table">

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZUneXK1zDug5s6yf2A23PJ4fZwL8RnPKwnGTu1z3aa0LoufS3LoV+dksyC+S+GXK1vQ0vFec/maV7Bfryf2Lhg==",
+  "dgSpecHash": "H/d5dsb+EkuM4f2lOKjwQEqQCD+FQcSoMrh60BMzWWtzY0UUsfDyUoD6OETUdYmBDdUNtvBSF8QBq6Au60berg==",
   "success": true,
   "projectFilePath": "C:\\Users\\alexi\\RiderProjects\\Melodie\\Melodie\\Melodie.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\alexi\\.nuget\\packages\\jquery\\1.8.0\\jquery.1.8.0.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.2\\microsoft.aspnetcore.cryptography.internal.5.0.2.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.2\\microsoft.aspnetcore.cryptography.keyderivation.5.0.2.nupkg.sha512",
@@ -26,6 +27,7 @@
     "C:\\Users\\alexi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\microsoft.jquery.unobtrusive.ajax\\3.2.6\\microsoft.jquery.unobtrusive.ajax.3.2.6.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\microsoft.netcore.platforms\\6.0.0-preview.1.21102.12\\microsoft.netcore.platforms.6.0.0-preview.1.21102.12.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0-preview.1.21102.12\\microsoft.win32.systemevents.6.0.0-preview.1.21102.12.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\mysqlconnector\\1.1.0\\mysqlconnector.1.1.0.nupkg.sha512",

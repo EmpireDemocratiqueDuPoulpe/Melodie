@@ -27,6 +27,10 @@ namespace Melodie.Models
         
         
         public List<Music> Musics { get; set; }
+        
+        
+        [NotMapped, Compare("Name", ErrorMessage = "The confirmation doesn't match the playlist name.")]
+        public string DeleteConfirmation { get; set; }
 
         // TODO: Remove UserId after login system
         public Playlist()
