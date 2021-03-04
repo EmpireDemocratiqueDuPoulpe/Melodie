@@ -3,9 +3,12 @@ using System.Threading.Tasks;
 using Melodie.Data;
 using Microsoft.AspNetCore.Mvc;
 using Melodie.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Melodie.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         //private readonly ILogger<HomeController> _logger;
@@ -25,7 +28,7 @@ namespace Melodie.Controllers
         // TODO: Update after login system
         public async Task<IActionResult> Index()
         {
-            var playlists = await _dbService.GetPlaylistsOf(1);
+            var playlists = await _dbService.GetPlaylistsOf(User.Identity.GetUserId());
             var lastMusics = await _dbService.GetLastMusics();
 
             if (playlists.Equals(default)) return RedirectToAction("Error");

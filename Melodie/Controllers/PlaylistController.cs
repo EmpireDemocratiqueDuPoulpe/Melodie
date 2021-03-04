@@ -1,10 +1,13 @@
 ﻿using System.Threading.Tasks;
 using Melodie.Data;
 using Melodie.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Melodie.Controllers
 {
+    [Authorize]
     public class PlaylistController : Controller
     {
         //private readonly ILogger<PlaylistController> _logger;
@@ -37,7 +40,7 @@ namespace Melodie.Controllers
         // TODO: Update after login system
         public async Task<ActionResult<Playlist>> Add()
         {
-            var playlist = new Playlist();
+            var playlist = new Playlist {UserId = User.Identity.GetUserId()};
 
             var playlistId = await _dbService.AddPlaylist(playlist);
             return RedirectToAction("Playlist", new { pid = playlistId });

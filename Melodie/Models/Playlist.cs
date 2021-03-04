@@ -11,7 +11,7 @@ namespace Melodie.Models
         
         
         [Required, Column("user_id")]
-        public int? UserId { get; init; }
+        public string UserId { get; set; }
         
         
         [Required, Column("color_id")]
@@ -31,11 +31,9 @@ namespace Melodie.Models
         
         [NotMapped, Compare("Name", ErrorMessage = "The confirmation doesn't match the playlist name.")]
         public string DeleteConfirmation { get; set; }
-
-        // TODO: Remove UserId after login system
+        
         public Playlist()
         {
-            UserId = 1;
             ColorId = 1;
             Name = "Nouvelle playlist";
         }

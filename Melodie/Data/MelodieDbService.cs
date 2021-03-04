@@ -17,43 +17,6 @@ namespace Melodie.Data
         
         /* GET
         -------------------------------------------------- */
-        // Users
-        public async Task<User> GetUserById(int userId)
-        {
-            return await _db.Users.FirstOrDefaultAsync(u => u.UserId == userId);
-        }
-
-        public async Task<IEnumerable<User>> GetAllUsers()
-        {
-            return await _db.Users.ToListAsync();
-        }
-
-        public async Task<int?> GetUserId(string username)
-        {
-            var user = await _db.Users.FirstOrDefaultAsync(u => u.Username == username);
-            return user?.UserId;
-        }
-
-        public async Task<string> SearchForUsername(string username)
-        {
-            var user = await _db.Users.FirstOrDefaultAsync(u => u.Username == username);
-            return user?.Username;
-        }
-
-        public async Task<string> SearchForEmail(string email)
-        {
-            var user = await _db.Users.FirstOrDefaultAsync(u => u.EmailAddress == email);
-            return user?.EmailAddress;
-        }
-
-        public async Task<bool> IsUserPassword(int userId, string password)
-        {
-            var user = await _db.Users
-                .Where(u => u.UserId == userId && u.Password == password)
-                .FirstOrDefaultAsync();
-            return user != null;
-        }
-
         // Playlists
         public async Task<Playlist> GetPlaylistById(int playlistId)
         {
@@ -62,7 +25,7 @@ namespace Melodie.Data
                 .FirstOrDefaultAsync(p => p.PlaylistId == playlistId);
         }
         
-        public async Task<IEnumerable<Playlist>> GetPlaylistsOf(int userId)
+        public async Task<IEnumerable<Playlist>> GetPlaylistsOf(string userId)
         {
             return await _db.Playlists
                 .Where(p => p.UserId == userId)
@@ -94,13 +57,6 @@ namespace Melodie.Data
 
         /* ADD
         -------------------------------------------------- */
-        // Users
-        public async Task<int> AddUser(User user)
-        {
-            _db.Add(user);
-            return await _db.SaveChangesAsync();
-        }
-        
         // Playlists
         public async Task<int> AddPlaylist(Playlist playlist)
         {
@@ -121,20 +77,6 @@ namespace Melodie.Data
 
         /* UPDATE
         -------------------------------------------------- */
-        // Users
-        public async Task<int> UpdateUser(User user)
-        {
-            try
-            {
-                _db.Users.Update(user);
-                return await _db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                return 0;
-            }
-        }
-        
         // Playlists
         public async Task<int> UpdatePlaylist(Playlist playlist)
         {
@@ -162,23 +104,9 @@ namespace Melodie.Data
                 return 0;
             }
         }
-        
+
         /* DELETE
         -------------------------------------------------- */
-        // Users
-        public async Task<int> DeleteUser(int userId)
-        {
-            try
-            {
-                _db.Users.Remove(new User { UserId = userId });
-                return await _db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                return 0;
-            }
-        }
-        
         // Playlists
         public async Task<int> DeletePlaylist(Playlist playlist)
         {

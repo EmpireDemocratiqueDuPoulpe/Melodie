@@ -1,21 +1,20 @@
 ﻿using Melodie.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Melodie.Data
 {
-    public class MelodieDbContext : DbContext
+    public class MelodieDbContext : IdentityDbContext
     {
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Playlist> Playlists { get; set; }
         public virtual DbSet<Music> Musics { get; set; }
-        public MelodieDbContext(DbContextOptions<MelodieDbContext> options) : base(options) {}
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         
+        public MelodieDbContext(DbContextOptions<MelodieDbContext> options) : base(options) {}
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Music>()
-            //    .HasOne(m => m.Playlist)
-            //    .WithMany(p => p.Musics)
-            //    .HasForeignKey(m => m.PlaylistId);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

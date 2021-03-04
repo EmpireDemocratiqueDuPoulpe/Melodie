@@ -4,11 +4,13 @@ using System.IO;
 using System.Threading.Tasks;
 using Melodie.Data;
 using Melodie.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Melodie.Controllers
 {
+    [Authorize]
     public class MusicController : Controller
     {
         //private readonly ILogger<MusicController> _logger;

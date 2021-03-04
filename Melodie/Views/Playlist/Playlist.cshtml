@@ -46,6 +46,7 @@
 			@Html.AntiForgeryToken()
 			
 			@Html.HiddenFor(p => p.PlaylistId)
+			@Html.HiddenFor(p => p.UserId)
 			@Html.EditorFor(p => p.Name, new { htmlAttributes = new { @class = "playlist-title bg-on-hover", placeholder = "Nom de la playlist" } })
 			<p class="playlist-duration light-text">@musicsCount</p>
 			@Html.EditorFor(p => p.Description, new { htmlAttributes = new { @class = "playlist-desc bg-on-hover", placeholder = "Description" } })
@@ -79,6 +80,7 @@
 				@using (Html.BeginForm("Delete", "Playlist", FormMethod.Post))
 				{
 					@Html.HiddenFor(p => p.PlaylistId)
+					@Html.HiddenFor(p => p.UserId)
 					@Html.HiddenFor(p => p.Name)
 					
 					@Html.ValidationMessageFor(p => p.DeleteConfirmation, null, new {@class = "error"})

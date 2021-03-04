@@ -1,7 +1,8 @@
-﻿@model Melodie.Models.User
+﻿@model Melodie.Models.AspNetUser
 
 @{
 	ViewBag.NoHeader = true;
+	ViewBag.Title = "Inscription";
 	
 	var errors = ViewBag.RegisterError ?? new Dictionary<string, string>();
 }
@@ -29,12 +30,13 @@
 			</div>
 		}
 		
-		@using (Html.BeginForm("AddUser", "User", FormMethod.Post))
+		<!--@@using (Html.BeginForm("AddUser", "User", FormMethod.Post))-->
+		@using (Html.BeginForm("RegisterUser", "User", FormMethod.Post))
 		{
 			@Html.AntiForgeryToken()
 
 			<span class="field @(errors.ContainsKey("InvalidUsername") ? "red" : "white" ) field-madoka">
-				@Html.EditorFor(u => u.Username, new {htmlAttributes = new {id = "username", @class = "field-input", placeholder = " ", @required = "required"}})
+				@Html.EditorFor(u => u.UserName, new {htmlAttributes = new {id = "username", @class = "field-input", placeholder = " ", @required = "required"}})
 				<label class="field-label" for="username">
 					<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
 						<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
@@ -44,7 +46,7 @@
 			</span>
 
 			<span class="field @(errors.ContainsKey("InvalidEmail") ? "red" : "white" ) field-madoka">
-				@Html.EditorFor(u => u.EmailAddress, new {htmlAttributes = new {id = "email", @class = "field-input", placeholder = " "}})
+				@Html.EditorFor(u => u.Email, new {htmlAttributes = new {id = "email", @class = "field-input", placeholder = " "}})
 				<label class="field-label" for="email">
 					<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
 						<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>

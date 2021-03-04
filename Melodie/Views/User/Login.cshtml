@@ -1,7 +1,8 @@
-@model Melodie.Models.User
+@model Melodie.Models.AspNetUser
 
 @{
 	ViewBag.NoHeader = true;
+	ViewBag.Title = "Connexion";
 	
 	var errors = ViewBag.LoginError ?? new Dictionary<string, string>();
 }
@@ -34,12 +35,12 @@
     		@Html.AntiForgeryToken()
     
     		<span class="field @(errors.ContainsKey("UnknownUsername") ? "red" : "white" ) field-madoka">
-    			@Html.EditorFor(u => u.Username, new {htmlAttributes = new {id = "username", @class = "field-input", placeholder = " ", @required = "required"}})
+    			@Html.EditorFor(u => u.UserName, new {htmlAttributes = new {id = "username", @class = "field-input", placeholder = " ", @required = "required"}})
     			<label class="field-label" for="username">
     				<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
     					<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
     				</svg>
-    				<span class="field-label-content">Nom d'utilisateur</span>
+    				<span class="field-label-content">Email</span>
     			</label>
     		</span>
 

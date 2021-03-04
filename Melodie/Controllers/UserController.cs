@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Security.Claims;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Melodie.Data;
 using Melodie.Models;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Melodie.Controllers
@@ -13,23 +10,20 @@ namespace Melodie.Controllers
     [Authorize]
     public class UserController : Controller
     {
-        private readonly IMelodieDbService _dbService;
-        //private readonly UserManager<User> _userManager;
-        //private readonly SignInManager<User> _loginManager;
-        private const string Scheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        // TODO: Not working, the dictionary reset after a redirect.
-        private readonly Dictionary<string, string> _registerError = new();
-        private readonly Dictionary<string, string> _loginError = new();
+        private readonly UserManager<AspNetUser> _userManager;
+        private readonly SignInManager<AspNetUser> _signInManager;
+        //private readonly IEmailSender _emailSender;
 
         public UserController(
-            IMelodieDbService service
-            //UserManager<User> userManager,
-            //SignInManager<User> loginManager)
+            IMelodieDbService service,
+            UserManager<AspNetUser> userManager,
+            SignInManager<AspNetUser> signInManager
+            //IEmailSender emailSender)
             )
         {
-            _dbService = service;
-            //_userManager = userManager;
-            //_loginManager = loginManager;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            //_emailSender = emailSender;
         }
 
         /* GET
@@ -39,14 +33,6 @@ namespace Melodie.Controllers
         [Route("User/Register")]
         public IActionResult Register()
         {
-            if (_registerError.Count > 0)
-            {
-                ViewBag.RegisterError = _registerError;
-                _registerError.Clear();
-            }
-            
-            ViewBag.Title = "Inscription";
-            
             return View();
         }
 
@@ -55,188 +41,79 @@ namespace Melodie.Controllers
         [Route("User/Login")]
         public IActionResult Login()
         {
-            if (_loginError.Count > 0)
-            {
-                ViewBag.LoginError = _loginError;
-                _loginError.Clear();
-            }
-
-            ViewBag.Title = "Connexion";
-            
             return View();
         }
-
+        
+        [HttpPost]
         [AllowAnonymous]
-        [HttpPost("User/ProcessLogin")]
-        public async Task<IActionResult> LoginUser(User user)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RegisterUser(AspNetUser user)
         {
-            var userId = await _dbService.GetUserId(user.Username);
+            if (!ModelState.IsValid || user.Password != user.PasswordConfirmation) return View("Register", user);
             
-            if (userId == null)
+            var result = await _userManager.CreateAsync(user, user.Password);
+            if (result.Succeeded)
             {
-                _loginError.Add("UnknownUsername", "Le nom d'utilisateur n'existe pas.");
-                return RedirectToAction("Login", "User");
+                await _signInManager.PasswordSignInAsync(user.UserName, user.Password, true, false);
+                return RedirectToAction(nameof(HomeController.Index), "Home");
             }
 
-            user.UserId = userId;
-            if (!await IsUserPassword((int) user.UserId, user.Password))
+            foreach (var error in result.Errors)
             {
-                _loginError.Add("WrongPassword", "Le mot de passe est erroné.");
-                return RedirectToAction("Login", "User");
+                ModelState.AddModelError(error.Code, error.Description);
             }
-            
-            var userClaim = new ClaimsPrincipal(
-                new ClaimsIdentity(
-                    new[]
-                    {
-                        new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-                        new Claim(ClaimTypes.Name, user.Username)
-                    },
-                    Scheme
-                )
-            );
-            
-            SignIn(userClaim, Scheme);
 
-            return RedirectToAction("Index", "Home");
+            return View("Register", user);
         }
         
-        //User/Disconnect
+        [HttpPost]
         [AllowAnonymous]
-        [Route("User/Disconnect")]
-        public async Task<IActionResult> Disconnect()
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> LoginUser(AspNetUser user, string returnUrl = null)
         {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            ViewData["ReturnUrl"] = returnUrl;
+            if (ModelState.IsValid)
+            {
+                var result = await _signInManager.PasswordSignInAsync(user.UserName, user.Password, true, lockoutOnFailure: false);
+                
+                if (result.Succeeded)
+                {
+                    return RedirectToLocal(returnUrl);
+                }
+                /*if (result.RequiresTwoFactor)
+                {
+                    return RedirectToAction(nameof(SendCode), new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                }*/
+                if (result.IsLockedOut)
+                {
+                    return BadRequest("Lockout");
+                }
 
-            return RedirectToAction("Login", "User");
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                return View("Login", user);
+            }
+            
+            return View("Login", user);
         }
         
-        /* ADD
-        -------------------------------------------------- */
-
-        [AllowAnonymous]
-        [HttpPost("User/ProcessRegister")]
-        public async Task<IActionResult> AddUser(User user)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> LogOffUser()
         {
-            // Check username
-            if (!await IsUsernameAvailable(user.Username))
+            await _signInManager.SignOutAsync();
+            return RedirectToAction(nameof(Login), "User");
+        }
+        
+        private ActionResult RedirectToLocal(string returnUrl)
+        {
+            if (Url.IsLocalUrl(returnUrl))
             {
-                _registerError.Add("InvalidUsername", "Nom d'utilisateur invalide où déjà utilisé.");
-            }
-            
-            // Check email
-            if (!await IsEmailAvailable(user.EmailAddress))
-            {
-                _registerError.Add("InvalidEmail", "Adresse email invalide où déjà utilisée.");
-            }
-            
-            // Check password
-            if (!IsPasswordPairIdentical(user.Password, user.PasswordConfirmation))
-            {
-                _registerError.Add("PasswordsDontMatch", "Les mots de passe sont différents.");
+                return Redirect(returnUrl);
             }
             else
             {
-                if (!IsPasswordValid(user.Password))
-                {
-                    _registerError.Add("InvalidPassword", "Le mot de passe n'est pas sécurisé (8 caractères, 1 majuscule, 1 minuscule, 1 chiffre, 1 caractère spécial");
-                }
+                return RedirectToAction("Index", "Home");
             }
-            
-            // Redirect if there's errors
-            if (_registerError.Count > 0)
-            {
-                return RedirectToAction("Register", "User");
-            }
-            
-            // Add user
-            await _dbService.AddUser(user);
-
-            return await LoginUser(user);
         }
-        
-        /* Checks
-        -------------------------------------------------- */
-
-        private async Task<bool> IsUsernameAvailable(string username)
-        {
-            if (username.Length == 0 || username.Length > 32) return false;
-
-            return await _dbService.SearchForUsername(username) == null;
-        }
-        
-        private async Task<bool> IsEmailAvailable(string email)
-        {
-            if (email.Length == 0 || email.Length > 320) return false;
-
-            return await _dbService.SearchForEmail(email) == null;
-        }
-
-        private static bool IsPasswordPairIdentical(string password1, string password2)
-        {
-            return (password1.Equals(password2));
-        }
-        
-        // TODO: Make this
-        private static bool IsPasswordValid(string password)
-        {
-            return password != "";
-        }
-
-        private async Task<bool> IsUserPassword(int userId, string password)
-        {
-            return await _dbService.IsUserPassword(userId, password);
-        }
-        
-        /* Old login system (not working at all)
-        -------------------------------------------------- */
-
-        //User/Logout
-        //[Route("User/Logout")]
-        //public IActionResult Logout()
-        //{
-        //    _loginManager.SignOutAsync();
-        //    return RedirectToAction("Login", "User");
-        //}
-
-        /* ADD
-        -------------------------------------------------- */
-        //User/Register
-        //[AllowAnonymous]
-        //[HttpPost("User/Register")]
-        //public async Task<IActionResult> AddUser(User user)
-        //{
-        //    if (user.Password != user.PasswordConfirmation)
-        //    {
-        //        ViewBag.RegisterError = "Les mots de passe doivent correspondre.";
-        //        return RedirectToAction("Register", "User");
-        //    }
-        //    
-        //    var userCreation = await _userManager.CreateAsync(user, user.Password);
-//
-        //    if (userCreation.Succeeded)
-        //    {
-        //        return RedirectToAction("Login", "User");
-        //    }
-//
-        //    ViewBag.RegisterError = "Erreur lors de l'inscription";
-        //    return RedirectToAction("Register", "User");
-        //}
-
-        //User/Login
-        //[AllowAnonymous]
-        //[HttpPost("User/Login")]
-        //public async Task<IActionResult> LoginUser(User user)
-        //{
-        //    var userLogin = await _loginManager.PasswordSignInAsync(user.Username, user.Password, false, false);
-//
-        //    if (userLogin.Succeeded)
-        //    {
-        //        return RedirectToAction("Index", "Home");
-        //    }
-//
-        //    ViewBag.LoginError = "Erreur lors de la connexion";
-        //    return RedirectToAction("Login", "User");
-        //}
     }
 }
