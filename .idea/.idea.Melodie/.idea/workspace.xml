@@ -8,14 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Melodie.UnitTests/Melodie.UnitTests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Melodie.UnitTests/PlaylistControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie.UnitTests/obj/Debug/net5.0/Melodie.UnitTests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie.UnitTests/obj/Debug/net5.0/Melodie.UnitTests.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +38,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/Admin/AddEditRecipe.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Views/Blog/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/alexi/RiderProjects/Melodie/Melodie/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/Admin/AddEditRecipe.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day 5/Chapter1/01_03/End/LandonHotel/Repositories/RoomsRepository.cs" root0="SKIP_HIGHLIGHTING" />
@@ -52,29 +46,26 @@
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/Recipe.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day 5/Chapter1/01_03/End/LandonHotel/Repositories/IRoomsRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F758DD2F-9E4C-41A0-B7A1-63138D66F75D/A/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/alexi/RiderProjects/Melodie/Melodie/Views/Shared/AddMusicFormPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day2/Day2TP1/Pages/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/_ViewStart.cshtml.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day2/Day2TP1/Pages/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/alexi/RiderProjects/Melodie/Melodie/obj/Debug/net5.0/Razor/Views/_ViewStart.cshtml.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/Account/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/Account/Login.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day2/Day2TP1/Pages/Wonder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Startup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/647FAEDF-A0C0-4C01-B79E-04471FFD80DF/233/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/alexi/RiderProjects/Melodie/Melodie/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Controllers/BlogController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/647FAEDF-A0C0-4C01-B79E-04471FFD80DF/37/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Melodie.UnitTests/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Models/BlogDataContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Startup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Models/Post.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Melodie/wwwroot/js/KeepScrollPosition.js" />
       <option value="$PROJECT_DIR$/Melodie/Views/Home/Index.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/ModelOpener.js" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/FooterFixer.js" />
@@ -125,6 +116,7 @@
       <option value="$PROJECT_DIR$/Melodie/Views/User/Register.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Views/User/Login.cshtml" />
       <option value="$PROJECT_DIR$/Melodie.UnitTests/PlaylistControllerTests.cs" />
+      <option value="$USER_HOME$/Desktop/melodie_db_clean.sql" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1o4TnRmOu64XrIIxtmBo7OSf87P" />
@@ -214,7 +206,8 @@
       <workItem from="1614863476867" duration="4237000" />
       <workItem from="1614868165583" duration="95000" />
       <workItem from="1614868292202" duration="13213000" />
-      <workItem from="1614891032636" duration="23745000" />
+      <workItem from="1614891032636" duration="23796000" />
+      <workItem from="1614917289225" duration="196000" />
     </task>
     <task id="LOCAL-00001" summary="Added Playlist page">
       <created>1613846759594</created>
@@ -545,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614914695801</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Added beginning of unit test">
+      <created>1614916092842</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1614916092842</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added last songs and improved header" />
     <MESSAGE value="Added next and previous button in the music player" />
     <MESSAGE value="Added mute button" />
     <MESSAGE value="Added light theme" />
@@ -592,7 +591,8 @@
     <MESSAGE value="Code cleanup and edited MusicPlayer.js to use a built-in Map instead of an object to preserve insertion order" />
     <MESSAGE value="Added Login/Registration errors" />
     <MESSAGE value="Removed old Unit Test project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed old Unit Test project" />
+    <MESSAGE value="Added beginning of unit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added beginning of unit test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
