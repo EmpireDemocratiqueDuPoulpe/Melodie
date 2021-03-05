@@ -128,16 +128,24 @@ namespace Melodie.Controllers
             var absolutePath = Path.Combine(_env.WebRootPath, UploadFolder, filePath);
 
             music.FilePath = relativePath;
+
+            // Save the file onto the server
+            if (music.MusicFile.Length > 0)
+            {
+                await using (Stream fileStream = new FileStream(absolutePath, FileMode.Create))
+                {
+                    await music.MusicFile.CopyToAsync(fileStream);
+                }
+            }
             
             // Set the creation date
             music.CreationDate = DateTime.Now;
             
-            // Save the file onto the server
-            if (music.MusicFile.Length > 0)
-            {
-                await using Stream fileStream = new FileStream(absolutePath, FileMode.Create);
-                await music.MusicFile.CopyToAsync(fileStream);
-            }
+            // Set the file duration
+            var tagFile = TagLib.File.Create(absolutePath);
+            var duration = tagFile.Properties.Duration;
+
+            music.Duration = duration.ToString(@"mm\:ss");
 
             return music;
         }
@@ -164,13 +172,21 @@ namespace Melodie.Controllers
                     var absolutePath = Path.Combine(_env.WebRootPath, UploadFolder, name);
 
                     music.FilePath = relativePath;
-                        
+
+                    // Save the file onto the server
+                    await using (Stream fileStream = new FileStream(absolutePath, FileMode.Create))
+                    {
+                        await result.Content.CopyToAsync(fileStream);
+                    }
+                    
                     // Set the creation date
                     music.CreationDate = DateTime.Now;
-                        
-                    // Save the file onto the server
-                    await using Stream fileStream = new FileStream(absolutePath, FileMode.Create);
-                    await result.Content.CopyToAsync(fileStream);
+                    
+                    // Set the file duration
+                    var tagFile = TagLib.File.Create(absolutePath);
+                    var duration = tagFile.Properties.Duration;
+
+                    music.Duration = duration.ToString(@"mm\:ss");
                         
                     return music;
                 }

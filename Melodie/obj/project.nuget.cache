@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IgWv0RripCq+YVxpOdN9gX2f8aegV2bet43+K4OYj6d4wW38zs8ADpT2HeLkqZCVz5nhnrBcuZVqDvAv1CkR2A==",
+  "dgSpecHash": "F56Q7BzA7hZ2hLo8Pi1//el6U07YW38JYTbkGy+1aeABF/vnWnZAFedjvu4yX2+nlpK7QKlM7nhoqI+hx5yNDQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\alexi\\RiderProjects\\Melodie\\Melodie\\Melodie.csproj",
   "expectedPackageFiles": [
@@ -41,7 +41,8 @@
     "C:\\Users\\alexi\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0-preview.1.21102.12\\system.security.cryptography.protecteddata.6.0.0-preview.1.21102.12.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\system.security.permissions\\6.0.0-preview.1.21102.12\\system.security.permissions.6.0.0-preview.1.21102.12.nupkg.sha512",
     "C:\\Users\\alexi\\.nuget\\packages\\system.security.principal.windows\\6.0.0-preview.1.21102.12\\system.security.principal.windows.6.0.0-preview.1.21102.12.nupkg.sha512",
-    "C:\\Users\\alexi\\.nuget\\packages\\system.windows.extensions\\6.0.0-preview.1.21102.12\\system.windows.extensions.6.0.0-preview.1.21102.12.nupkg.sha512"
+    "C:\\Users\\alexi\\.nuget\\packages\\system.windows.extensions\\6.0.0-preview.1.21102.12\\system.windows.extensions.6.0.0-preview.1.21102.12.nupkg.sha512",
+    "C:\\Users\\alexi\\.nuget\\packages\\taglibsharp\\2.2.0\\taglibsharp.2.2.0.nupkg.sha512"
   ],
   "logs": [
     {
