@@ -77,7 +77,9 @@ namespace Melodie.Controllers
             if (!ModelState.IsValid)
             {
                 ViewBag.OpenDeleteModal = true;
-                return View("Playlist", playlist);
+
+                var p = await _dbService.GetPlaylistById(playlist.PlaylistId ?? -1);
+                return View("Playlist", p);
             }
             
             if (playlist.PlaylistId == null)

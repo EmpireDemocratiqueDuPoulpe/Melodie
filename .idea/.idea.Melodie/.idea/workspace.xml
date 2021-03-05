@@ -7,7 +7,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="" />
+    <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie.UnitTests/obj/Debug/net5.0/Melodie.UnitTests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie.UnitTests/obj/Debug/net5.0/Melodie.UnitTests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/Shared/AddMusicFormPartial.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/Shared/AddMusicFormPartial.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,19 +116,19 @@
       <option value="$PROJECT_DIR$/Melodie/wwwroot/images/upload_file-24px.svg" />
       <option value="$PROJECT_DIR$/Melodie/Models/Music.cs" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/musics/.gitignore" />
-      <option value="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" />
-      <option value="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" />
       <option value="$PROJECT_DIR$/Melodie/Views/_ViewStart.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/MusicPlayer.js" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/AddMusicOptionChanger.js" />
-      <option value="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/UserController.cs" />
       <option value="$PROJECT_DIR$/Melodie/Views/User/Register.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Views/User/Login.cshtml" />
       <option value="$PROJECT_DIR$/Melodie.UnitTests/PlaylistControllerTests.cs" />
       <option value="$USER_HOME$/Desktop/melodie_db_clean.sql" />
+      <option value="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" />
+      <option value="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" />
+      <option value="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1o4TnRmOu64XrIIxtmBo7OSf87P" />
@@ -204,13 +220,9 @@
       <workItem from="1614868292202" duration="13213000" />
       <workItem from="1614891032636" duration="23796000" />
       <workItem from="1614917289225" duration="241000" />
-    </task>
-    <task id="LOCAL-00001" summary="Added Playlist page">
-      <created>1613846759594</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1613846759594</updated>
+      <workItem from="1614919439192" duration="146000" />
+      <workItem from="1614952076877" duration="2234000" />
+      <workItem from="1614954332959" duration="319000" />
     </task>
     <task id="LOCAL-00002" summary="Added missing files">
       <created>1613846785216</created>
@@ -548,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614917520010</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Added missing files">
+      <created>1614919576414</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1614919576414</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +594,6 @@
     <MESSAGE value="Fixed theme changer css" />
     <MESSAGE value="Play the first music if the user press the big Play btn" />
     <MESSAGE value="Added Register/Login page structure and style" />
-    <MESSAGE value="Added missing files" />
     <MESSAGE value="Added font-family and revamped the whole css" />
     <MESSAGE value="Fixed a bug where the playlist logo acronym didn't change after an update" />
     <MESSAGE value="Fixed a bug where the logo acronym was able to overflow its container" />
@@ -595,7 +613,27 @@
     <MESSAGE value="Removed old Unit Test project" />
     <MESSAGE value="Added beginning of unit test" />
     <MESSAGE value="Added default database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added default database" />
+    <MESSAGE value="Added missing files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added missing files" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs</url>
+          <line>26</line>
+          <properties documentPath="C:\Users\alexi\RiderProjects\Melodie\Melodie\Controllers\PlaylistController.cs" initialLine="26" containingFunctionPresentation="method 'Playlist'">
+            <startOffsets>
+              <option value="723" />
+            </startOffsets>
+            <endOffsets>
+              <option value="776" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

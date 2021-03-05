@@ -151,11 +151,11 @@ html.dark-theme { background: #353535; color: #F7F9F9; }
 -------------------------------------------------- */
 
 /** Body **/
-html.light-theme { background: #F7F9F9; color: #353535; }
+html.light-theme { background: #E7E7E7; color: #353535; }
 
 /** Header **/
-.light-theme header                     { background: #EDEFEF; }
-.light-theme header .user-display:hover { background: #E3E5E5; }
+.light-theme header                     { background: #D9DBDB; }
+.light-theme header .user-display:hover { background: #CFD1D1; }
 .light-theme header .user-display img   { background: #D9DBDB; }
 
 /** Footer **/
@@ -169,15 +169,9 @@ html.light-theme { background: #F7F9F9; color: #353535; }
 
 /** Modals **/
 .light-theme .modal                     { background: rgba(0, 0, 0, 0.5); }
-.light-theme .modal-wrapper             { background: #EDEFEF; }
-.light-theme .modal-header              { background: #DEE0E0; }
+.light-theme .modal-wrapper             { background: #E7E7E7; }
+.light-theme .modal-header              { background: #D9DBDB; }
 .light-theme .modal-body form .error    { color: #F95950; }
-
-/** Dropdown menus **/
-.light-theme .dropdown                      { background: #EDEFEF; }
-.light-theme .dropdown:hover                { background: #E3E5E5; }
-.light-theme .dropdown-content button       { color: #353535; }
-.light-theme .dropdown-content button:hover { background: #DEE0E0; }
 
 /** App logo **/
 .light-theme .header-section .app-logo { background: url("../images/melodie_black.png") center no-repeat; }
@@ -207,7 +201,7 @@ html.light-theme { background: #F7F9F9; color: #353535; }
 
 /** Forms and inputs **/
 .light-theme textarea,
-.light-theme input[type=text] { background: #EDEFEF; color: #353535; }
+.light-theme input[type=text] { background: #D9DBDB; color: #353535; }
 
 .light-theme input::placeholder,
 .light-theme textarea::placeholder { color: #6D7070; }
@@ -219,7 +213,7 @@ html.light-theme { background: #F7F9F9; color: #353535; }
 .light-theme input.bg-on-hover:focus,
 .light-theme textarea.bg-on-hover:focus,
 .light-theme input.bg-on-hover:active,
-.light-theme textarea.bg-on-hover:active    { background: #E3E5E5; }
+.light-theme textarea.bg-on-hover:active    { background: #D4D6D6; }
 
 .light-theme input[type=range]                                  { background: #E3E5E5; }
 
@@ -244,15 +238,21 @@ html.light-theme { background: #F7F9F9; color: #353535; }
 .light-theme #theme-selector #dark-theme-text   { display: none; }
 .light-theme #theme-selector #light-theme-text  { display: block; }
 
-.light-theme .btn.growing-circle:hover span     { color: #F7F9F9; } /* Background color */
+.light-theme .btn.growing-circle:hover span     { color: #E7E7E7; } /* Background color */
 .light-theme .btn.growing-circle:hover object   { filter: invert(98%) sepia(85%) saturate(142%) hue-rotate(125deg) brightness(108%) contrast(95%); } /* Background color */
-.light-theme .btn.slide-effect:hover span       { color: #F7F9F9; } /* Background color */
+.light-theme .btn.slide-effect:hover span       { color: #E7E7E7; } /* Background color */
 .light-theme .btn.slide-effect:hover object     { filter: invert(98%) sepia(85%) saturate(142%) hue-rotate(125deg) brightness(108%) contrast(95%); } /* Background color */
 .light-theme .btn.showing-icon:hover object     { filter: invert(98%) sepia(85%) saturate(142%) hue-rotate(125deg) brightness(108%) contrast(95%); } /* Background color */
 
+/** Dropdown menus **/
+.light-theme .dropdown                      { background: #D9DBDB; }
+.light-theme .dropdown:hover                { background: #E3E5E5; }
+.light-theme .dropdown-content button       { color: #353535; }
+.light-theme .dropdown-content button:hover { background: #DEE0E0; }
+
 /** Auth container **/
 .light-theme .auth-container {
-    background: #EDEFEF;
+    background: #E7E7E7;
     -webkit-box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.25);
     -moz-box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.25);
     box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.25);
@@ -263,18 +263,18 @@ html.light-theme { background: #F7F9F9; color: #353535; }
 /** Playlists **/
 .light-theme #add-playlist-btn { color: #353535; }
 
-.light-theme .playlist-block:hover { background: #E3E5E5; }
+.light-theme .playlist-block:hover { background: #CACCCC; }
 
-.light-theme .playlist-logo { background: #EDEFEF; }
+.light-theme .playlist-logo { background: #D9DBDB; }
 .light-theme .playlist-logo:not(.auto-acronym):after { filter: invert(46%) sepia(7%) saturate(111%) hue-rotate(131deg) brightness(91%) contrast(84%); }
 
-.light-theme #songs-table thead                      { background: #F95950; color: #F7F9F9; }
-.light-theme #songs-table .song-row:hover            { background: #E3E5E5; }
-.light-theme #songs-table .song-row.playing          { background: #CFD1D1; }
+.light-theme #songs-table thead                      { background: #F95950; color: #E7E7E7; }
+.light-theme #songs-table .song-row:hover            { background: #D9DBDB; }
+.light-theme #songs-table .song-row.playing          { background: #D9DBDB; }
 .light-theme #songs-table .song-row.playing:hover    { background: #D4D6D6; }
 
 /** Last songs **/
-.light-theme .last-song-logo        { background: #EDEFEF; }
+.light-theme .last-song-logo        { background: #D9DBDB; }
 .light-theme .last-song-logo:after  { filter: invert(46%) sepia(7%) saturate(111%) hue-rotate(131deg) brightness(91%) contrast(84%); }
 
 /** Music player **/
@@ -560,7 +560,7 @@ header {
 .dark-theme .field.white.field-madoka .field-graphic    { stroke: #BDBFBF; }
 
 .light-theme .field.white .field-input {
-    background: #EDEFEF;
+    background: #E7E7E7;
     color: #353535;
 }
 
@@ -583,7 +583,7 @@ header {
 .dark-theme .field.red.field-madoka .field-graphic  { stroke: #F95950; }
 
 .light-theme .field.red .field-input {
-    background: #EDEFEF;
+    background: #E7E7E7;
     color: #353535;
 }
 
