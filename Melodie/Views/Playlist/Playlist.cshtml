@@ -85,7 +85,7 @@
 					
 					@Html.ValidationMessageFor(p => p.DeleteConfirmation, null, new {@class = "error"})
 					
-					<span class="field white field-madoka">
+					<span class="field white field-madoka bottom-label">
 						@Html.EditorFor(p => p.DeleteConfirmation, new {htmlAttributes = new {id = "playlist-delete-confirm", @class = "field-input", placeholder = " ", @required = "required"}})
 						<label class="field-label" for="playlist-delete-confirm">
 							<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">

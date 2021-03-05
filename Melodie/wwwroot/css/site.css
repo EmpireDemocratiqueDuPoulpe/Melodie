@@ -531,6 +531,13 @@ header {
 .field.field-madoka:focus + .field-label .field-label-content,
 .field.field-madoka .field-input:focus + .field-label .field-label-content,
 .field.field-madoka .field-input:not(:placeholder-shown) + .field-label .field-label-content {
+    -webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, -4em, 0);
+    transform: scale3d(0.81, 0.81, 1) translate3d(0, -4em, 0);
+}
+
+.field.field-madoka.bottom-label:focus + .field-label .field-label-content,
+.field.field-madoka.bottom-label .field-input:focus + .field-label .field-label-content,
+.field.field-madoka.bottom-label .field-input:not(:placeholder-shown) + .field-label .field-label-content {
     -webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
     transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
 }

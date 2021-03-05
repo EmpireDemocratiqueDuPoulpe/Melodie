@@ -8,38 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Melodie/wwwroot/images/link-24px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Melodie/wwwroot/images/link-24px.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Melodie/wwwroot/images/upload_file-24px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Melodie/wwwroot/images/upload_file-24px.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Melodie/wwwroot/js/AddMusicOptionChanger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Controllers/PlaylistController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Models/Music.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Models/Music.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/ref/Melodie.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/ref/Melodie.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/Playlist/Playlist.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/Playlist/Playlist.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/Shared/AddMusicFormPartial.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/Shared/AddMusicFormPartial.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/Shared/_Layout.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/ref/Melodie.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/ref/Melodie.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/musics/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/musics/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,11 +120,11 @@
       <option value="$PROJECT_DIR$/Melodie/wwwroot/images/upload_file-24px.svg" />
       <option value="$PROJECT_DIR$/Melodie/Models/Music.cs" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/AddMusicOptionChanger.js" />
-      <option value="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/musics/.gitignore" />
       <option value="$PROJECT_DIR$/Melodie/Controllers/MusicController.cs" />
-      <option value="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" />
+      <option value="$PROJECT_DIR$/Melodie/Views/Shared/AddMusicFormPartial.cshtml" />
+      <option value="$PROJECT_DIR$/Melodie/Views/Playlist/Playlist.cshtml" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1o4TnRmOu64XrIIxtmBo7OSf87P" />
@@ -237,7 +214,7 @@
       <workItem from="1614863476867" duration="4237000" />
       <workItem from="1614868165583" duration="95000" />
       <workItem from="1614868292202" duration="13213000" />
-      <workItem from="1614891032636" duration="16740000" />
+      <workItem from="1614891032636" duration="17249000" />
     </task>
     <task id="LOCAL-00001" summary="Added Playlist page">
       <created>1613846759594</created>
@@ -519,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614893936132</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Added music upload by url">
+      <created>1614909087358</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1614909087358</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +525,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added music deletion and improved playlist interface" />
     <MESSAGE value="Added WaveSurfer API" />
     <MESSAGE value="Add playlist system to the MusicPlayer.js" />
     <MESSAGE value="Added music folder to the git repo" />
@@ -566,7 +549,8 @@
     <MESSAGE value="Added a script to keep scroll position, improved music player and code cleanup" />
     <MESSAGE value="Added a modal shown to confirm delete a playlist and added a JS function to manage classes" />
     <MESSAGE value="Added login system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added login system" />
+    <MESSAGE value="Added music upload by url" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added music upload by url" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

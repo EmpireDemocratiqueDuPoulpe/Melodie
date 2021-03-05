@@ -7,7 +7,7 @@
 	@Html.HiddenFor(m => m.PlaylistId)
 	
 	<td class="song-name-row">
-		<span class="field white field-madoka">
+		<span class="field white field-madoka bottom-label">
         	@Html.EditorFor(m => m.Name, new {htmlAttributes = new { id = "name", @class = "field-input", placeholder = " ", @required = "required" } })
         	<label class="field-label" for="name">
         		<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
@@ -19,7 +19,7 @@
 	</td>
 	<td class="song-duration-row"></td>
 	<td class="song-author-row">
-		<span class="field white field-madoka">
+		<span class="field white field-madoka bottom-label">
         	@Html.EditorFor(m => m.Author, new { htmlAttributes = new { id = "author", @class = "field-input", placeholder = " " } })
         	<label class="field-label" for="author">
         		<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
@@ -43,7 +43,7 @@
 				</div>
 
 				<!-- Add by link -->
-				<span id="external-link" class="field white field-madoka">
+				<span id="external-link" class="field white field-madoka bottom-label">
 					@Html.EditorFor(m => m.ExternalLink, new {htmlAttributes = new {id = "music-link", @class = "field-input", placeholder = " "}})
 					<label class="field-label" for="music-link">
 						<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
