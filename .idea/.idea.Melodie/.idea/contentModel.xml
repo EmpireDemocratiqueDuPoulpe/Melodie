@@ -211,9 +211,6 @@
         </e>
       </e>
       <e p="Melodie.sln" t="IncludeFlat" />
-      <e p="Melodie.UnitTests" t="IncludeRecursive">
-        <e p="Melodie.UnitTests.csproj" t="IncludeRecursive" />
-      </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>
