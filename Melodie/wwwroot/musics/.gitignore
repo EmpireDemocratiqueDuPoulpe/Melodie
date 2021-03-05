@@ -1,13 +1,12 @@
 *.wav
 *.ogg
 *.oga
-*.aif
 *.caf
 *.flac
-*.alac
-*.ac3
+*.m4a
 *.mp3
 *.wma
 *.au
 *.asf
 *.aac
+*.webm

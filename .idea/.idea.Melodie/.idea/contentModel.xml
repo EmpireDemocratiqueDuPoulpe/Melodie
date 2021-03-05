@@ -82,6 +82,8 @@
             <e p="cloud_upload-24px.svg" t="Include" />
             <e p="delete-24px.png" t="Include" />
             <e p="delete-24px.svg" t="Include" />
+            <e p="link-24px.png" t="Include" />
+            <e p="link-24px.svg" t="Include" />
             <e p="login_img.png" t="Include" />
             <e p="melodie_black.png" t="Include" />
             <e p="melodie_simple.png" t="Include" />
@@ -99,6 +101,8 @@
             <e p="skip_next-24px.svg" t="Include" />
             <e p="skip_previous-24px.png" t="Include" />
             <e p="skip_previous-24px.svg" t="Include" />
+            <e p="upload_file-24px.png" t="Include" />
+            <e p="upload_file-24px.svg" t="Include" />
             <e p="user_profile_pic.png" t="Include" />
             <e p="volume_off-24px.png" t="Include" />
             <e p="volume_off-24px.svg" t="Include" />
@@ -110,6 +114,7 @@
             <e p="zoom_in-24px.svg" t="Include" />
           </e>
           <e p="js" t="Include">
+            <e p="AddMusicOptionChanger.js" t="Include" />
             <e p="CustomInputFile.js" t="Include" />
             <e p="FooterFixer.js" t="Include" />
             <e p="GlobalFunctions.js" t="Include" />
@@ -203,6 +208,8 @@
             <e p="2021_03_02_07_53_02Caravan Palace - Moonshine.mp3" t="Include" />
             <e p="2021_03_02_07_53_20Caravan Palace - Miracle.mp3" t="Include" />
             <e p="2021_03_04_09_44_24Daft Punk - Harder Better Faster Stronger.mp3" t="Include" />
+            <e p="2021_03_05_02_41_16_downloaded.mp3" t="Include" />
+            <e p="2021_03_05_02_44_04_downloaded.ogg" t="Include" />
           </e>
         </e>
       </e>

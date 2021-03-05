@@ -64,12 +64,15 @@
                 <div class="header-section right">
                     @if (User.Identity != null && User.Identity.IsAuthenticated)
                     {
-                        <form asp-controller="User" asp-action="LogOffUser" method="post">
-                            <button class="user-display disable-visited" type="submit">
-                                <img src="https://cdn130.picsart.com/329072184134211.png?type=webp&to=min&r=640" alt="Profile pic"/>
-                                <p>@User.Identity.Name</p>
-                            </button>
-                        </form>
+                        <div class="user-display disable-visited dropdown">
+                            <img src="/images/user_profile_pic.png" alt="Profile pic"/>
+                            <p>@User.Identity.Name</p>
+                            <div class="dropdown-content">
+                                <form asp-controller="User" asp-action="LogOffUser" method="post">
+                                    <button type="submit">D&eacute;connexion</button>
+                                </form>
+                            </div>
+                        </div>
                     }
                 </div>
             </header>

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Melodie.Data;
 using Melodie.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -112,7 +113,7 @@ namespace Melodie.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction(nameof(Index), "Home");
             }
         }
     }

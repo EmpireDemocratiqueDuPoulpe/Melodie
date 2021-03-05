@@ -25,13 +25,12 @@ namespace Melodie.Controllers
         [Route("")]
         [Route("Home")]
         [Route("Home/Index")]
-        // TODO: Update after login system
         public async Task<IActionResult> Index()
         {
             var playlists = await _dbService.GetPlaylistsOf(User.Identity.GetUserId());
             var lastMusics = await _dbService.GetLastMusics();
 
-            if (playlists.Equals(default)) return RedirectToAction("Error");
+            if (playlists.Equals(default)) return RedirectToAction(nameof(Error));
 
             ViewBag.Title = "Home Page";
             ViewBag.Playlists = playlists;

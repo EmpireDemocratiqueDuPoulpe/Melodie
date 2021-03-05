@@ -31,12 +31,40 @@
 		
 	</td>
 	<td class="song-add-date-row">
-		<div class="file-input">
-			<input type="file" id="musicFile" name="MusicFile" required/>
-			<label class="btn long yellow growing-circle" for="musicFile">
+		<div id="add-music-options" class="upload-by-file">
+			<div id="add-music-fields">
+				<!-- Add by file -->
+				<div id="file" class="file-input">
+					<input type="file" id="musicFile" name="MusicFile"/>
+					<label class="btn long yellow growing-circle" for="musicFile">
+						<div class="btn-effect-box"></div>
+						<span>Choisir un fichier</span>
+					</label>
+				</div>
+
+				<!-- Add by link -->
+				<span id="external-link" class="field white field-madoka">
+					@Html.EditorFor(m => m.ExternalLink, new {htmlAttributes = new {id = "music-link", @class = "field-input", placeholder = " "}})
+					<label class="field-label" for="music-link">
+						<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+							<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+						</svg>
+						<span class="field-label-content">Lien</span>
+					</label>
+				</span>
+			</div>
+			
+			<!-- Option changer -->
+			<div id="add-music-opt-changer" class="btn small yellow slide-effect">
 				<div class="btn-effect-box"></div>
-				<span>Choisir un fichier</span>
-			</label>
+				<object id="link-icon" data="/images/link-24px.svg" type="image/svg+xml">
+					<img src="/images/link-24px.png" alt="Use a link"/>
+				</object>
+				
+				<object id="file-icon" data="/images/upload_file-24px.svg" type="image/svg+xml">
+                	<img src="/images/upload_file-24px.png" alt="Use a file"/>
+                </object>
+			</div>
 		</div>
 		
 	</td>
@@ -47,3 +75,5 @@
 		</button>
 	</td>
 }
+
+<script src="~/js/AddMusicOptionChanger.js"></script>

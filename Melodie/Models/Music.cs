@@ -39,6 +39,9 @@ namespace Melodie.Models
 
         [NotMapped]
         public IFormFile MusicFile { get; set; }
+        
+        [NotMapped]
+        public string ExternalLink { get; set; }
 
 
         public Music()

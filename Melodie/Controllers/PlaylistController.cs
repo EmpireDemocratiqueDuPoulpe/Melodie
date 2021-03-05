@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Melodie.Data;
 using Melodie.Models;
 using Microsoft.AspNet.Identity;
@@ -26,9 +27,10 @@ namespace Melodie.Controllers
         {
             var playlist = await _dbService.GetPlaylistById(pid);
 
-            if (playlist == default) return RedirectToAction("Index", "Home");
+            if (playlist == default) return RedirectToAction(nameof(Index), "Home");
             
-            ViewBag.Title = "Playlist - " + playlist.Name;
+            //ViewBag.Title = "Playlist - " + playlist.Name;
+            ViewBag.Title = playlist.Name;
 
             return View(playlist);
         }
@@ -43,7 +45,7 @@ namespace Melodie.Controllers
             var playlist = new Playlist {UserId = User.Identity.GetUserId()};
 
             var playlistId = await _dbService.AddPlaylist(playlist);
-            return RedirectToAction("Playlist", new { pid = playlistId });
+            return RedirectToAction(nameof(Playlist), "Playlist", new { pid = playlistId });
         }
         
         /* UPDATE
@@ -66,7 +68,7 @@ namespace Melodie.Controllers
             // 2 - Use Ajax.BeginForm
             //return (result > 0) ? NoContent() : NotFound();
             return (result > 0)
-                ? RedirectToAction("Playlist", "Playlist", new {pid = playlist.PlaylistId})
+                ? RedirectToAction(nameof(Playlist), "Playlist", new {pid = playlist.PlaylistId})
                 : NotFound();
         }
         
@@ -94,7 +96,7 @@ namespace Melodie.Controllers
             }
             
             var result = await _dbService.DeletePlaylist(playlist);
-            return (result > 0) ? RedirectToAction("Index", "Home") : NotFound();
+            return (result > 0) ? RedirectToAction(nameof(Index), "Home") : NotFound();
         }
         
         //Playlist/DeleteById
@@ -102,7 +104,7 @@ namespace Melodie.Controllers
         public async Task<ActionResult<Playlist>> DeleteById(int pid)
         {
             var result = await _dbService.DeletePlaylistById(pid);
-            return (result > 0) ? RedirectToAction("Index", "Home") : NotFound();
+            return (result > 0) ? RedirectToAction(nameof(Index), "Home") : NotFound();
         }
     }
 }

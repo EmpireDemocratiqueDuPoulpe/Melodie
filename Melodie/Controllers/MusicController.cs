@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Melodie.Data;
 using Melodie.Models;
@@ -19,9 +20,42 @@ namespace Melodie.Controllers
 
         private readonly List<string> _audioFilesExt = new(new[]
         {
-            "wav", "ogg", "oga", "aif", "caf", "flac", "alac", "ac3", "mp3", "wma", "au", "asf", "aac"
+            "wav", "ogg", "oga", "caf", "flac", "m4a", "mp3", "wma", "au", "asf", "aac", "webm"
         });
 
+        private readonly Dictionary<string, string> _contentTypesExt = new()
+        {
+            // .wav
+            {"audio/x-wav", ".wav"},
+            {"audio/vnd.wave", ".wav"},
+            {"audio/wav", ".wav"},
+            {"audio/wave", ".wav"},
+            {"audio/x-pn-wav", ".wav"},
+            // .ogg / .oga
+            {"application/ogg", ".ogg"},
+            {"audio/ogg", ".ogg"},
+            // .caf
+            {"audio/x-caf", ".caf"},
+            // .flac
+            {"audio/x-flac", ".flac"},
+            {"audio/flac", ".flac"},
+            // .m4a
+            {"audio/mp4", ".m4a"},
+            // .mp3
+            {"audio/mpeg", ".mp3"},
+            // .wma
+            {"video/x-ms-wma", ".wma"},
+            // .au
+            {"audio/basic", ".au"},
+            // .asf
+            {"video/x-ms-asf", ".asf"},
+            {"application/vnd.ms-asf", ".asf"},
+            // .aac
+            {"audio/aac", ".aac"},
+            // .webm
+            {"audio/webm", ".webm"},
+        };
+        
         private const string UploadFolder = "musics/";
 
         public MusicController(IMelodieDbService service, IWebHostEnvironment env)
@@ -43,6 +77,36 @@ namespace Melodie.Controllers
         [HttpPost("Music/Add", Name = "AddMusic")]
         public async Task<ActionResult<Music>> Add(Music music)
         {
+            Music uploadedMusic;
+            
+            // Get the music file
+            if (music.MusicFile != null)
+            {
+                uploadedMusic = await AddByFile(music);
+            }
+            else if (music.ExternalLink != null)
+            {
+                uploadedMusic = await AddByLink(music);
+            }
+            else
+            {
+                return RedirectToAction(nameof(Playlist), "Playlist", new { pid = music.PlaylistId });
+            }
+
+            // Add the music to the playlist if the upload is successful
+            if (uploadedMusic == null)
+            {
+                return RedirectToAction(nameof(Playlist), "Playlist", new { pid = music.PlaylistId });
+            }
+
+            // Save the music into the database
+            await _dbService.AddMusic(uploadedMusic);
+
+            return RedirectToAction(nameof(Playlist), "Playlist", new { pid = music.PlaylistId });
+        }
+
+        public async Task<Music> AddByFile(Music music)
+        {
             // Get file path
             var filePath = Path.GetFileNameWithoutExtension(music.MusicFile.FileName);
             var fileExtension = Path.GetExtension(music.MusicFile.FileName);
@@ -51,9 +115,10 @@ namespace Melodie.Controllers
             // Check file extension
             if (!IsFileAMusic(fileExtension))
             {
-                return RedirectToAction("Playlist", "Playlist", new { pid = music.PlaylistId });
+                RedirectToAction(nameof(Playlist), "Playlist", new { pid = music.PlaylistId });
+                return null;
             }
-
+            
             // Get upload path
             // TODO: Doesn't work !
             // var uploadPath = ConfigurationManager.AppSettings["UserMusicPath"];
@@ -73,13 +138,45 @@ namespace Melodie.Controllers
                 await using Stream fileStream = new FileStream(absolutePath, FileMode.Create);
                 await music.MusicFile.CopyToAsync(fileStream);
             }
-            
-            // Save the music into the database
-            await _dbService.AddMusic(music);
 
-            return RedirectToAction("Playlist", "Playlist", new { pid = music.PlaylistId });
+            return music;
         }
         
+        public async Task<Music> AddByLink(Music music)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                using (var result = await httpClient.GetAsync(music.ExternalLink))
+                {
+                    if (!result.IsSuccessStatusCode) return null;
+                    
+                    // Get file type
+                    var contentType = result.Content.Headers.ContentType.MediaType;
+                    var ext = GetExtensionForContentType(contentType);
+
+                    if (ext == null) return null;
+                        
+                    // Get file name
+                    var name = DateTime.Now.ToString("yyyy_MM_dd_hh_mm_ss") + "_downloaded" + ext;
+                        
+                    // Get file paths
+                    var relativePath = Path.Combine(UploadFolder, name);
+                    var absolutePath = Path.Combine(_env.WebRootPath, UploadFolder, name);
+
+                    music.FilePath = relativePath;
+                        
+                    // Set the creation date
+                    music.CreationDate = DateTime.Now;
+                        
+                    // Save the file onto the server
+                    await using Stream fileStream = new FileStream(absolutePath, FileMode.Create);
+                    await result.Content.CopyToAsync(fileStream);
+                        
+                    return music;
+                }
+            }
+        }
+
         /* DELETE
         -------------------------------------------------- */
         //Music/Delete
@@ -94,7 +191,7 @@ namespace Melodie.Controllers
             var playlistId = music.PlaylistId;
             var result = await _dbService.DeleteMusic(music);
             return (result > 0)
-                ? RedirectToAction("Playlist", "Playlist", new { pid = playlistId })
+                ? RedirectToAction(nameof(Playlist), "Playlist", new { pid = playlistId })
                 : NotFound();
         }
         
@@ -111,6 +208,11 @@ namespace Melodie.Controllers
         public bool IsFileAMusic(string ext)
         {
             return _audioFilesExt.Contains(ext.Replace(".", string.Empty).ToLower());
+        }
+
+        public string GetExtensionForContentType(string contentType)
+        {
+            return _contentTypesExt.ContainsKey(contentType) ? _contentTypesExt[contentType] : null;
         }
     }
 }
