@@ -10,6 +10,12 @@ Il suffit de télécharger le projet et de l'ouvrir avec un IDE <span>ASP</span>
 
 ***[Eng]** You need to download the project and to open it using your IDE. This project run on <span>ASP</span>.NET Core 5.0 and the database is hosted locally with MariaDB 10.5.8. You can [install this version](https://mariadb.org/download/) or use your own installation and then import the [SQL file](https://github.com/EmpireDemocratiqueDuPoulpe/Melodie/blob/master/Melodie/melodie_db.sql) into it. If needed, you can change connection parameters in [appsettings.json](https://github.com/EmpireDemocratiqueDuPoulpe/Melodie/blob/master/Melodie/appsettings.json) file.*
 
+## Bugs connus / Known bugs
+- **[Suppression de playlist] -** Un bug apparu très tard qui survient lors de la suppression de playlist. Si l'utilisateur rentre le mauvais nom de playlist, le nom actuel de la playlist sera mis dans le champ "Name" du formulaire d'ajout de musique.
+
+***[ENG]***
+- ***[Suppression de playlist] -** This is a weird bug found lately during the development. On the playlist deletion, if the user enters the wrong playlist name, the current playlist name will be set as value of the "Name" field used to add a music.*
+
 ## Comptes par défaut / Default accounts
 Il existe déjà quelques comptes dans la base de données. Ils ont tous pour mots de passe **Supinfo123!** :
 ***[Eng]** There are already some default account you can use to log in. Their password is **Supinfo123!**:*
