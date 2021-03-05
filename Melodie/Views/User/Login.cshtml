@@ -3,8 +3,6 @@
 @{
 	ViewBag.NoHeader = true;
 	ViewBag.Title = "Connexion";
-	
-	var errors = ViewBag.LoginError ?? new Dictionary<string, string>();
 }
 
 <div class="auth-container">
@@ -18,15 +16,10 @@
 			<span>&Agrave; un monde rempli de musique.</span>
 		</div>
 		
-		@if (errors.Count > 0)
+		@if (ViewData.ModelState.ErrorCount > 0)
         {
         	<div class="auth-errors">
-        		<ol>
-        			@foreach (KeyValuePair<string, string> error in errors)
-        			{
-        				<li>@error.Value</li>
-        			}
-        		</ol>
+        		@Html.ValidationMessage("loginFailed")
         	</div>
         }
 		
@@ -34,7 +27,7 @@
     	{
     		@Html.AntiForgeryToken()
     
-    		<span class="field @(errors.ContainsKey("UnknownUsername") ? "red" : "white" ) field-madoka">
+    		<span class="field @(ViewData.ModelState.ErrorCount > 0 ? "red" : "white" ) field-madoka">
     			@Html.EditorFor(u => u.UserName, new {htmlAttributes = new {id = "username", @class = "field-input", placeholder = " ", @required = "required"}})
     			<label class="field-label" for="username">
     				<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
@@ -44,7 +37,7 @@
     			</label>
     		</span>
 
-		    <span class="field @(errors.ContainsKey("WrongPassword") ? "red" : "white" ) field-madoka">
+		    <span class="field @(ViewData.ModelState.ErrorCount > 0 ? "red" : "white" ) field-madoka">
     			@Html.EditorFor(u => u.Password, new {htmlAttributes = new {id = "password1", @class = "field-input", placeholder = " ", @required = "required"}})
     			<label class="field-label" for="password1">
     				<svg class="field-graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">

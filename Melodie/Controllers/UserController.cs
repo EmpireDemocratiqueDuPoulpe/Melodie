@@ -44,8 +44,20 @@ namespace Melodie.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RegisterUser(AspNetUser user)
         {
-            if (!ModelState.IsValid || user.Password != user.PasswordConfirmation) return View("Register", user);
+            // The model isn't valid
+            if (!ModelState.IsValid || user.Password != user.PasswordConfirmation)
+            {
+                ModelState.AddModelError("registerFailed", "Veuillez corriger les erreurs ci-dessous:");
+
+                if (user.Password != user.PasswordConfirmation)
+                {
+                    ModelState.AddModelError("passwordsDontMatch", "Les mots de passes ne correspondent pas.");
+                }
+                
+                return View("Register", user);
+            }
             
+            // Try to log in the user
             var result = await _userManager.CreateAsync(user, user.Password);
             if (result.Succeeded)
             {
@@ -53,6 +65,7 @@ namespace Melodie.Controllers
                 return RedirectToAction(nameof(HomeController.Index), "Home");
             }
 
+            // Uh oh, something went wrong
             foreach (var error in result.Errors)
             {
                 ModelState.AddModelError(error.Code, error.Description);
@@ -84,7 +97,7 @@ namespace Melodie.Controllers
                     return BadRequest("Lockout");
                 }
 
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                ModelState.AddModelError("loginFailed", "Mauvais nom d'utilisateur/mot de passe.");
                 return View("Login", user);
             }
             

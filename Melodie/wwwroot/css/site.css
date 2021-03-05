@@ -108,6 +108,8 @@ html.dark-theme { background: #353535; color: #F7F9F9; }
     box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.25);
 }
 
+.dark-theme .auth-errors { color: #F95950; }
+
 /** Playlists **/
 .dark-theme #add-playlist-btn { color: #F7F9F9; }
 
@@ -255,6 +257,8 @@ html.light-theme { background: #F7F9F9; color: #353535; }
     -moz-box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.25);
     box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.25);
 }
+
+.light-theme .auth-errors { color: #F95950; }
 
 /** Playlists **/
 .light-theme #add-playlist-btn { color: #353535; }
@@ -1226,8 +1230,16 @@ body.has-music-player footer {
 .auth-left-container.auth-box   { margin-right: 400px; }
 .auth-right-container.auth-box  { margin-left: 400px; }
 
+.auth-box .auth-errors {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 0.9em;
+    padding: 0 20px 20px 70px;
+}
+
 /* Title */
 .auth-title {
+    box-sizing: border-box;
     width: 100%;
     padding: 0 20px 20px 70px;
 }
