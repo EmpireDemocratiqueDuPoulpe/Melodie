@@ -8,25 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Melodie.UnitTests/Melodie.UnitTests.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Melodie.UnitTests/PlaylistControllerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Views/User/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/User/Login.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/Views/User/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/Views/User/Register.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/Melodie.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/ref/Melodie.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/bin/Debug/net5.0/ref/Melodie.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/User/Login.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/User/Login.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/User/Register.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/User/Register.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/_ViewStart.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/_ViewStart.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/ref/Melodie.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/ref/Melodie.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Melodie/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +55,9 @@
     <setting file="mock://C:/Users/alexi/RiderProjects/Melodie/Melodie/Views/Shared/AddMusicFormPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day2/Day2TP1/Pages/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Razor/Views/_ViewStart.cshtml.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day2/Day2TP1/Pages/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/alexi/RiderProjects/Melodie/Melodie/obj/Debug/net5.0/Razor/Views/_ViewStart.cshtml.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/Account/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/TopsyTurvyCakes/Pages/Account/Login.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day2/Day2TP1/Pages/Wonder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
@@ -80,12 +71,9 @@
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Models/BlogDataContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Startup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Day3/ExploreCalifornia/Models/Post.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Melodie.UnitTests/AppTests.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Melodie.UnitTests/AppInitializer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Melodie/wwwroot/js/PlaylistsLogoFiller.js" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/KeepScrollPosition.js" />
       <option value="$PROJECT_DIR$/Melodie/Views/Home/Index.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/wwwroot/js/ModelOpener.js" />
@@ -136,6 +124,7 @@
       <option value="$PROJECT_DIR$/Melodie/Controllers/UserController.cs" />
       <option value="$PROJECT_DIR$/Melodie/Views/User/Register.cshtml" />
       <option value="$PROJECT_DIR$/Melodie/Views/User/Login.cshtml" />
+      <option value="$PROJECT_DIR$/Melodie.UnitTests/PlaylistControllerTests.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1o4TnRmOu64XrIIxtmBo7OSf87P" />
@@ -225,7 +214,7 @@
       <workItem from="1614863476867" duration="4237000" />
       <workItem from="1614868165583" duration="95000" />
       <workItem from="1614868292202" duration="13213000" />
-      <workItem from="1614891032636" duration="22168000" />
+      <workItem from="1614891032636" duration="23745000" />
     </task>
     <task id="LOCAL-00001" summary="Added Playlist page">
       <created>1613846759594</created>
@@ -542,7 +531,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614913132675</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Added Login/Registration errors">
+      <created>1614914559105</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1614914559105</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Removed old Unit Test project">
+      <created>1614914695801</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1614914695801</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,8 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Changed button colors" />
-    <MESSAGE value="Fixed a bug with the footer z-index" />
     <MESSAGE value="Added last songs and improved header" />
     <MESSAGE value="Added next and previous button in the music player" />
     <MESSAGE value="Added mute button" />
@@ -589,7 +590,9 @@
     <MESSAGE value="Added TagLib# to get audio file duration" />
     <MESSAGE value="Removed old project" />
     <MESSAGE value="Code cleanup and edited MusicPlayer.js to use a built-in Map instead of an object to preserve insertion order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code cleanup and edited MusicPlayer.js to use a built-in Map instead of an object to preserve insertion order" />
+    <MESSAGE value="Added Login/Registration errors" />
+    <MESSAGE value="Removed old Unit Test project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed old Unit Test project" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
