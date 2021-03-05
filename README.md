@@ -1,3 +1,5 @@
+![](https://github.com/EmpireDemocratiqueDuPoulpe/Melodie/blob/master/Melodie/wwwroot/images/melodie_black.png)
+
 # Melodie
 Melodie est un site web où un utilisateur inscrit peut créer des listes de lecture et y ajouter des musiques depuis des fichiers ou des liens. La lecture des musiques est assurée par [l'API Wavesurfer](https://wavesurfer-js.org/doc/). L'activation de JavaScript est donc indispensable.
 
