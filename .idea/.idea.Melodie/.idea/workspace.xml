@@ -7,11 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Melodie/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie.UnitTests/obj/Debug/net5.0/Melodie.UnitTests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie.UnitTests/obj/Debug/net5.0/Melodie.UnitTests.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Melodie/obj/Debug/net5.0/Melodie.csprojAssemblyReference.cache" afterDir="false" />
-    </list>
+    <list default="true" id="00fde06c-a2f7-4e1f-a9b3-afea31489f02" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,7 +203,7 @@
       <workItem from="1614868165583" duration="95000" />
       <workItem from="1614868292202" duration="13213000" />
       <workItem from="1614891032636" duration="23796000" />
-      <workItem from="1614917289225" duration="196000" />
+      <workItem from="1614917289225" duration="241000" />
     </task>
     <task id="LOCAL-00001" summary="Added Playlist page">
       <created>1613846759594</created>
@@ -545,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614916092842</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Added default database">
+      <created>1614917520010</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1614917520010</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +570,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added next and previous button in the music player" />
     <MESSAGE value="Added mute button" />
     <MESSAGE value="Added light theme" />
     <MESSAGE value="Fixed theme changer css" />
@@ -592,7 +594,8 @@
     <MESSAGE value="Added Login/Registration errors" />
     <MESSAGE value="Removed old Unit Test project" />
     <MESSAGE value="Added beginning of unit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added beginning of unit test" />
+    <MESSAGE value="Added default database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added default database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

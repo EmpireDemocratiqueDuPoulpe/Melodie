@@ -33,6 +33,7 @@
           <e p="MelodieDbService.cs" t="Include" />
         </e>
         <e p="Melodie.csproj" t="IncludeRecursive" />
+        <e p="melodie_db.sql" t="Include" />
         <e p="Models" t="Include">
           <e p="AspNetUser.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
