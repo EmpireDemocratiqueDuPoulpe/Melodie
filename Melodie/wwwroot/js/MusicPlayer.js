@@ -17,10 +17,9 @@ class Music {
     }
 }
 
-// TODO: Change the object for something with a constant order (Map, Array, ...)
-const playlist = {};
+const playlist = new Map();
 let currentSong = -1;
-let playFirstSong = false;
+let playedFirstSong = false;
 
 // Global play
 let globalPlayBtn;
@@ -33,7 +32,7 @@ let currentVolume;
 /* Wavesurfer and events
 -------------------------------------------------- */
 
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function() {
     
     /* Wavesurfer
     -------------------------------------------------- */
@@ -82,9 +81,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
             // Get data
             const data = getPlayBtnData(playBtn);
 
-            // Add a music to the playlist object
+            // Add a music to the playlist map
             if (data.id !== undefined && data.uri !== undefined) {
-                playlist[data.id] = new Music(data.id, data.uri);
+                playlist.set(data.id, new Music(data.id, data.uri));
 
                 playBtn.addEventListener('click', playOnEvent, false);
             }
@@ -187,7 +186,7 @@ function playMusic(music) {
     }
     
     // Play the music
-    playFirstSong = true;
+    playedFirstSong = true;
     currentSong = Number(music.id);
     wavesurfer.load('../' + music.uri);
     
@@ -197,29 +196,20 @@ function playMusic(music) {
 
 // Play the next music
 function playNextMusic() {
-    let nextMusic = playlist[Object.keys(playlist)[currentSong + 1]];
-
-    if (nextMusic == null) {
-        nextMusic = playlist[Object.keys(playlist)[0]];
-    }
-
+    let nextMusic = playlist.get(currentSong + 1) ?? playlist.get(0);
+    
     playMusic(nextMusic);
 }
 
 // Play the previous music
 function playPreviousMusic() {
     let previousMusic;
-    
-    // Play the last song of the playlist if the current song is the first one
-    if (currentSong - 1 === -1) {
-        previousMusic = playlist[Object.keys(playlist)[Object.keys(playlist).length - 1]]
-    // Else play the previous song
-    } else {
-        previousMusic = playlist[Object.keys(playlist)[currentSong - 1]];
 
-        if (previousMusic == null) {
-            previousMusic = playlist[Object.keys(playlist)[0]];
-        }
+    // Play the last song of the playlist if the current song is the first one
+    if (currentSong - 1 < 0) {
+        previousMusic = playlist.get(playlist.size - 1);
+    } else {
+        previousMusic = playlist.get(currentSong - 1) ?? playlist.get(0);
     }
     
     playMusic(previousMusic);
@@ -227,8 +217,8 @@ function playPreviousMusic() {
 
 // Function called when the global Play/Pause button is pressed
 function playPause() {
-    if (!playFirstSong) {
-        playMusic(playlist[Object.keys(playlist)[0]]);
+    if (!playedFirstSong) {
+        playMusic(playlist.get(0));
     }
 
     wavesurfer.playPause();

@@ -120,10 +120,6 @@ namespace Melodie.Controllers
             }
             
             // Get upload path
-            // TODO: Doesn't work !
-            // var uploadPath = ConfigurationManager.AppSettings["UserMusicPath"];
-            //const string uploadPath = "D:\\MelodieStorage\\Musics\\";
-            
             var relativePath = Path.Combine(UploadFolder, filePath);
             var absolutePath = Path.Combine(_env.WebRootPath, UploadFolder, filePath);
 
@@ -159,7 +155,7 @@ namespace Melodie.Controllers
                     if (!result.IsSuccessStatusCode) return null;
                     
                     // Get file type
-                    var contentType = result.Content.Headers.ContentType.MediaType;
+                    var contentType = result.Content.Headers.ContentType?.MediaType;
                     var ext = GetExtensionForContentType(contentType);
 
                     if (ext == null) return null;

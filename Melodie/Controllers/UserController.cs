@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Melodie.Data;
 using Melodie.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -13,18 +12,13 @@ namespace Melodie.Controllers
     {
         private readonly UserManager<AspNetUser> _userManager;
         private readonly SignInManager<AspNetUser> _signInManager;
-        //private readonly IEmailSender _emailSender;
 
         public UserController(
-            IMelodieDbService service,
             UserManager<AspNetUser> userManager,
-            SignInManager<AspNetUser> signInManager
-            //IEmailSender emailSender)
-            )
+            SignInManager<AspNetUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            //_emailSender = emailSender;
         }
 
         /* GET

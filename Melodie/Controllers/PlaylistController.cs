@@ -11,7 +11,6 @@ namespace Melodie.Controllers
     [Authorize]
     public class PlaylistController : Controller
     {
-        //private readonly ILogger<PlaylistController> _logger;
         private readonly IMelodieDbService _dbService;
 
         public PlaylistController(IMelodieDbService service)
@@ -29,7 +28,6 @@ namespace Melodie.Controllers
 
             if (playlist == default) return RedirectToAction(nameof(Index), "Home");
             
-            //ViewBag.Title = "Playlist - " + playlist.Name;
             ViewBag.Title = playlist.Name;
 
             return View(playlist);
@@ -39,7 +37,6 @@ namespace Melodie.Controllers
         -------------------------------------------------- */
         //Playlist/Add
         [HttpPost("Playlist/Add", Name = "AddPlaylist")]
-        // TODO: Update after login system
         public async Task<ActionResult<Playlist>> Add()
         {
             var playlist = new Playlist {UserId = User.Identity.GetUserId()};
@@ -51,7 +48,6 @@ namespace Melodie.Controllers
         /* UPDATE
         -------------------------------------------------- */
         //Playlist/Update
-        //[HttpPut("Playlist/Update", Name = "UpdatePlaylist")]
         [HttpPost("Playlist/Update", Name = "UpdatePlaylist")]
         public async Task<ActionResult<Playlist>> Update(Playlist playlist)
         {
@@ -62,7 +58,7 @@ namespace Melodie.Controllers
 
             var result = await _dbService.UpdatePlaylist(playlist);
             
-            // Fix a bug where the modal confirmation message wasn't updated with the name.
+            // Fix a b.u.g where the modal confirmation message wasn't updated with the name.
             // Possibles fixes:
             // 1 - Reload the page on update (current)
             // 2 - Use Ajax.BeginForm
@@ -75,7 +71,6 @@ namespace Melodie.Controllers
         /* DELETE
         -------------------------------------------------- */
         //Playlist/Delete
-        //[HttpDelete("Home/Playlist/Delete/{pid}", Name = "DelPlaylist")]
         [HttpPost("Playlist/Delete", Name = "DelPlaylist")]
         public async Task<ActionResult<Playlist>> Delete(Playlist playlist)
         {

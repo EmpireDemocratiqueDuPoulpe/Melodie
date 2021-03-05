@@ -1,8 +1,14 @@
-﻿let addMusicOptions;
+﻿/* Vars
+-------------------------------------------------- */
+
+let addMusicOptions;
 let optChanger;
 
 const options = ['upload-by-file', 'upload-by-link'];
 let currentOption = 0;
+
+/* Get DOM elements
+-------------------------------------------------- */
 
 document.addEventListener('DOMContentLoaded', function() {
     addMusicOptions = document.querySelector('#add-music-options');
@@ -10,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     optChanger.addEventListener('click', changeToNextOption);
 });
+
+/* Functions
+-------------------------------------------------- */
 
 function changeToNextOption() {
     // Remove the previous class
