@@ -29,6 +29,7 @@ Les fichiers mis en ligne depuis le site sont enregistrés dans le dossier [wwwr
 ***[Eng]** Uploaded files are saved into the [wwwroot/musics/](https://github.com/EmpireDemocratiqueDuPoulpe/Melodie/tree/master/Melodie/wwwroot/musics) folder. Here is the list of supported audio files:*
 
 > Le support d'un format dépend principalement du navigateur sur lequel il est lu.
+> 
 > ***[Eng]** The file support depends mainly on the web browser you're using.*
 
 | Extension | Type MIME                                                          |
