@@ -18,7 +18,6 @@ Il suffit de télécharger le projet et de l'ouvrir avec un IDE <span>ASP</span>
 
 ## Comptes par défaut / Default accounts
 Il existe déjà quelques comptes dans la base de données. Ils ont tous pour mots de passe **Supinfo123!** :
-
 ***[Eng]** There are already some default account you can use to log in. Their password is **Supinfo123!**:*
 - Pierre-Ciseaux
 - Captain Diabète
@@ -27,11 +26,9 @@ Il existe déjà quelques comptes dans la base de données. Ils ont tous pour mo
 
 ## Fichiers mis en ligne / Supported musics files
 Les fichiers mis en ligne depuis le site sont enregistrés dans le dossier [wwwroot/musics/](https://github.com/EmpireDemocratiqueDuPoulpe/Melodie/tree/master/Melodie/wwwroot/musics). Pour des raisons de droits d'auteur, aucune musique n'est incluse avec le projet. Les formats de fichiers supportés sont les suivants :
-
 ***[Eng]** Uploaded files are saved into the [wwwroot/musics/](https://github.com/EmpireDemocratiqueDuPoulpe/Melodie/tree/master/Melodie/wwwroot/musics) folder. Here is the list of supported audio files:*
 
 > Le support d'un format dépend principalement du navigateur sur lequel il est lu.
-> 
 > ***[Eng]** The file support depends mainly on the web browser you're using.*
 
 | Extension | Type MIME                                                          |
